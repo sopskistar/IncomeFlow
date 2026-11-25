@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-25",
+  "contracts": {
+    "vault": {
+      "matchId": "59931687",
+      "creationMatch": "exact_match",
+      "runtimeMatch": "exact_match",
+      "verifiedAt": "2026-11-25T10:51:24Z",
+      "match": "exact_match",
+      "chainId": "84532",
+      "address": "0x361890c8550548bB5c1A2C40e009470a259cf41E"
+    },
+    "rc": {
+      "matchId": "59931685",
+      "creationMatch": "exact_match",
+      "runtimeMatch": "exact_match",
+      "verifiedAt": "2026-11-25T10:51:16Z",
+      "match": "exact_match",
+      "chainId": "5318007",
+      "address": "0x07B1f3295A076e52403811B5128f4e479E4D0C3d"
+    },
+    "token": {
+      "matchId": "59931679",
+      "creationMatch": "exact_match",
+      "runtimeMatch": "exact_match",
+      "verifiedAt": "2026-11-25T10:51:08Z",
+      "match": "exact_match",
+      "chainId": "84532",
+      "address": "0x2d1045a2025d197Ee83723452B505bec38427CE9"
+    }
+  }
+}

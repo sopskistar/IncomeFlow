@@ -1,0 +1,8 @@
+{
+  "address": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+  "purpose": "Disposable testnet-only deployer; no mainnet funds",
+  "networks": [
+    84532,
+    5318007
+  ]
+}

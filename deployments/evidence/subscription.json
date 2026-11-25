@@ -1,0 +1,20 @@
+[
+  {
+    "Uid": "0x180d5d7b6450c25891728a469dbadd9a",
+    "ChainId": 84532,
+    "Contract": "0x2d1045a2025d197ee83723452b505bec38427ce9",
+    "Topics": [
+      "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+      null,
+      "0x000000000000000000000000361890c8550548bb5c1a2c40e009470a259cf41e",
+      null
+    ],
+    "Configs": [
+      {
+        "Contract": "0x07b1f3295a076e52403811b5128f4e479e4d0c3d",
+        "RvmId": "0x0000000000000000000000000000000000000000",
+        "Active": true
+      }
+    ]
+  }
+]

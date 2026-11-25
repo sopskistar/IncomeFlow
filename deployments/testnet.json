@@ -1,0 +1,27 @@
+{
+  "status": "verified",
+  "baseChainId": 84532,
+  "reactiveChainId": 5318007,
+  "callbackProxy": "0x476F44b11F5C942c58f4c8E3d0300E5710743585",
+  "systemContract": "0x8888888888888888888888888888888888888888",
+  "token": "0x2d1045a2025d197Ee83723452B505bec38427CE9",
+  "reactive": "0x07B1f3295A076e52403811B5128f4e479E4D0C3d",
+  "vault": "0x361890c8550548bB5c1A2C40e009470a259cf41E",
+  "baseStartBlock": "63409321",
+  "reactiveStartBlock": "9211567",
+  "transactions": {
+    "lasnaFaucet": "0x0c5e5362d64f2d23f1fb78019e24e2ad9e4fc0cb8f2b6ad6992cd6984e252ddb",
+    "tokenDeploy": "0x8c2068004c56a3170e1c534f3e8219d17a3759ad450557de4eaf3dba4992ecf1",
+    "reactiveDeploy": "0xa8f97aa2cfbbc53d662035caa128c9f08f2bb455202518d12f6b8058b4b107d0",
+    "vaultDeploy": "0x635f720527bbaa3349b2fe656cb47f05ecd348c207cc47d3e63b95c72e5c199f",
+    "policy": "0x6b894a4e366e3be1df2f72eeab0a86c41a48b238adcfb08bbadd20d41af4af95",
+    "bind": "0x43171f952555a293a0bbb84fcc43f7cd3171fb4606d1ab13e50c6b2fad06a8fb"
+  },
+  "proof": "deployments/evidence/m1.json",
+  "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+  "recipients": [
+    "0xA96B637E0Dc2F17937700B18010723AD1f4e3079",
+    "0x93b79B2E31Fb33E11C11d4067C3A3820E5Cf2AEB",
+    "0x0B4ad4CEDEC75bc9577Afc9D75C75b1101875713"
+  ]
+}

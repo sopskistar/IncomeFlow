@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-25T10:48:27.203Z",
+  "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+  "incoming": [
+    {
+      "hash": "0x45328422c3b96e9c988dbd7a10f7ee4df5483d2a13c6a5e24b9fa3445f059e96",
+      "to": "0x732400b210bcd79acd0bbb8a760cacd511f7e09a",
+      "value": "1000000000000000000",
+      "block": "63408404",
+      "status": "success"
+    },
+    {
+      "hash": "0x5ff371b7fffb5f8570dc2486f3e1a0fa04c383ab28fd3da2cda4f03227fffce9",
+      "to": "0x732400b210bcd79acd0bbb8a760cacd511f7e09a",
+      "value": "1000000000000000000",
+      "block": "63407026",
+      "status": "success"
+    }
+  ],
+  "faucet": {
+    "hash": "0x0c5e5362d64f2d23f1fb78019e24e2ad9e4fc0cb8f2b6ad6992cd6984e252ddb",
+    "to": "0x2afafd298b23b62760711756088f75b7409f5967",
+    "value": "20000000000000000",
+    "status": "success",
+    "block": "63408849",
+    "call": {
+      "functionName": "request",
+      "args": [
+        "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a"
+      ]
+    }
+  },
+  "baseBalance": "1979999846489984657",
+  "lasnaBalance": "2000000000000000000"
+}

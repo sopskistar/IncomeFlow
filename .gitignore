@@ -148,6 +148,18 @@ vite.config.ts.timestamp-*
 # Astro generated types
 .astro/
 
+# IncomeFlow tools, contract artifacts, local testnet wallet and captures
+.tools/
+.secrets/
+contracts/out/
+contracts/cache/
+contracts/lib/
+contracts/broadcast/
+test-results/
+playwright-report/
+artifacts/video/
+.vercel/
+
 # Turbo Repo (https://turborepo.dev/)
 .turbo
 
