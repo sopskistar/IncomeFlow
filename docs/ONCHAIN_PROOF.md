@@ -97,3 +97,18 @@ Reactive processing: [0x239028f304ca2647e2dcf683dad26233e0edefbc0290ac6c420ede28
 Confirmed transfers: **50 / 30 / 20 ifUSD** to the same three destination wallets listed above. The new vault reports paymentCount 1, totalDistributed 100 ifUSD, zero token balance, paused false, active subscription and zero debt on both services. Pause and resume receipts were independently read when resuming the runner. Returning-wallet reconnection and a browser refresh retained owner access; historical receipt inspection used the saved origin-block window.
 
 The initial 0.5 lREACT and 0.003 test ETH reserves were funded by the existing disposable account, with no new faucet funds. The signed journey performed seven transactions across its resumptions; no original M1 deployment was replaced. Detailed chain-backed state and signed transaction inputs are in `deployments/browser-proof.json` and `deployments/browser-transactions.json`. Raw genuine moving captures remain under `artifacts/video/raw/`; they are not fabricated UI states. These browser acceptance timings are not an end-to-end latency benchmark.
+
+## Payment Passport: a new signed request and two partial payments
+
+Verified 2026-11-26 against live receipts during the signed browser workflow. Request 0xdcb6a2cd7ac48f90f52fa2499700e3cfa8606255b1de101159ec07a33682e86d was owner-signed before either transfer. The website-design job is illustrative; the owner and payer are the same disposable test account. These are valueless testnet engineering payments, not commercial income. Original M1 and earlier signed-vault proof remain separate and unchanged.
+
+Existing user vault: `0xd70db6249b22cb72a463cc26849e85fa699d37c1`. Exact request, owner signatures, log indices and observations: [passport-proof.json](../deployments/passport-proof.json). No redeployment, policy transaction or faucet exchange was performed.
+
+| Payment | Origin / exact log | Reactive execution | Authenticated callback | Actual payouts |
+| --- | --- | --- | --- | --- |
+| 40 ifUSD | [Origin](https://sepolia.basescan.org/tx/0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964), log 10 | [Reactive](https://lasna.reactscan.net/tx/0x7dc8bb4d7775d2a7d22989de6b35338bf696a873ce22b411dd6deb002e3e4b10) | [Callback](https://sepolia.basescan.org/tx/0xdff7ee7715f54a4a119001cbee4965b6cde358317d1d14ec2ac497a4812590b9) | 20 / 12 / 8 ifUSD |
+| 60 ifUSD | [Origin](https://sepolia.basescan.org/tx/0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da), log 29 | [Reactive](https://lasna.reactscan.net/tx/0x0807477dab0eac199dfa65eba7416097c593b718dc8cab89d985f80de590077a) | [Callback](https://sepolia.basescan.org/tx/0xb1f4ee25f1c47cb6d3f3f1330160b06f57392b7f0639fb5e220ab9bd5684dc91) | 30 / 18 / 12 ifUSD |
+
+Each successful token-emitted Transfer was explicitly associated through an owner-signed EIP-712 PaymentAssociation. The verifier checked the current owner and canonical vault runtime, exact token/to/payer/log/amount, matching payment ID and policy, actual callback token Transfers and the corresponding Reactive PaymentObserved receipt. The first association counted 40 received and 60 outstanding; the second counted 100 received and zero outstanding. Total allocations are 50/30/20 ifUSD under policy version 1. Financial event verification passed; the final returning-owner browser regression is recorded separately in PASSPORT_QA.md.
+
+Reproduce read-only: open `/passport-demo?view=owner`, refresh evidence, follow each explorer link, or submit the signed envelope from the manifest to `POST /api/passport/verify`. No wallet or new payment is necessary to inspect this proof.

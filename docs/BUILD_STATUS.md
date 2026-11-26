@@ -37,3 +37,13 @@ Original recordings and superseded segments are preserved locally. The initial f
 ## Independent production verification
 
 Public app: https://incomeflow-gamma.vercel.app. Final deployment `dpl_48RFxdBJ3Aeu5p1wXJXhEksmRxyc`. [CI 45754101739](https://github.com/sopskistar/IncomeFlow/actions/runs/45754101739) and [visual evidence CI 45756034510](https://github.com/sopskistar/IncomeFlow/actions/runs/45756034510) passed contracts, application, 14 local-build and 14 public-Vercel tests. The latter captured ten actual public screenshots with `browser-errors.json = []`; all were inspected. Public repository visibility confirmed. Local public-browser network failures are retained in PRODUCTION_QA.md and are not described as passes.
+
+## Payment Passport extension — in progress
+
+Baseline preserved: main `1fdbad7cc96ec426b435fb2126e0d881daa72984`, public release `incomeflow-testnet-demo`, original production deployment unchanged. Work isolated on `feat/payment-passport`.
+
+Implemented but not release-verified: EIP-712 request/association schema, current-owner and compiled-vault checks, integer partial-payment accounting, client/owner pages, owner-scoped archive import/export, explicit callback proof. First 25 unit tests pass; browser acceptance/build/audit/new film remain pending. No new contract deployment or blockchain transaction has occurred for this extension. Prior phase results above describe the preserved release, not this feature branch.
+
+Payment Passport live acceptance: **implemented and verified** on 2026-11-26T16:41:50.566Z. Existing user vault reused. New 40/60 ifUSD transfers, exact owner-signed associations, actual allocations, returning-owner refresh and fresh receipt verification passed. See deployments/passport-proof.json and PASSPORT_QA.md. Full browser/visual/public release checks and revised film are still pending.
+
+Reviewed extension checkpoint: production build/typecheck, lint and 25 unit tests pass; 20 browser tests pass in1.7 minutes after fixes. The two independent critiques scored listed UI defects resolved; Hallmark scoped static clearance is 0 FAIL/REFLEX/WARN with four documented dismissals. Fresh public/owner screenshots have zero capture errors. Genuine signed acceptance and exact receipts remain unchanged. Internal security review includes canonical Reactive runtime/binding, owner signatures and explicit attribution; no unresolved critical/high finding identified. Source checkpoint/CI, production promotion and revised film remain pending.

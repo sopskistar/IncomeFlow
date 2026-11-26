@@ -1,0 +1,49 @@
+name: IncomeFlow public verification
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Verified release URL to inspect after deployment
+        default: https://incomeflow-gamma.vercel.app
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: incomeflow-public-qa
+  cancel-in-progress: false
+jobs:
+  public-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ inputs.url }}
+      - run: node scripts/capture-qa.mjs
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ inputs.url }}
+          QA_OUTPUT: artifacts/public-qa/vault
+      - run: node --import tsx scripts/capture-passport.mjs
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ inputs.url }}
+          PASSPORT_QA_OUTPUT: artifacts/public-qa/passport
+          PASSPORT_SKIP_VIDEO: '1'
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: public-visual-qa
+          path: |
+            artifacts/public-qa
+            playwright-report
+          retention-days: 7
+# Explicit post-deployment gate avoids comparing a new source revision with the
+# intentionally preserved old production release while a feature branch is tested.

@@ -214,6 +214,7 @@ export function Header() {
         <Brand />
         <nav aria-label="Main">
           <Link href="/app">Workspace</Link>
+          <Link href="/passport">Payment Passport</Link>
           <Link href="/proof">On-chain proof</Link>
           <Link href="/help">Help</Link>
         </nav>

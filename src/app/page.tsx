@@ -14,8 +14,9 @@ export default function Home() {
               <br />a purpose.
             </h1>
             <p>
-              Get paid in crypto. Automatically set aside what you need for
-              spending, savings and taxes, with rules you control.
+              From requesting payment to organizing your income, track supported
+              crypto payments and automatically set aside money with rules you
+              control.
             </p>
             <div className="hero-actions">
               <Link className="button primary" href="/app">
@@ -48,13 +49,15 @@ export default function Home() {
         <section className="container story-section">
           <div>
             <h2>
-              Your work is done.
+              The work is finished.
               <br />
-              Let your income get organized.
+              The financial admin isn’t.
             </h2>
             <p>
-              A client pays your vault like any other wallet. IncomeFlow handles
-              the repetitive part, even when you’re offline.
+              Imagine a freelance designer delivering a website. There is still
+              a payment to request, a balance to track, and income to organize.
+              Payment Passport connects those steps. This is an illustrative
+              scenario, not a customer story.
             </p>
             <Link className="text-link" href="/help">
               Understand the payment flow
@@ -64,23 +67,52 @@ export default function Home() {
             <li>
               <span>Set your destinations</span>
               <p>
-                Choose your wallets and percentages. Confirm your rules once.
+                Create an owner-signed request for your job, then choose your
+                allocation wallets and percentages.
               </p>
             </li>
             <li>
-              <span>Share your vault address</span>
+              <span>Share your payment request</span>
               <p>
-                Receive the supported token through a regular ERC-20 transfer.
+                Clients verify your receiving vault and send test ifUSD.
+                Explicitly associate the transaction and log index; partial
+                payments remain visible.
               </p>
             </li>
             <li>
-              <span>Follow the allocation</span>
+              <span>Keep the financial record</span>
               <p>
-                Reactive observes the payment and triggers your vault. Every
-                payout has a public receipt.
+                Reactive observes the payment and triggers your vault. Keep
+                verified transfers and allocation evidence alongside the
+                request.
               </p>
             </li>
           </ol>
+        </section>
+        <section className="container problem-evidence">
+          <h2>Getting paid is not the end of the admin.</h2>
+          <p>
+            QuickBooks’ 2026 report says 59% of surveyed small businesses had
+            invoices overdue by 30 days or more.{" "}
+            <a
+              className="text-link"
+              href="https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/"
+            >
+              Read the original report
+            </a>
+            .
+          </p>
+          <p className="small muted">
+            This research covers small businesses broadly, not crypto
+            freelancers. It establishes the wider problem, not IncomeFlow’s
+            effectiveness. IncomeFlow cannot make a client pay sooner.
+          </p>
+          <Link className="button secondary" href="/passport">
+            Create a payment request
+          </Link>
+          <Link className="text-link" href="/passport-demo">
+            Explore a verified Payment Passport
+          </Link>
         </section>
         <section className="control-section">
           <div className="container control-grid">

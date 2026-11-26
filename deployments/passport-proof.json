@@ -1,0 +1,232 @@
+{
+  "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+  "vault": "0xd70db6249b22cb72a463cc26849e85fa699d37c1",
+  "transactions": [
+    {
+      "hash": "0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964",
+      "amount": "40000000"
+    },
+    {
+      "hash": "0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da",
+      "amount": "60000000"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "0x9fa81c78b51ad634bcae50a01d6b7431bc81f5a6a7b06fcbff74bad0c3397c5a",
+      "originHash": "0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964",
+      "logIndex": 10,
+      "block": "63941280",
+      "amount": "40000000",
+      "payer": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "status": "Distribution confirmed",
+      "reactiveHash": "0x7dc8bb4d7775d2a7d22989de6b35338bf696a873ce22b411dd6deb002e3e4b10",
+      "destinationHash": "0xdff7ee7715f54a4a119001cbee4965b6cde358317d1d14ec2ac497a4812590b9",
+      "version": "1",
+      "allocations": [
+        {
+          "recipient": "0xA96B637E0Dc2F17937700B18010723AD1f4e3079",
+          "amount": "20000000",
+          "ruleIndex": 0
+        },
+        {
+          "recipient": "0x93b79B2E31Fb33E11C11d4067C3A3820E5Cf2AEB",
+          "amount": "12000000",
+          "ruleIndex": 1
+        },
+        {
+          "recipient": "0x0B4ad4CEDEC75bc9577Afc9D75C75b1101875713",
+          "amount": "8000000",
+          "ruleIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "0x45703b64ab29accacc6398bff550fd794ba25aa8ad059a4cb02497a72f0ab71f",
+      "originHash": "0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da",
+      "logIndex": 29,
+      "block": "63941413",
+      "amount": "60000000",
+      "payer": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "status": "Distribution confirmed",
+      "reactiveHash": "0x0807477dab0eac199dfa65eba7416097c593b718dc8cab89d985f80de590077a",
+      "destinationHash": "0xb1f4ee25f1c47cb6d3f3f1330160b06f57392b7f0639fb5e220ab9bd5684dc91",
+      "version": "1",
+      "allocations": [
+        {
+          "recipient": "0xA96B637E0Dc2F17937700B18010723AD1f4e3079",
+          "amount": "30000000",
+          "ruleIndex": 0
+        },
+        {
+          "recipient": "0x93b79B2E31Fb33E11C11d4067C3A3820E5Cf2AEB",
+          "amount": "18000000",
+          "ruleIndex": 1
+        },
+        {
+          "recipient": "0x0B4ad4CEDEC75bc9577Afc9D75C75b1101875713",
+          "amount": "12000000",
+          "ruleIndex": 2
+        }
+      ]
+    },
+    {
+      "final": {
+        "verified": true,
+        "digest": "0x44b63bff17293a1bc7dccf1d1eae00ec9846386f1123741272fb5bd946f847f7",
+        "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+        "reactive": "0x30fc195918738aBf90BA5B626Dfa98F99d5Ca200",
+        "payments": [
+          {
+            "transactionHash": "0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964",
+            "logIndex": 10,
+            "id": "0x9fa81c78b51ad634bcae50a01d6b7431bc81f5a6a7b06fcbff74bad0c3397c5a",
+            "amount": "40000000",
+            "payer": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+            "paidAt": 1795710124,
+            "status": "Allocation confirmed",
+            "destinationHash": "0xdff7ee7715f54a4a119001cbee4965b6cde358317d1d14ec2ac497a4812590b9",
+            "reactiveHash": "0x7dc8bb4d7775d2a7d22989de6b35338bf696a873ce22b411dd6deb002e3e4b10",
+            "version": "1",
+            "allocations": [
+              {
+                "recipient": "0xA96B637E0Dc2F17937700B18010723AD1f4e3079",
+                "amount": "20000000"
+              },
+              {
+                "recipient": "0x93b79B2E31Fb33E11C11d4067C3A3820E5Cf2AEB",
+                "amount": "12000000"
+              },
+              {
+                "recipient": "0x0B4ad4CEDEC75bc9577Afc9D75C75b1101875713",
+                "amount": "8000000"
+              }
+            ]
+          },
+          {
+            "transactionHash": "0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da",
+            "logIndex": 29,
+            "id": "0x45703b64ab29accacc6398bff550fd794ba25aa8ad059a4cb02497a72f0ab71f",
+            "amount": "60000000",
+            "payer": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+            "paidAt": 1795710151,
+            "status": "Allocation confirmed",
+            "destinationHash": "0xb1f4ee25f1c47cb6d3f3f1330160b06f57392b7f0639fb5e220ab9bd5684dc91",
+            "reactiveHash": "0x0807477dab0eac199dfa65eba7416097c593b718dc8cab89d985f80de590077a",
+            "version": "1",
+            "allocations": [
+              {
+                "recipient": "0xA96B637E0Dc2F17937700B18010723AD1f4e3079",
+                "amount": "30000000"
+              },
+              {
+                "recipient": "0x93b79B2E31Fb33E11C11d4067C3A3820E5Cf2AEB",
+                "amount": "18000000"
+              },
+              {
+                "recipient": "0x0B4ad4CEDEC75bc9577Afc9D75C75b1101875713",
+                "amount": "12000000"
+              }
+            ]
+          }
+        ],
+        "failures": [],
+        "paid": "100000000",
+        "outstanding": "0",
+        "overpaid": "0",
+        "checkedAt": "2026-11-26T16:41:50.529Z"
+      },
+      "preflight": {
+        "notice": "Read-only resumption; no additional funding or transaction permitted."
+      },
+      "accountIdentity": "Owner and payer are the same disposable test account; no real client identity is claimed."
+    }
+  ],
+  "recording": {
+    "marks": {
+      "payment-0-start": 8.554,
+      "payment-0-sent": 8.556,
+      "association-0-start": 9.289,
+      "association-0-complete": 9.29,
+      "payment-1-start": 10.529,
+      "payment-1-sent": 10.542,
+      "association-1-start": 10.875,
+      "association-1-complete": 10.876,
+      "returning-owner": 12.147
+    },
+    "path": "/home/sopski/projects/IncomeFlow/artifacts/video/passport/raw/page@2bb1f940bd7db9a631fb474a2fdf7c39.webm"
+  },
+  "passport": {
+    "version": 1,
+    "request": {
+      "version": 1,
+      "id": "0xdcb6a2cd7ac48f90f52fa2499700e3cfa8606255b1de101159ec07a33682e86d",
+      "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "vault": "0xD70db6249b22cb72a463cc26849E85fa699d37C1",
+      "token": "0x2d1045a2025d197Ee83723452B505bec38427CE9",
+      "chainId": 84532,
+      "title": "Website design — illustrative test job",
+      "description": "Illustrative freelancer scenario. Genuine testnet engineering payments, not commercial income.",
+      "amount": "100000000",
+      "expectedPayer": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "issuedAt": 1795710109,
+      "dueAt": 0,
+      "validUntil": 0
+    },
+    "signature": "0x9d01b67ffdff89ade6c02e33d3dcf154cdb88fd12d81f73cb8a1d25457ceddd910901b7763059eb955ac6321596d4c51f4b334f2d446e155c7838fc4fd6569941c",
+    "associations": [
+      {
+        "transactionHash": "0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964",
+        "logIndex": 10,
+        "destinationHash": "0xdff7ee7715f54a4a119001cbee4965b6cde358317d1d14ec2ac497a4812590b9",
+        "reactiveHash": "0x7dc8bb4d7775d2a7d22989de6b35338bf696a873ce22b411dd6deb002e3e4b10",
+        "signature": "0x29804bc1a68a0e25d6798761ead9aa6759f0556ba28aee3079ad8ba0584509174246e6b64e19b256cf3eee9ef517d9b3a413beb8549e35f5c528aa7e245f3bb41b"
+      },
+      {
+        "transactionHash": "0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da",
+        "logIndex": 29,
+        "destinationHash": "0xb1f4ee25f1c47cb6d3f3f1330160b06f57392b7f0639fb5e220ab9bd5684dc91",
+        "reactiveHash": "0x0807477dab0eac199dfa65eba7416097c593b718dc8cab89d985f80de590077a",
+        "signature": "0x2e25070001d8e74ab62ca93642d516f063afad9718bf0ec3119fbc6793c1779e05dae06af969afe345859254bab63b118618da2fc70e441332821424683b88661c"
+      }
+    ]
+  },
+  "recordings": [
+    {
+      "marks": {
+        "request-start": 5.08,
+        "payment-0-start": 12.139,
+        "payment-0-sent": 23.314,
+        "association-0-start": 27.52,
+        "association-0-complete": 35.88,
+        "payment-1-start": 36.549,
+        "payment-1-sent": 48.571,
+        "association-1-start": 52.803,
+        "association-1-complete": 69.9,
+        "returning-owner": 71.344
+      },
+      "path": "/home/sopski/projects/IncomeFlow/artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm"
+    },
+    {
+      "marks": {
+        "payment-0-start": 8.333,
+        "payment-0-sent": 8.335
+      }
+    },
+    {
+      "marks": {
+        "payment-0-start": 38.94,
+        "payment-0-sent": 38.95,
+        "association-0-start": 39.852,
+        "association-0-complete": 39.853,
+        "payment-1-start": 42.879,
+        "payment-1-sent": 42.881,
+        "association-1-start": 43.18,
+        "association-1-complete": 43.183,
+        "returning-owner": 45.004
+      },
+      "path": "/home/sopski/projects/IncomeFlow/artifacts/video/passport/raw/page@c24ec84cdc53ca0e93457323c67e0007.webm"
+    }
+  ],
+  "completed": "2026-11-26T16:41:50.566Z"
+}

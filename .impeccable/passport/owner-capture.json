@@ -1,0 +1,7 @@
+{
+  "root": "http://localhost:3098",
+  "checkedAt": "2026-11-26T18:33:02.393Z",
+  "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+  "errors": [],
+  "mode": "Read-only encrypted-account connection; genuine saved signatures verified; unsigned form preview; no signing or transaction method."
+}

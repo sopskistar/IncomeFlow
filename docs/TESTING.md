@@ -45,3 +45,9 @@ Actual desktop, tablet and phone screenshots were inspected, then refined. Hallm
 `.github/workflows/ci.yml` runs independent contract and application jobs, including pinned dependency installation, build/tests, lint, TypeScript, production dependency audit and Chromium journeys. It receives no signing keys and performs no contract deployment. Actual remote-run status belongs in BUILD_STATUS.md once a pushed run is inspected.
 
 Final remote check: commit `747be04` passed GitHub Actions contracts/application jobs and both **14-test local-build and public-Vercel suites**. Public suite: 12.8s, no retries. [Actual run](https://github.com/sopskistar/IncomeFlow/actions/runs/45754101739). Additional deterministic hydration and underfunding/API validation coverage is included. Local production network interruptions were preserved and are not reclassified as passes.
+
+## Payment Passport extension
+
+The preserved 18-test report is `/tmp/incomeflow-passport-browser-full.log`. After independent review fixes, `/tmp/incomeflow-passport-browser-final.log` reports **20 passed in 1.7 minutes**. New cases cover signing-review title/amount, Edit retaining payer/date, declined signing, genuine signed archive import/export/reconnection, malformed/oversized links, and actual two-payment client/full-owner receipts. No ordinary browser test signs or broadcasts.
+
+The opt-in signed acceptance already passed and is guarded by `deployments/passport-proof.json`; do not rerun payments for QA. Exactly two transfers were made in the earlier run. 25 unit tests cover cryptography/domain tampering, schemas/expiry, duplicate association accounting, storage isolation and chain receipts including canonical vault/Reactive code and actual payouts. 28 unchanged-contract Foundry tests passed; Solar remains an incompatible parser result, not a passing scan. Final branch/public CI outcomes are recorded after execution in BUILD_STATUS.md and passport-checks.json.

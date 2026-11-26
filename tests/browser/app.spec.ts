@@ -6,7 +6,7 @@ test("landing calculator is labeled and does not impersonate a payment", async (
   await expect(
     page.getByRole("heading", { name: "Give every payment a purpose." }),
   ).toBeVisible();
-  await expect(page.getByText("Illustration only")).toBeVisible();
+  await expect(page.getByText("Interactive preview · No transaction")).toBeVisible();
   await page.getByLabel("Illustrative payment amount").fill("100");
   await expect(
     page.locator(".preview-allocations").getByText("50", { exact: true }),

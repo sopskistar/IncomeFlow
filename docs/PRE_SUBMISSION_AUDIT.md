@@ -47,3 +47,9 @@ Public RPC throttling/history windows, incomplete callback-list responses, indep
 ## Readiness disposition
 
 Technical evidence gates pass for the testnet prototype. Release publication and anonymous download checksum passed; source/media milestone b7b25e3 is pushed. Closing main CI and delivery are recorded in BUILD_STATUS.md and the final report. Overall submission remains **CONDITIONAL PASS** until the user checks the authenticated DoraHacks cutoff/required portal fields and reviews the prepared package. No automated DoraHacks submission is performed. Internal review is not an independent professional audit.
+
+## Payment Passport release gate
+
+The previously verified release and published original film remain a fallback. The extension is isolated on `feat/payment-passport`; it introduces no contract redeployment. New signatures, current-owner/runtime checks, exact explicit attribution, partial/overpayment math, archive recovery and real post-request payments require their own evidence.
+
+Two new test transfers (40/60 ifUSD) and their real callbacks have passed chain verification; the final returning-owner browser run is still being reconciled. The app's recent activity window is not used as a substitute for saved exact historical receipts. PP-01 through PP-06 are documented in SECURITY_AUDIT.md. Prior Solar parse failure remains a tooling limitation. Updated local/public browser checks, responsive screenshot critique, final CI and revised-video verification must pass before promoting the extension or recommending its submission film. See PASSPORT_QA.md for actual results and failures.

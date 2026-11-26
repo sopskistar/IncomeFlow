@@ -25,7 +25,7 @@ export function AllocationPreview() {
     <div className="allocation-preview">
       <div className="preview-top">
         <span>Try an allocation</span>
-        <span className="tag">Illustration only</span>
+        <span className="tag">Interactive preview · No transaction</span>
       </div>
       <label className="preview-input">
         Incoming payment

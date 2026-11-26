@@ -162,6 +162,18 @@ export default function ProofPage() {
             Read the reproducible proof and source-verification links
           </a>
         </details>
+        <section className="panel">
+          <h2>A new request, two verified payments.</h2>
+          <p>
+            Payment Passport’s illustrative test job was signed before two
+            genuine 40 and 60 ifUSD payments. Both transfers and their automatic
+            allocations are independently checked. This is separate from the
+            original M1 proof above, and represents no real client income.
+          </p>
+          <Link className="button secondary" href="/passport-demo?view=owner">
+            Inspect the Payment Passport
+          </Link>
+        </section>
       </main>
       <Footer />
     </>

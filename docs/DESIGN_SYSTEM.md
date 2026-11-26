@@ -35,3 +35,9 @@ Production browser QA completed 10/10 tests before review fixes. Desktop, tablet
 ## Applied studio guidance
 
 Discovered and used: Premium UI Design, Hallmark, Impeccable, UI UX Pro Max, Brand Identity Studio, Design System, Frontend Motion Design and Frontend Visual QA. Video work used Hackathon Video Studio and installed Remotion guidance with the shared video workspace. The existing branching identity was preserved. Hallmark static checks passed with two documented dismissals; its unavailable Puppeteer renderer was not claimed as passed. Actual production captures were inspected through the independent Playwright/CI workflow.
+
+## Payment Passport extension
+
+Preserve the allocation-rail mark, Manrope, pine/slate/ochre semantic palette and light/dark tokens. The owner surface uses a request index beside a signed financial document; the client surface uses one readable payment document. The amount and verified outstanding balance carry hierarchy, while full addresses and signatures sit in readable/wrapping detail rows. Status text communicates signature, transfer and allocation separately; no status animation substitutes for chain evidence.
+
+Reference review: [Framer Marketplace](https://www.framer.com/marketplace/templates/) for restrained software/fintech composition; [21st community catalog](https://21st.dev/community/components) for component discoverability; [shadcn Field](https://ui.shadcn.com/docs/components/base/field) for grouped labels/descriptions and responsive field semantics. No component source or restricted template was copied. UI UX Pro Max guidance reinforced visible labels, submit feedback and field validation. Existing brand assets/fonts/licenses are reused. Screenshot review findings belong in PASSPORT_QA.md, not inferred from static checks.

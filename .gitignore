@@ -174,3 +174,5 @@ artifacts/video/
 
 # Transient QA, original recordings and rendered deliverables; durable reports are in deployments.
 /artifacts/
+# Python tooling bytecode
+__pycache__/

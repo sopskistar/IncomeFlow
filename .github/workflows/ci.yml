@@ -1,7 +1,7 @@
 name: IncomeFlow checks
 on:
   push:
-    branches: [main]
+    branches: [main, feat/payment-passport]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -50,20 +50,5 @@ jobs:
       - run: npm run test:browser
         env:
           CI: true
-      - name: Verify public testnet application
-        run: npm run test:browser
-        env:
-          CI: true
-          PLAYWRIGHT_BASE_URL: https://incomeflow-gamma.vercel.app
-      - name: Capture public responsive evidence
-        run: node scripts/capture-qa.mjs
-        env:
-          PLAYWRIGHT_BASE_URL: https://incomeflow-gamma.vercel.app
-          QA_OUTPUT: artifacts/public-qa
-      - uses: actions/upload-artifact@v7.0.2
-        with:
-          name: production-visual-qa
-          path: artifacts/public-qa
-          retention-days: 7
 # No signing keys or automatic contract deployments. The read-only browser
 # integration tests use the public, genuinely deployed testnet contracts.

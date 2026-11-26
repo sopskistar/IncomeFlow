@@ -1,10 +1,43 @@
-# IncomeFlow
+# IncomeFlow — Give every payment a purpose.
 
-**Give every payment a purpose.** IncomeFlow organizes supported crypto income into owner-selected spending, savings and reserve wallets automatically. Configure percentages once; a regular ERC-20 payment to your vault triggers Reactive Omni and an authenticated allocation callback.
+**From payment requested to income organized.** For independent professionals, finishing a project can leave another workload: requesting payment, tracking what arrives, organizing income and retaining the record. IncomeFlow connects those steps for supported crypto payments.
 
 [Open IncomeFlow](https://incomeflow-gamma.vercel.app) · [Inspect on-chain proof](https://incomeflow-gamma.vercel.app/proof)
 
 Built for freelancers and independent professionals in the Reactive Omni Buildathon’s **Set It and Forget It** track. This is a **testnet prototype**, using valueless **MockIncomeUSD (ifUSD)**. Tax reserve percentages are user choices, not tax advice or calculated liabilities.
+
+## Why we built it
+
+Imagine a freelance designer delivering a website. The work is finished, but a payment still needs requesting, transfers need identifying, outstanding amounts need tracking, and income needs organizing. This is an illustrative scenario, not a customer testimonial.
+
+**From payment requested to income organized.** IncomeFlow connects a supported crypto payment request to explicitly associated transfers, automatic spending/savings/reserve allocations and a record the recipient can recover.
+
+QuickBooks’ 2026 report says 59% of surveyed small businesses had invoices overdue at least 30 days. This is broader small-business research, not a statistic about crypto freelancers or evidence that IncomeFlow improves collection. [Primary report](https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/); [research and methodology caveats](docs/PROBLEM_RESEARCH.md), including Chaser’s receivables-administration findings.
+
+## What Payment Passport adds
+
+Established payment splitting and invoicing tools already solve valuable parts of this problem. Our narrower workflow connects an owner-signed, shareable ifUSD request to exact token-transfer logs, partial-payment progress and verified allocation receipts. We do not infer a job match from amount or time. The owner explicitly signs each association; payer identity remains unverified. [Comparison and evidence limits](docs/COMPETITIVE_DIFFERENTIATION.md).
+
+1. Create and review a request for an actual owned IncomeFlow vault; sign its structured data.
+2. Share the independently verifiable request. The client checks the owner, chain, token and receiving address.
+3. Send supported test ifUSD using an ordinary ERC-20 transfer. Reactive triggers allocation without an online freelancer or backend payout bot.
+4. Associate the exact transaction hash and log index with the request. Verify partial/outstanding amounts and the separate allocation evidence.
+5. Export the client receipt or full owner Passport; back up browser-local records for another device.
+
+[Payment Passport specification and limitations](docs/PAYMENT_PASSPORT.md). The feature branch's current verification/release state is in [BUILD_STATUS](docs/BUILD_STATUS.md); the previously verified release remains the fallback until its extension passes.
+
+## A signed request. Two real partial payments.
+
+The illustrative website-design request was owner-signed before two genuine testnet transfers: **40 + 60 ifUSD**. The owner signed an explicit association to each exact token log. Their verified allocations were **20/12/8 + 30/18/12**, totaling **50/30/20 ifUSD**, with **zero outstanding** in the associated record. These are engineering payments using one disposable owner/payer account, not commercial client income.
+
+[Inspect the Payment Passport](https://incomeflow-gamma.vercel.app/passport-demo?view=owner) · [Client receipt](https://incomeflow-gamma.vercel.app/passport-demo) · [Signed proof manifest](deployments/passport-proof.json)
+
+| Payment | Origin | Reactive execution | Callback and actual payouts |
+| --- | --- | --- | --- |
+| 40 ifUSD, log 10 | [Transfer](https://sepolia.basescan.org/tx/0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964) | [Execution](https://lasna.reactscan.net/tx/0x7dc8bb4d7775d2a7d22989de6b35338bf696a873ce22b411dd6deb002e3e4b10) | [20/12/8](https://sepolia.basescan.org/tx/0xdff7ee7715f54a4a119001cbee4965b6cde358317d1d14ec2ac497a4812590b9) |
+| 60 ifUSD, log 29 | [Transfer](https://sepolia.basescan.org/tx/0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da) | [Execution](https://lasna.reactscan.net/tx/0x0807477dab0eac199dfa65eba7416097c593b718dc8cab89d985f80de590077a) | [30/18/12](https://sepolia.basescan.org/tx/0xb1f4ee25f1c47cb6d3f3f1330160b06f57392b7f0639fb5e220ab9bd5684dc91) |
+
+Existing user vault: [0xd70db6249b22cb72a463cc26849e85fa699d37c1](https://sepolia.basescan.org/address/0xd70db6249b22cb72a463cc26849e85fa699d37c1). Its Reactive contract: [0x30fc195918738aBf90BA5B626Dfa98F99d5Ca200](https://lasna.reactscan.net/address/0x30fc195918738aBf90BA5B626Dfa98F99d5Ca200). No redeployment or funding exchange was needed for Passport.
 
 ## Verify the working automation
 

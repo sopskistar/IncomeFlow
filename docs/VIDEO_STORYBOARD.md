@@ -13,3 +13,7 @@ Production direction: a calm fintech explainer intercut with genuine moving appl
 | 134–150s | Brand close and honest testnet/security limits | Open source, independent review needed before mainnet; no tax-liability claim |
 
 Footage must be recorded from the functioning application. Any locally automated EIP-1193 test wallet is named as such and signs through the encrypted Node/Foundry keystore; no private key is injected into a page and no third-party wallet UI is impersonated. Long network waits may be cut; transaction outcomes must remain authentic. Retain original recordings and the edit timing map.
+
+## Payment Passport revision (separate output)
+
+Preserve the published original film. Revised narrative: 0–20 illustrative delivered website / remaining admin; 20–35 qualified QuickBooks evidence with URL; 35–55 actual signed request creation; 55–85 real explicit partial-payment association and outstanding amounts; 85–115 genuine new test payments and Reactive allocation; 115–135 exact proof and recovered record; 135–150 established brand, live URL, GitHub. No invented client or historical invoice. Source: video/passport-narration.json. Do not recommend this revision until footage, render, decode and visual inspection are complete.

@@ -38,3 +38,7 @@ Vercel project `sopskistars-projects/incomeflow` was created using the existing 
 No signing secrets are required on Vercel. Public testnet RPC defaults are used unless explicitly overridden. `.vercelignore` excludes encrypted wallets, local tooling, video recordings, contract build artifacts and environment files. The core app uses on-chain state and needs no database. Production remains a testnet demonstration.
 
 Final runtime source checkpoint: `747be04`. Verified deployment `dpl_48RFxdBJ3Aeu5p1wXJXhEksmRxyc`, immutable URL https://incomeflow-cpt6v6l13-sopskistars-projects.vercel.app. Both public browser assertions and production screenshots passed in GitHub Actions; see PRODUCTION_QA.md. No automatic Vercel-on-push integration is claimed: deployments were issued explicitly through the authenticated CLI, while GitHub Actions runs verification only.
+
+## Payment Passport promotion
+
+The feature adds no database, private server signer or new environment secret. Preserve `incomeflow-testnet-demo` and the prior immutable Vercel deployment as fallback. Verify the feature branch with normal CI and internal audit before promotion. After deploying the reviewed source, run `gh workflow run public-qa.yml --ref main -f url=https://incomeflow-gamma.vercel.app`, inspect its actual browser results and screenshot artifact, and record the deployment/commit. Public verification is an explicit post-deployment workflow so feature tests do not compare new selectors against intentionally unchanged production. No contract deployment is part of web promotion.

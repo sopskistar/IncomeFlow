@@ -29,3 +29,7 @@ The original verified run received one hundred demo tokens and paid fifty, thirt
 ## Set your plan once. (134–150s)
 
 IncomeFlow is a testnet prototype for personal income automation. Tax reserves are user choices, and mainnet use would require independent security review. Set your plan once. Let supported payments find their purpose.
+
+## Payment Passport revision
+
+The complete synchronized narration is versioned in `video/passport-narration.json`. The designer/job is visibly illustrative. Both test payments must be made after the signed request exists; the owner explicitly associates exact receipt logs. Research is attributed to QuickBooks with scope qualification. The original M1 is identified separately. No client identity, adoption, faster collection or product time-savings claim is permitted. Keep the original released MP4 intact.

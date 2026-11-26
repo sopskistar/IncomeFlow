@@ -48,3 +48,19 @@ Vercel serves the Next.js app and read-only `/api/vault/[address]` route. The AP
 Wallet writes occur only through the connected EVM provider. Multi-step setup explicitly confirms the network for every step so React render state cannot skip a required switch. Confirmed public creation addresses are stored locally for resumption; the test runner separately persists every broadcast hash. Rule drafts use per-vault/per-policy session storage and survive navigation/reload. Saving removes the old draft while retaining the submitted values until the refreshed policy remounts the editor. The illustrative SSR calculator cannot accept edits until its handlers hydrate.
 
 Neither local storage nor the public read API can authorize a callback or change a vault's recipients. No signing material is included in the app deployment. The optional encrypted Node signer exists only in opt-in test infrastructure.
+
+## Payment Passport application boundary
+
+```mermaid
+flowchart LR
+  Owner[Vault owner] -->|EIP-712 request| Link[Versioned shared request]
+  Link --> Verify[Read-only verification API]
+  Verify -->|runtime + current ownership| Base[Base Sepolia]
+  Client[Client wallet] -->|ordinary token Transfer| Base
+  Owner -->|signed exact log association| Passport[Local Payment Passport]
+  Passport --> Verify
+  Verify -->|optional exact execution receipt| Lasna[Reactive Lasna]
+  Passport --> Backup[Versioned JSON backup]
+```
+
+No new funds-moving contract is introduced. Signed metadata cannot authorize a vault payout. The existing Reactive contract and authenticated vault remain the only automation path. Refer to PAYMENT_PASSPORT.md for schema, attestation, attribution, partial sums and privacy.

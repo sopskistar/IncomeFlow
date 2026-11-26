@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-11-26T18:59:58.428271+00:00",
+  "branch": "feat/payment-passport",
+  "baseline": "1fdbad7cc96ec426b435fb2126e0d881daa72984",
+  "checks": {
+    "contracts": {
+      "passed": 28,
+      "log": "/tmp/incomeflow-passport-foundry.log",
+      "note": "Solidity unchanged; fuzz/invariant included. Final CI repeats regression."
+    },
+    "unit": {
+      "passed": 25,
+      "log": "/tmp/incomeflow-passport-unit.log"
+    },
+    "browser": {
+      "passed": 20,
+      "log": "/tmp/incomeflow-passport-browser-final.log",
+      "note": "No test sends a blockchain transaction."
+    },
+    "build": {
+      "status": "passed",
+      "log": "/tmp/incomeflow-passport-build-final.log",
+      "includesTypecheck": true
+    },
+    "lint": {
+      "status": "passed",
+      "log": "/tmp/incomeflow-passport-lint-release.log"
+    },
+    "dependencyAudit": {
+      "productionVulnerabilities": 0,
+      "log": "/tmp/incomeflow-passport-audit.log"
+    },
+    "liveAcceptance": {
+      "status": "passed",
+      "completed": "2026-11-26T16:41:50.566Z",
+      "additionalTransactionsThisResumption": 0
+    }
+  },
+  "visual": {
+    "assessmentA": "listed findings resolved; ship",
+    "assessmentB": "listed findings resolved; static0FAIL0REFLEX0WARN4dismissed; long confirmation label shortened, public final capture pending",
+    "capture": {
+      "root": "http://localhost:3098",
+      "checkedAt": "2026-11-26T18:20:24.635Z",
+      "errors": [],
+      "recording": "/home/sopski/projects/IncomeFlow/artifacts/video/passport/raw/page@a17450b84acf9fcbc8fc244256cf8d2f.webm",
+      "marks": {
+        "landing": 1.248,
+        "empty-request": 4.418,
+        "partial": 15.439,
+        "settled-client": 28.318,
+        "full-passport": 46.243,
+        "proof-first": 50.299,
+        "proof-second": 55.488
+      },
+      "source": "Genuine live RPC reads of the original signed request and its first/all association sets. No injected wallet, no signing or new transaction."
+    },
+    "ownerCapture": {
+      "root": "http://localhost:3098",
+      "checkedAt": "2026-11-26T18:33:02.393Z",
+      "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "errors": [],
+      "mode": "Read-only encrypted-account connection; genuine saved signatures verified; unsigned form preview; no signing or transaction method."
+    }
+  },
+  "security": {
+    "scope": "Internal engineering review; not an independent audit",
+    "unresolvedCriticalHigh": 0,
+    "solar": "Parser tooling limitation, not passed"
+  },
+  "deployment": "Prior production preserved; extension not promoted yet",
+  "video": "Revision in production; original published film preserved"
+}

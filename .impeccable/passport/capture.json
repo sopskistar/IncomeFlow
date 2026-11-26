@@ -1,0 +1,16 @@
+{
+  "root": "http://localhost:3098",
+  "checkedAt": "2026-11-26T18:20:24.635Z",
+  "errors": [],
+  "recording": "/home/sopski/projects/IncomeFlow/artifacts/video/passport/raw/page@a17450b84acf9fcbc8fc244256cf8d2f.webm",
+  "marks": {
+    "landing": 1.248,
+    "empty-request": 4.418,
+    "partial": 15.439,
+    "settled-client": 28.318,
+    "full-passport": 46.243,
+    "proof-first": 50.299,
+    "proof-second": 55.488
+  },
+  "source": "Genuine live RPC reads of the original signed request and its first/all association sets. No injected wallet, no signing or new transaction."
+}

@@ -443,6 +443,9 @@ export function Workspace() {
                   <RefreshCw size={14} aria-hidden="true" />
                   {query.isFetching ? "Syncing…" : "Refresh"}
                 </button>
+                <Link className="text-link" href="/passport">
+                  Payment Passport
+                </Link>
                 <Link className="text-link" href="/app">
                   Change vault
                 </Link>
@@ -718,10 +721,11 @@ function RulesEditor({
         { recipient: "", percent: "30", label: "Savings" },
         { recipient: "", percent: "20", label: "Tax reserve" },
       ];
-  const { rows, setRows, clear, commit, storageFailed, changed } = useAllocationDraft(
-    `incomeflow.rules.${data.address.toLowerCase()}.${data.policyVersion}`,
-    initialRows,
-  );
+  const { rows, setRows, clear, commit, storageFailed, changed } =
+    useAllocationDraft(
+      `incomeflow.rules.${data.address.toLowerCase()}.${data.policyVersion}`,
+      initialRows,
+    );
   const formRef = useRef<HTMLFormElement>(null);
   const [submitted, setSubmitted] = useState(false);
   const validation = validateRules(rows, [data.address, data.token, proxy]);

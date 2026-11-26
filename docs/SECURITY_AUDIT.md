@@ -63,3 +63,28 @@ Application/contract/test/workflow files remain unchanged from the passing `546e
 The initial video audit followed the reused shared node_modules symlink and reported one moderate minimatch glob-amplification advisory in the shared installation. That installation was not modified. The video project now has an independent portable registry lockfile, audited with zero vulnerabilities. Rendering used trusted project paths only; these offline tools are excluded from the deployed application. The web application's separate production dependency audit was also clean.
 
 Final publication check: the release MP4 was anonymously downloaded and matched the validated local SHA-256. Secrets/keystores, raw temporary recordings, caches and the shared dependency symlink are excluded from Git. Final application/contract source did not change during media finalization, so no additional live transaction or manual full-suite rerun was necessary. The normal main-branch CI remains the closing regression gate.
+
+## Payment Passport extension review — 2026-11-26
+
+Scope adds `passport.ts`, `passport-chain.ts`, bounded read-only verification route, request/client pages, local archives and opt-in encrypted acceptance harness. Existing Solidity is unchanged; 28 Foundry regressions passed again. The preserved release's audit result above does not automatically attest to this extension.
+
+Reviewed boundaries: domain-separated EIP-712 EOA signatures; all metadata included in the signed request; current owner read; pinned compiled vault runtime with immutable masking; fixed chain/token/proxy; explicit owner association bound to full request digest and exact origin hash/log; integer arithmetic; duplicates within/across local requests; receipt status/token/to/payer/time; callback-to-proxy transaction with matching canonical-vault events and actual token payouts; optional exact Reactive receipt; schema/version/date/size/control-text validation; escaped rendering; namespaced validated archives; no signing service in production.
+
+| ID | Severity / disposition | Finding and resolution |
+| --- | --- | --- |
+| PP-01 | Medium, resolved before release | Initial callback verifier assumed a top-level transaction from proxy to vault. Actual historical receipt showed relayer → proxy → vault. Verifier now checks proxy target plus exact canonical-vault logs, conserved allocations and actual transfers; regression cases reject wrong targets and fabricated payouts. |
+| PP-02 | Low, resolved before release | Old verification results were keyed only by request metadata while association sets could change. Results now fingerprint the entire validated envelope, and an already verified saved association avoids a redundant loading/reset cycle. |
+| PP-03 | Low, resolved before release | Unbounded chunked JSON bodies could be buffered before size checking. Verification now reads a stream with a 50,000-byte limit and cancels excess input. |
+| PP-04 | Low, mitigated | Receipt verification consumes public RPC resources. Association count is capped at 20, discovery at 2,000 blocks, concurrency at 3 and UI verification at 55 seconds. Public infrastructure quotas and transient RPC failures remain operational limits. |
+| PP-05 | Informational, accepted | There is no global invoice registry or exclusive cross-device attribution. An owner can issue conflicting independent associations. Local duplicate prevention and explicit disclosure avoid implying legally exclusive settlement. |
+| PP-06 | Informational, accepted | EOA signatures only; no EIP-1271 support or cryptographic client-identity attestation. Ownership changes invalidate earlier requests; signed links are public, non-expiring by default and do not auto-sync. |
+
+The genuine new request and two test-token payments are recorded independently in ONCHAIN_PROOF.md. No old transfer was relabeled as a newly issued invoice. The production API has no keystore access; the opt-in Node harness restricts signatures to this domain/vault and permits only 40+60 ifUSD payments, persists every hash and refuses further sends. Returning-owner test harness selector/initialization failures and RPC limitations are retained in the QA ledger.
+
+No unresolved critical/high issue has been identified in this internal scope so far. Final regression, screenshot critique and public deployment checks remain the extension's release gates. Solar still has the documented inherited-constructor parser limitation and is not reported as passed. This is not an independent professional audit.
+
+### Final review corrections
+
+Independent UI/source review found that Review → Edit dropped the expected payer and due date, and the signing review omitted title/amount. Both are corrected and covered by a non-signing browser regression. A settled request now clearly states no further payment is requested; any amount above the verified associated outstanding balance requires explicit additional-payment acknowledgment, rechecked immediately before signing a transfer. Verification failures block payment.
+
+The verifier now also attests the compiled IncomeFlowReactive runtime and checks its token/vault binding on Lasna. A malicious contract emitting a lookalike PaymentObserved event is insufficient. Invalid request/association signatures are rejected before RPC reads, followed by a fresh current-owner check. This strengthens evidence authentication without changing deployed contracts or repeating payments. Final regression outcomes are recorded in PASSPORT_QA.md.

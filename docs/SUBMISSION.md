@@ -1,3 +1,28 @@
+# IncomeFlow — Give Every Payment a Purpose
+
+## Story and product description
+
+A freelancer finishes the work. Managing the payment can still create another round of administration: requesting payment, recognizing transfers, tracking outstanding amounts and organizing income. Our designer scenario is illustrative, never a claimed customer.
+
+Primary small-business and receivables research supports the wider problem; see [PROBLEM_RESEARCH](PROBLEM_RESEARCH.md) for precise scope and methodology. It does not demonstrate IncomeFlow's effectiveness or establish crypto-freelancer prevalence.
+
+IncomeFlow addresses a narrow part of that workflow. Payment Passport connects a signed supported-token request to explicitly owner-associated verified transfers and the financial outcome. Incoming ifUSD reaches the user's existing smart vault through an ordinary ERC-20 transfer. Reactive Omni observes its exact event subscription and requests an authenticated callback, which distributes funds according to owner-controlled rules. The user does not keep a bot running or initiate each allocation.
+
+The original M1 and signed-wallet demonstration provide real public origin → Reactive → callback → 50/30/20 payout proof. They are engineering tests, not commercial income. Passport-specific live acceptance and revised media must be verified separately before claiming the updated workflow is ready. Current status: BUILD_STATUS.md.
+
+The prototype cannot enforce collection, guarantee cash flow, resolve disputes or calculate tax liability. Request metadata and payment associations are application features; Reactive performs the actual event-triggered allocation. Browser-local records need backups, and public links do not automatically synchronize. An internal review is not an independent security audit.
+
+## Judging evidence
+
+- Execution: deployed contracts and exact transaction evidence in ONCHAIN_PROOF.md.
+- Integration: a regular token Transfer does not execute receiving-vault logic; the Reactive callback performs that essential action.
+- Usefulness: a coherent request-to-organized-income record for independent professionals.
+- Craft: reproducible source, explicit trust boundaries, owner controls, tests, responsive application and genuinely recorded footage.
+
+---
+
+## Preserved submission details
+
 # DoraHacks submission draft
 
 **Title:** IncomeFlow — give every payment a purpose
