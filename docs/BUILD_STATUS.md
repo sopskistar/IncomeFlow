@@ -10,7 +10,7 @@ Updated 2026-11-26. Preserved verified M1 commit `af46408` on `main`; applicatio
 | M3 | Implemented and verified | Separate signed UI vault setup, subscription, policy, real payment/callback, pause/resume and returning-owner receipt. `deployments/browser-proof.json`. |
 | M4 | Implemented and verified | Original identity; actual desktop/tablet/390/320 light/dark inspection. Independent nav finding resolved. Hallmark static 0 FAIL/REFLEX/WARN, 2 documented dismissals; renderer unavailable. |
 | M5 | Implemented and verified | Frozen production build; lint/types/7 units/28 Foundry tests; 14 local and 14 public browser tests; 0 dependency vulnerabilities. Vercel verified through independent CI and ten inspected public screenshots, zero browser errors. |
-| M6 | Implemented and verified locally | Final 150.0s 1080p30 H.264/AAC film, full decode, narration correlation, zero black intervals and reviewed frames. Portable source and submission draft complete; release/push closing steps below. |
+| M6 | Implemented and verified | Final 150.0s 1080p30 H.264/AAC film decoded/inspected, published with captions and verified by anonymous download checksum. Portable source and submission package complete. |
 
 ## Signed acceptance recovery
 
@@ -24,13 +24,15 @@ No original M1 deployment or faucet was repeated. Initial provider permissions/t
 
 Stopped only the stale IncomeFlow Remotion Studio. Unrelated host processes were preserved. Heavy local operations run sequentially, browser workers 1, Next build CPUs 1. Public app: https://incomeflow-gamma.vercel.app. Vercel initial deployment `dpl_7dWuHW1D4u5VB6LGWsWA2YCmyov9`; superseded by the verified deployment below. No database or paid service.
 
-## Closing delivery steps
+## Delivery and remaining user actions
 
-1. Publish the verified MP4, captions and verification JSON as a release artifact.
-2. Push the final source/media documentation and inspect the closing CI run.
-3. User checks exact authenticated portal cutoff/fields, reviews the package and manually submits to DoraHacks. No automatic submission.
+Verified source/media milestone: `b7b25e3129d0fac333d9004ee3fd11a785d6132d`, pushed to `main`. [Public testnet demo release](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo); [direct MP4](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow-demo.mp4). Anonymous download matched SHA-256 `5a35aaadd5614c96f0a4da6f7c82ac645fe0abc5669cae92f313c9a7fbe1e530`, 5,281,055 bytes. Release assets include captions and verification JSON. Source, narration and edited genuine footage are committed; large originals/rendered output remain outside Git history.
 
-Final movie: `artifacts/video/incomeflow-demo.mp4`, 5,281,055 bytes, SHA-256 `5a35aaadd5614c96f0a4da6f7c82ac645fe0abc5669cae92f313c9a7fbe1e530`. No new testnet transaction or faucet request was made during this final video resumption. Original recordings and superseded segments remain local. The initial browser renderer failed; the successful sequential native pipeline reused completed scenes and then repaired only setup/payment trims after frame review. Final source details: VIDEO_TIMELINE.md.
+The closing documentation commit records these verified links. Latest main CI is visible at [IncomeFlow checks](https://github.com/sopskistar/IncomeFlow/actions/workflows/ci.yml); its actual closing result is checked before delivery. Application/contract files are unchanged from the passing QA checkpoint. No manual repeat of passed core tests, blockchain transaction or faucet request was used in this video resumption.
+
+Overall submission disposition: **CONDITIONAL PASS**. Technical deliverables pass; the exact authenticated DoraHacks cutoff and portal-specific fields remain user-only checks. Review the package and manually submit. No DoraHacks submission was performed automatically.
+
+Original recordings and superseded segments are preserved locally. The initial full-browser render failed; the successful native pipeline reused all motion scenes and repaired only setup/payment trims after visual inspection. Final media report: `deployments/video.json`; reproduction: VIDEO_TIMELINE.md.
 
 ## Independent production verification
 

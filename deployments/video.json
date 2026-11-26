@@ -144,5 +144,11 @@
   },
   "renderStrategy": "Original Remotion motion graphics + native FFmpeg genuine-video composite",
   "sourceEditMap": "video/edit.json",
-  "publicRelease": "pending publication"
+  "publicRelease": {
+    "url": "https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo",
+    "mp4": "https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow-demo.mp4",
+    "anonymousDownloadVerified": true,
+    "downloadSha256": "5a35aaadd5614c96f0a4da6f7c82ac645fe0abc5669cae92f313c9a7fbe1e530",
+    "sourceCommit": "b7b25e3129d0fac333d9004ee3fd11a785d6132d"
+  }
 }

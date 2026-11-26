@@ -1,16 +1,395 @@
-import React from 'react';
-import {registerRoot,Composition,AbsoluteFill,Sequence,Audio,OffthreadVideo,Img,staticFile,useCurrentFrame,interpolate,Easing} from 'remotion';
-import scenes from '../narration.json';
-import edit from '../edit.json';
-const C={pine:'#145e4d',ink:'#15352e',paper:'#f3f7f3',muted:'#a9beb4',white:'#fff',gold:'#ba9550',blue:'#6b87a3'};
-const font='Manrope, sans-serif';
-const enter=(f:number)=>interpolate(f,[0,22],[0,1],{extrapolateLeft:'clamp',extrapolateRight:'clamp',easing:Easing.out(Easing.cubic)});
-function Mark({light=false}:{light?:boolean}){return <div style={{display:'flex',alignItems:'center',gap:16,fontSize:34,fontWeight:800}}><Img src={staticFile(`brand/mark-${light?'dark':'light'}.svg`)} style={{width:52,height:52}}/>IncomeFlow</div>}
-function Allocation({animate=true}:{animate?:boolean}){const f=useCurrentFrame();return <div style={{display:'flex',gap:20,width:'100%'}}>{[['Spending','50%',C.pine],['Savings','30%',C.blue],['Tax reserve','20%',C.gold]].map(([label,number,color],i)=><div key={label} style={{flex:[5,3,2][i],opacity:animate?enter(f-i*12):1,transform:`translateY(${animate?(1-enter(f-i*12))*24:0}px)`}}><div style={{height:14,background:color,borderRadius:3,marginBottom:26}}/><div style={{fontSize:22,marginBottom:12}}>{label}</div><div style={{fontSize:62,fontWeight:600,letterSpacing:-2}}>{number}</div></div>)}</div>}
-function Hero({closing=false}:{closing?:boolean}){const f=useCurrentFrame();return <AbsoluteFill style={{background:C.ink,color:C.paper,padding:'90px 116px',justifyContent:'space-between'}}><Mark light/><div style={{opacity:enter(f),transform:`translateY(${(1-enter(f))*24}px)`}}><div style={{color:C.muted,fontSize:24,marginBottom:26}}>{closing?'PERSONAL INCOME AUTOMATION':'REACTIVE OMNI BUILDATHON · SET IT AND FORGET IT'}</div><div style={{fontSize:104,fontWeight:600,lineHeight:1.08,letterSpacing:-5,maxWidth:1400}}>{closing?<>Set your plan once.<br/>Let income find its purpose.</>:<>Give every payment<br/>a purpose.</>}</div><p style={{fontSize:30,color:C.muted,marginTop:30}}>{closing?'Open source. Owner controlled. Testnet prototype.':'Spending. Savings. The reserves you choose.'}</p></div>{closing?<div style={{display:'flex',justifyContent:'space-between',fontSize:24,color:C.muted}}><span>github.com/sopskistar/IncomeFlow</span><span>Independent security review required before mainnet use.</span></div>:<div style={{width:1100}}><Allocation/><div style={{fontSize:20,color:C.muted,marginTop:28}}>Illustration · user-selected allocations · tax reserve is not a tax calculation</div></div>}</AbsoluteFill>}
-function Automation(){const f=useCurrentFrame();const items=[['01','A regular payment','Base Sepolia','Token Transfer event'],['02','An exact subscription','Reactive Lasna','Token + vault destination'],['03','A verified callback','Base Sepolia','Provider + Reactive sender'],['04','Your allocation','Owner-controlled vault','Replay check + 50 / 30 / 20']];return <AbsoluteFill style={{background:C.paper,color:C.ink,padding:'75px 100px'}}><Mark/><div style={{fontSize:64,fontWeight:600,letterSpacing:-2,marginTop:80}}>Reactive does the essential work.</div><p style={{fontSize:28,color:'#547166'}}>No backend payout key. No need to stay online.</p><div style={{display:'flex',gap:22,marginTop:110}}>{items.map(([n,title,network,detail],i)=><div key={n} style={{flex:1,borderTop:`8px solid ${i===3?C.gold:C.pine}`,padding:'28px 22px',opacity:enter(f-i*28),background:'white',minHeight:280}}><div style={{fontSize:22,color:C.pine}}>{n} / {network}</div><div style={{fontSize:34,fontWeight:600,marginTop:36,lineHeight:1.2}}>{title}</div><div style={{fontSize:22,marginTop:26,color:'#547166'}}>{detail}</div></div>)}</div><div style={{fontSize:20,marginTop:72,color:'#547166'}}>Architecture illustration · actual transaction evidence follows</div></AbsoluteFill>}
-function Footage({id,title,kicker,plateOnly=false}:{id:string;title:string;kicker:string;plateOnly?:boolean}){const f=useCurrentFrame();const clip=(edit.clips as {id:string;file:string}[]).find(c=>c.id===id);return <AbsoluteFill style={{background:C.paper,color:C.ink,padding:'46px 72px'}}><div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}><Mark/><span style={{fontSize:20,color:'#547166'}}>REAL APPLICATION FOOTAGE · TESTNET</span></div><div style={{display:'flex',alignItems:'baseline',justifyContent:'space-between',margin:'30px 0 24px'}}><h1 style={{fontSize:48,letterSpacing:-2,fontWeight:600,margin:0}}>{title}</h1><span style={{fontSize:20,color:'#547166'}}>{kicker}</span></div><div style={{position:'absolute',left:72,top:220,width:1776,overflow:'hidden',height:790,border:'1px solid #c5d4cb',borderRadius:0,background:'white',opacity:plateOnly?1:enter(f)}}>{plateOnly?null:clip?<OffthreadVideo src={staticFile(clip.file)} muted style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:id==='payment'?'center bottom':'center center'}}/>:<div style={{padding:80,fontSize:40}}>Footage required before final render</div>}</div></AbsoluteFill>}
-const Film=()=> <AbsoluteFill style={{fontFamily:font}}><style>{`@font-face{font-family:Manrope;src:url('${staticFile('fonts/manrope-400.ttf')}');font-weight:400}@font-face{font-family:Manrope;src:url('${staticFile('fonts/manrope-600.ttf')}');font-weight:600}@font-face{font-family:Manrope;src:url('${staticFile('fonts/manrope-800.ttf')}');font-weight:800}`}</style>{scenes.map(s=><Sequence key={s.id} from={s.from*30} durationInFrames={s.duration*30}><Audio src={staticFile(`narration/${s.id}.mp3`)}/>{s.id==='opening'?<Hero/>:s.id==='closing'?<Hero closing/>:s.id==='automation'?<Automation/>:<Footage id={s.id} title={s.title} kicker={s.id==='setup'?'Local encrypted test wallet':s.id==='proof'?'Original verified M1 run':'Actual chain receipts'}/>}</Sequence>)}</AbsoluteFill>;
-const Plate=({sceneId}:{sceneId:string})=>{const s=scenes.find(s=>s.id===sceneId)!;return <AbsoluteFill style={{fontFamily:font}}><style>{`@font-face{font-family:Manrope;src:url('${staticFile('fonts/manrope-400.ttf')}');font-weight:400}@font-face{font-family:Manrope;src:url('${staticFile('fonts/manrope-600.ttf')}');font-weight:600}@font-face{font-family:Manrope;src:url('${staticFile('fonts/manrope-800.ttf')}');font-weight:800}`}</style><Footage id={s.id} title={s.title} kicker={s.id==='setup'?'Local encrypted test wallet':s.id==='proof'?'Original verified M1 run':'Actual chain receipts'} plateOnly/></AbsoluteFill>};
-const Root=()=> <><Composition id="IncomeFlow" component={Film} durationInFrames={4500} fps={30} width={1920} height={1080}/><Composition id="Plate" component={Plate} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{sceneId:'setup'}}/></>;
+import React from "react";
+import {
+  registerRoot,
+  Composition,
+  AbsoluteFill,
+  Sequence,
+  Audio,
+  OffthreadVideo,
+  Img,
+  staticFile,
+  useCurrentFrame,
+  interpolate,
+  Easing,
+} from "remotion";
+import scenes from "../narration.json";
+import edit from "../edit.json";
+const C = {
+  pine: "#145e4d",
+  ink: "#15352e",
+  paper: "#f3f7f3",
+  muted: "#a9beb4",
+  white: "#fff",
+  gold: "#ba9550",
+  blue: "#6b87a3",
+};
+const font = "Manrope, sans-serif";
+const enter = (f: number) =>
+  interpolate(f, [0, 22], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  });
+function Mark({ light = false }: { light?: boolean }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 16,
+        fontSize: 34,
+        fontWeight: 800,
+      }}
+    >
+      <Img
+        src={staticFile(`brand/mark-${light ? "dark" : "light"}.svg`)}
+        style={{ width: 52, height: 52 }}
+      />
+      IncomeFlow
+    </div>
+  );
+}
+function Allocation({ animate = true }: { animate?: boolean }) {
+  const f = useCurrentFrame();
+  return (
+    <div style={{ display: "flex", gap: 20, width: "100%" }}>
+      {[
+        ["Spending", "50%", C.pine],
+        ["Savings", "30%", C.blue],
+        ["Tax reserve", "20%", C.gold],
+      ].map(([label, number, color], i) => (
+        <div
+          key={label}
+          style={{
+            flex: [5, 3, 2][i],
+            opacity: animate ? enter(f - i * 12) : 1,
+            transform: `translateY(${animate ? (1 - enter(f - i * 12)) * 24 : 0}px)`,
+          }}
+        >
+          <div
+            style={{
+              height: 14,
+              background: color,
+              borderRadius: 3,
+              marginBottom: 26,
+            }}
+          />
+          <div style={{ fontSize: 22, marginBottom: 12 }}>{label}</div>
+          <div style={{ fontSize: 62, fontWeight: 600, letterSpacing: -2 }}>
+            {number}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+function Hero({ closing = false }: { closing?: boolean }) {
+  const f = useCurrentFrame();
+  return (
+    <AbsoluteFill
+      style={{
+        background: C.ink,
+        color: C.paper,
+        padding: "90px 116px",
+        justifyContent: "space-between",
+      }}
+    >
+      <Mark light />
+      <div
+        style={{
+          opacity: enter(f),
+          transform: `translateY(${(1 - enter(f)) * 24}px)`,
+        }}
+      >
+        <div style={{ color: C.muted, fontSize: 24, marginBottom: 26 }}>
+          {closing
+            ? "PERSONAL INCOME AUTOMATION"
+            : "REACTIVE OMNI BUILDATHON · SET IT AND FORGET IT"}
+        </div>
+        <div
+          style={{
+            fontSize: 104,
+            fontWeight: 600,
+            lineHeight: 1.08,
+            letterSpacing: -5,
+            maxWidth: 1400,
+          }}
+        >
+          {closing ? (
+            <>
+              Set your plan once.
+              <br />
+              Let income find its purpose.
+            </>
+          ) : (
+            <>
+              Give every payment
+              <br />a purpose.
+            </>
+          )}
+        </div>
+        <p style={{ fontSize: 30, color: C.muted, marginTop: 30 }}>
+          {closing
+            ? "Open source. Owner controlled. Testnet prototype."
+            : "Spending. Savings. The reserves you choose."}
+        </p>
+      </div>
+      {closing ? (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: 24,
+            color: C.muted,
+          }}
+        >
+          <span>github.com/sopskistar/IncomeFlow</span>
+          <span>Independent security review required before mainnet use.</span>
+        </div>
+      ) : (
+        <div style={{ width: 1100 }}>
+          <Allocation />
+          <div style={{ fontSize: 20, color: C.muted, marginTop: 28 }}>
+            Illustration · user-selected allocations · tax reserve is not a tax
+            calculation
+          </div>
+        </div>
+      )}
+    </AbsoluteFill>
+  );
+}
+function Automation() {
+  const f = useCurrentFrame();
+  const items = [
+    ["01", "A regular payment", "Base Sepolia", "Token Transfer event"],
+    [
+      "02",
+      "An exact subscription",
+      "Reactive Lasna",
+      "Token + vault destination",
+    ],
+    ["03", "A verified callback", "Base Sepolia", "Provider + Reactive sender"],
+    [
+      "04",
+      "Your allocation",
+      "Owner-controlled vault",
+      "Replay check + 50 / 30 / 20",
+    ],
+  ];
+  return (
+    <AbsoluteFill
+      style={{ background: C.paper, color: C.ink, padding: "75px 100px" }}
+    >
+      <Mark />
+      <div
+        style={{
+          fontSize: 64,
+          fontWeight: 600,
+          letterSpacing: -2,
+          marginTop: 80,
+        }}
+      >
+        Reactive does the essential work.
+      </div>
+      <p style={{ fontSize: 28, color: "#547166" }}>
+        No backend payout key. No need to stay online.
+      </p>
+      <div style={{ display: "flex", gap: 22, marginTop: 110 }}>
+        {items.map(([n, title, network, detail], i) => (
+          <div
+            key={n}
+            style={{
+              flex: 1,
+              borderTop: `8px solid ${i === 3 ? C.gold : C.pine}`,
+              padding: "28px 22px",
+              opacity: enter(f - i * 28),
+              background: "white",
+              minHeight: 280,
+            }}
+          >
+            <div style={{ fontSize: 22, color: C.pine }}>
+              {n} / {network}
+            </div>
+            <div
+              style={{
+                fontSize: 34,
+                fontWeight: 600,
+                marginTop: 36,
+                lineHeight: 1.2,
+              }}
+            >
+              {title}
+            </div>
+            <div style={{ fontSize: 22, marginTop: 26, color: "#547166" }}>
+              {detail}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style={{ fontSize: 20, marginTop: 72, color: "#547166" }}>
+        Architecture illustration · actual transaction evidence follows
+      </div>
+    </AbsoluteFill>
+  );
+}
+function Footage({
+  id,
+  title,
+  kicker,
+  plateOnly = false,
+}: {
+  id: string;
+  title: string;
+  kicker: string;
+  plateOnly?: boolean;
+}) {
+  const f = useCurrentFrame();
+  const clip = (edit.clips as { id: string; file: string }[]).find(
+    (c) => c.id === id,
+  );
+  return (
+    <AbsoluteFill
+      style={{ background: C.paper, color: C.ink, padding: "46px 72px" }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <Mark />
+        <span style={{ fontSize: 20, color: "#547166" }}>
+          REAL APPLICATION FOOTAGE · TESTNET
+        </span>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          justifyContent: "space-between",
+          margin: "30px 0 24px",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: 48,
+            letterSpacing: -2,
+            fontWeight: 600,
+            margin: 0,
+          }}
+        >
+          {title}
+        </h1>
+        <span style={{ fontSize: 20, color: "#547166" }}>{kicker}</span>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          left: 72,
+          top: 220,
+          width: 1776,
+          overflow: "hidden",
+          height: 790,
+          border: "1px solid #c5d4cb",
+          borderRadius: 0,
+          background: "white",
+          opacity: plateOnly ? 1 : enter(f),
+        }}
+      >
+        {plateOnly ? null : clip ? (
+          <OffthreadVideo
+            src={staticFile(clip.file)}
+            muted
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition:
+                id === "payment" ? "center bottom" : "center center",
+            }}
+          />
+        ) : (
+          <div style={{ padding: 80, fontSize: 40 }}>
+            Footage required before final render
+          </div>
+        )}
+      </div>
+    </AbsoluteFill>
+  );
+}
+const Film = () => (
+  <AbsoluteFill style={{ fontFamily: font }}>
+    <style>{`@font-face{font-family:Manrope;src:url('${staticFile("fonts/manrope-400.ttf")}');font-weight:400}@font-face{font-family:Manrope;src:url('${staticFile("fonts/manrope-600.ttf")}');font-weight:600}@font-face{font-family:Manrope;src:url('${staticFile("fonts/manrope-800.ttf")}');font-weight:800}`}</style>
+    {scenes.map((s) => (
+      <Sequence
+        key={s.id}
+        from={s.from * 30}
+        durationInFrames={s.duration * 30}
+      >
+        <Audio src={staticFile(`narration/${s.id}.mp3`)} />
+        {s.id === "opening" ? (
+          <Hero />
+        ) : s.id === "closing" ? (
+          <Hero closing />
+        ) : s.id === "automation" ? (
+          <Automation />
+        ) : (
+          <Footage
+            id={s.id}
+            title={s.title}
+            kicker={
+              s.id === "setup"
+                ? "Local encrypted test wallet"
+                : s.id === "proof"
+                  ? "Original verified M1 run"
+                  : "Actual chain receipts"
+            }
+          />
+        )}
+      </Sequence>
+    ))}
+  </AbsoluteFill>
+);
+const Plate = ({ sceneId }: { sceneId: string }) => {
+  const s = scenes.find((s) => s.id === sceneId)!;
+  return (
+    <AbsoluteFill style={{ fontFamily: font }}>
+      <style>{`@font-face{font-family:Manrope;src:url('${staticFile("fonts/manrope-400.ttf")}');font-weight:400}@font-face{font-family:Manrope;src:url('${staticFile("fonts/manrope-600.ttf")}');font-weight:600}@font-face{font-family:Manrope;src:url('${staticFile("fonts/manrope-800.ttf")}');font-weight:800}`}</style>
+      <Footage
+        id={s.id}
+        title={s.title}
+        kicker={
+          s.id === "setup"
+            ? "Local encrypted test wallet"
+            : s.id === "proof"
+              ? "Original verified M1 run"
+              : "Actual chain receipts"
+        }
+        plateOnly
+      />
+    </AbsoluteFill>
+  );
+};
+const Root = () => (
+  <>
+    <Composition
+      id="IncomeFlow"
+      component={Film}
+      durationInFrames={4500}
+      fps={30}
+      width={1920}
+      height={1080}
+    />
+    <Composition
+      id="Plate"
+      component={Plate}
+      durationInFrames={1}
+      fps={30}
+      width={1920}
+      height={1080}
+      defaultProps={{ sceneId: "setup" }}
+    />
+  </>
+);
 registerRoot(Root);

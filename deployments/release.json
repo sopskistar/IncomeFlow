@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-26T10:46:03.369166+00:00",
+  "url": "https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo",
+  "sourceCommit": "b7b25e3129d0fac333d9004ee3fd11a785d6132d",
+  "isDraft": false,
+  "isPrerelease": true,
+  "anonymousMp4DownloadVerified": true,
+  "sha256": "5a35aaadd5614c96f0a4da6f7c82ac645fe0abc5669cae92f313c9a7fbe1e530",
+  "assets": [
+    {
+      "name": "incomeflow-demo.mp4",
+      "sizeBytes": 5281055,
+      "url": "https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow-demo.mp4"
+    },
+    {
+      "name": "incomeflow.srt",
+      "sizeBytes": 2909,
+      "url": "https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow.srt"
+    },
+    {
+      "name": "verification.json",
+      "sizeBytes": 1026,
+      "url": "https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/verification.json"
+    }
+  ]
+}

@@ -34,3 +34,5 @@ The public repository includes the four edited genuine source clips and seven na
 ## Verification performed
 
 Full FFmpeg decode succeeded. FFprobe confirms resolution, duration, 30 fps, H.264 and AAC. No black interval of at least 0.1 seconds was detected. Every scene has multiple distinct sampled frames; intentional reading/real-network holds are preserved. All seven narration tracks match the rendered scene audio with envelope correlations above 0.9998 and measured 0.00-second offsets. Representative decoded frames, including revised rule entry, real receipt, architecture, original proof and closing, were visually inspected for legibility and missing/corrupt content. This records the actual review method rather than claiming a separate human listening session.
+
+Public download: [verified MP4](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow-demo.mp4); [release/captions](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo). Anonymous download/checksum verified after publication.

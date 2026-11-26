@@ -56,9 +56,15 @@ This prototype supports only its conventional valueless demo token on Base Sepol
 - [x] Signed frontend workflow and internal security audit.
 - [x] Final post-fix production browser recheck: 14/14 plus ten inspected production screenshots.
 - [x] Final narrated MP4: 150.0 seconds, full decode, aligned audio and inspected frames.
-- [ ] Public MP4 release link verified.
-- [ ] Final CI/commit and evidence ledger reconciled.
+- [x] [Public MP4 release](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo) verified by anonymous download/checksum.
+- [x] Source/media milestone pushed; evidence ledger reconciled. Closing main CI is checked at delivery.
 - [ ] User checks exact DoraHacks closing time and any authenticated portal fields.
 - [ ] User reviews and manually submits; no automatic submission authorized.
 
 Official announcement confirms December 5, equal execution/integration/usefulness/craft scoring and video under three minutes. The [DoraHacks event page](https://dorahacks.io/hackathon/reactive-omni-buildathon/detail) repeatedly returned HTTP 405 to automated access. Exact cutoff/timezone is **not verified**; do not infer it from a third-party listing. [Official organizer announcement](https://blog.reactive.network/reactive-omni-buildathon-thirty-days-to-find-out-what-one-second-buys/).
+
+## Demo delivery
+
+[Watch/download the 150-second MP4](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow-demo.mp4) · [release, captions and verification](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo). Local final file: `artifacts/video/incomeflow-demo.mp4`. Exact size 5,281,055 bytes; 1920×1080, 30fps, H.264/AAC. Full decode, source-audio alignment, black-frame scan and representative-frame review passed. Actual proof and limitations are documented in VIDEO_EVIDENCE.md.
+
+Readiness: **CONDITIONAL PASS**, pending the user's authenticated portal cutoff/field check and final manual review/submission. The technical evidence gate passes; nothing was submitted automatically.

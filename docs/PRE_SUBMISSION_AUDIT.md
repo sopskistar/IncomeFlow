@@ -46,4 +46,4 @@ Public RPC throttling/history windows, incomplete callback-list responses, indep
 
 ## Readiness disposition
 
-Technical evidence gates pass for the testnet prototype. Release artifact publication and the final source push/CI are recorded separately in BUILD_STATUS.md. Overall submission remains **CONDITIONAL PASS** until the user checks the authenticated DoraHacks cutoff/required portal fields and reviews the prepared package. No automated DoraHacks submission is performed. Internal review is not an independent professional audit.
+Technical evidence gates pass for the testnet prototype. Release publication and anonymous download checksum passed; source/media milestone b7b25e3 is pushed. Closing main CI and delivery are recorded in BUILD_STATUS.md and the final report. Overall submission remains **CONDITIONAL PASS** until the user checks the authenticated DoraHacks cutoff/required portal fields and reviews the prepared package. No automated DoraHacks submission is performed. Internal review is not an independent professional audit.
