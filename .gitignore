@@ -169,3 +169,5 @@ artifacts/video/
 .nx/migrate-runs
 # Local shared Remotion dependency symlink (also exclude symlinks, not only directories)
 /video/node_modules
+/artifacts/qa/production-initial/
+/artifacts/qa/production-network-interrupted/

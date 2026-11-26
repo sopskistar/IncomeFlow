@@ -17,3 +17,9 @@ The existing demonstration vault may be shown read-only with its genuine fetched
 ## Media provenance
 
 Logo and motion graphics: original IncomeFlow vectors/code. Manrope: supplied OFL font assets. Voice: generated narration of the original script through the free Edge TTS client. No purchased footage, template graphics or third-party music. Final clip paths, source timestamps and render checks will be added after capture and export.
+
+## Signed frontend footage recovered
+
+`deployments/browser-proof.json` confirms the actual separate user pair. The successful creation/policy/payment segment is `artifacts/video/raw/page@d338c1e051b7a93b5d80c9c98010530d.webm` (1440×900, 33.4s). This recording ended on a strict-locator test error after genuine distribution had already succeeded; that assertion error is not shown as an application success. Owner pause/resume was captured in `page@a569d7022997f966488e06d33528aaf4.webm`; the final returning-owner receipt pass is `page@b7a0de9e5c2fc6f962b8d7b122700c99.webm`.
+
+The actual footage also revealed a brief stale pre-save editor display after confirmation. The final code retains submitted rows while chain data refreshes and disables editing during an in-flight save. Edited footage must not be presented as a latency measurement. Original files are preserved locally; explicit trim and retiming decisions belong in `video/edit.json`.

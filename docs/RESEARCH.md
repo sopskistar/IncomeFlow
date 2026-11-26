@@ -47,3 +47,6 @@ The [official DoraHacks page](https://dorahacks.io/hackathon/reactive-omni-build
 ## Architecture decision
 
 One independent Reactive contract and one independent vault per user; one demo token, two networks, no shared custody, no database or paid API. A first dedicated demonstration pair minimizes the live integration surface. Add a factory only after the primary loop is reliable. Current-policy-at-execution is explicit, the last recipient receives rounding remainder, and recovery invalidates pre-recovery event blocks.
+
+
+Recheck 2026-11-26: organizer announcement still confirms December 5 and a demo under three minutes. Automated DoraHacks fetch again returned HTTP 405; exact cutoff remains unverified. No third-party cutoff is promoted to a primary-source fact.

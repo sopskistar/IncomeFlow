@@ -40,3 +40,11 @@ The vault owner may pause and recover the **entire supported-token balance** to 
 ## Web and storage
 
 Next.js/TypeScript, Wagmi injected-wallet connection, Viem RPC reads/writes. Public deployment metadata contains only addresses, block cursors and verified references. Chain state and receipts are authoritative. No database controls custody or is required. History uses bounded paginated logs; RPC failures and truncated history must be shown. Unknown Reactive stages stay unknown until their events and delivery records are read.
+
+## Application deployment and read model
+
+Vercel serves the Next.js app and read-only `/api/vault/[address]` route. The API validates expected chains, supported token and callback provider, reads on-chain rules/accounting/fees, then correlates token Transfer, PaymentObserved, PaymentAllocated and AllocationPaid events. It uses 400-block Base pages split into 200-block RPC requests, 20-second per-instance caching and in-flight request coalescing. Old pages are explicit URL cursors. Archived M1 transaction references are re-read from actual receipts, not used as synthetic live data. Lasna query failure leaves stages/health unavailable rather than inferring success.
+
+Wallet writes occur only through the connected EVM provider. Multi-step setup explicitly confirms the network for every step so React render state cannot skip a required switch. Confirmed public creation addresses are stored locally for resumption; the test runner separately persists every broadcast hash. Rule drafts use per-vault/per-policy session storage and survive navigation/reload. Saving removes the old draft while retaining the submitted values until the refreshed policy remounts the editor. The illustrative SSR calculator cannot accept edits until its handlers hydrate.
+
+Neither local storage nor the public read API can authorize a callback or change a vault's recipients. No signing material is included in the app deployment. The optional encrypted Node signer exists only in opt-in test infrastructure.

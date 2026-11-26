@@ -718,7 +718,7 @@ function RulesEditor({
         { recipient: "", percent: "30", label: "Savings" },
         { recipient: "", percent: "20", label: "Tax reserve" },
       ];
-  const { rows, setRows, clear, storageFailed, changed } = useAllocationDraft(
+  const { rows, setRows, clear, commit, storageFailed, changed } = useAllocationDraft(
     `incomeflow.rules.${data.address.toLowerCase()}.${data.policyVersion}`,
     initialRows,
   );
@@ -769,7 +769,10 @@ function RulesEditor({
             return;
           }
           void save(validation.rules)
-            .then(clear)
+            .then(() => {
+              commit();
+              setSubmitted(false);
+            })
             .catch(() => {});
         }}
         noValidate
@@ -799,6 +802,7 @@ function RulesEditor({
               className="button subtle compact"
               type="button"
               onClick={clear}
+              disabled={busy}
             >
               Discard draft
             </button>
@@ -806,7 +810,7 @@ function RulesEditor({
         )}
         <div className="rule-edit-rows">
           {rows.map((r, i) => (
-            <fieldset key={i}>
+            <fieldset key={i} disabled={busy}>
               <legend>Destination {i + 1}</legend>
               <div className="rule-row-title">
                 <label>
@@ -901,7 +905,7 @@ function RulesEditor({
           <button
             className="button subtle compact"
             type="button"
-            disabled={rows.length >= 8}
+            disabled={busy || rows.length >= 8}
             onClick={() =>
               setRows([...rows, { recipient: "", percent: "", label: "Other" }])
             }

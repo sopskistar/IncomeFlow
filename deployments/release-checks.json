@@ -50,6 +50,19 @@
       "required": true,
       "testsPassed": 13,
       "durationSeconds": 47.9
+    },
+    {
+      "name": "browser-local-frozen-production",
+      "command": "PLAYWRIGHT_BASE_URL=http://localhost:3098 npm run test:browser",
+      "exitCode": 0,
+      "required": true,
+      "testsPassed": 14,
+      "durationSeconds": 30.1
     }
-  ]
+  ],
+  "previousCi": {
+    "commit": "d6337e49e3180532d796e201c803cbb48121a68f",
+    "conclusion": "success",
+    "url": "https://github.com/sopskistar/IncomeFlow/actions/runs/45750287334"
+  }
 }

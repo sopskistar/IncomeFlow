@@ -61,8 +61,8 @@ export function useAllocationDraft(key: string, initial: RuleDraft[]) {
       setStorageFailed(true);
     }
   }
-  function clear() {
-    setLocal(initial);
+  function clear(next = initial) {
+    setLocal(next);
     try {
       window.sessionStorage.removeItem(key);
       window.dispatchEvent(new Event(eventName));
@@ -73,7 +73,8 @@ export function useAllocationDraft(key: string, initial: RuleDraft[]) {
   return {
     rows,
     setRows,
-    clear,
+    clear: () => clear(),
+    commit: () => clear(rows),
     storageFailed,
     changed: JSON.stringify(rows) !== JSON.stringify(initial),
   };

@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
+const subscribe = () => () => {};
 import { allocate, amountText } from "@/lib/domain";
 import { parseUnits } from "viem";
 export function AllocationPreview() {
+  const hydrated = useSyncExternalStore(subscribe, () => true, () => false);
   const [amount, setAmount] = useState("1000");
   const [spending, setSpending] = useState(50);
   const [savings, setSavings] = useState(30);
@@ -29,6 +31,7 @@ export function AllocationPreview() {
         Incoming payment
         <span>
           <input
+            disabled={!hydrated}
             aria-label="Illustrative payment amount"
             inputMode="decimal"
             value={amount}
@@ -52,6 +55,7 @@ export function AllocationPreview() {
             <span className="share-input">
               {i < 2 ? (
                 <input
+                  disabled={!hydrated}
                   id={`preview-${i}`}
                   aria-label={`${name} sample percentage`}
                   type="number"

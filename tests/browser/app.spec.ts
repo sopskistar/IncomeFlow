@@ -172,3 +172,19 @@ test("production API rejects malformed address and history cursor", async ({requ
   expect((await request.get("/api/vault/not-an-address")).status()).toBe(400);
   expect((await request.get("/api/vault/0x361890c8550548bB5c1A2C40e009470a259cf41E?before=-1")).status()).toBe(400);
 });
+
+
+test("calculator waits for hydration before accepting edits", async ({page}) => {
+  let release!: () => void;
+  const gate = new Promise<void>(resolve => { release = resolve; });
+  await page.route("**/_next/static/**/*.js", async route => { await gate; await route.continue(); });
+  try {
+    await page.goto("/", {waitUntil:"commit"});
+    const amount = page.getByLabel("Illustrative payment amount");
+    await expect(amount).toBeDisabled();
+    release();
+    await expect(amount).toBeEnabled();
+    await amount.fill("100");
+    await expect(page.locator(".preview-allocations").getByText("50",{exact:true})).toBeVisible();
+  } finally { release(); }
+});
