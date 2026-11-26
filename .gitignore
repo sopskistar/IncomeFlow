@@ -167,3 +167,5 @@ artifacts/video/
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+# Local shared Remotion dependency symlink (also exclude symlinks, not only directories)
+/video/node_modules

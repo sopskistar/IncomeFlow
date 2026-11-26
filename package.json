@@ -4,8 +4,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next dev --hostname 0.0.0.0",
-    "build": "next build",
+    "dev": "next dev --webpack --hostname 0.0.0.0",
+    "build": "next build --webpack",
     "start": "next start --hostname 0.0.0.0",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -17,7 +17,8 @@
     "deploy": "tsx scripts/deploy.ts",
     "proof": "tsx scripts/proof.ts",
     "contracts:bootstrap": "bash scripts/bootstrap-contracts.sh",
-    "contracts:export": "node --import tsx scripts/export-contracts.ts"
+    "contracts:export": "node --import tsx scripts/export-contracts.ts",
+    "test:live": "node --import tsx scripts/live-browser.ts"
   },
   "dependencies": {
     "@openzeppelin/contracts": "5.6.1",
@@ -41,5 +42,6 @@
     "tsx": "4.23.15",
     "typescript": "5.9.3",
     "vitest": "4.1.12"
-  }
+  },
+  "type": "module"
 }

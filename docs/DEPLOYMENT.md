@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Node 22+ (development used Node 24.22.2), npm, Foundry (used 1.10.0), Solidity 0.8.29. `npm ci`, then `bash scripts/bootstrap-contracts.sh` installs pinned Omni and forge-std sources into ignored dependency directories. OpenZeppelin 5.6.1 is pinned in package-lock. Copy `.env.example` to `.env` if customizing RPCs; use environment variables when invoking scripts until an env-file loader is configured.
+Node 22+ (development used Node 24.22.2), npm, Foundry (used 1.10.0), Solidity 0.8.29. `npm ci`, then `bash scripts/bootstrap-contracts.sh` installs pinned Omni and forge-std sources into ignored dependency directories. OpenZeppelin 5.6.1 is pinned in package-lock. Copy `.env.example` to `.env` if customizing RPCs; scripts load `.env` with Node’s built-in env-file loader.
 
 The checked-in `deployments/testnet.json` records the actual demo deployment. Do not rerun deployment as if no contracts exist. Deployment resumes from metadata and records each confirmed step. A new independent deployment needs a separate manifest/branch and new dedicated vault/RC pair.
 
@@ -30,3 +30,9 @@ On Lasna call SYSTEM `depositTo(reactive)` with lREACT; on Base call proxy `depo
 ## Web hosting
 
 Next.js targets Vercel with `npm ci && npm run build`; RPC env values and generated public deployment metadata contain no signing keys. The web frontend never uses the deployment keystore. A live URL will be added only after an actual deployment and browser inspection. No database is needed for core automation.
+
+## Verified hosting record
+
+Vercel project `sopskistars-projects/incomeflow` was created using the existing authenticated free account. Initial production deployment ID: `dpl_7dWuHW1D4u5VB6LGWsWA2YCmyov9`. Public alias: https://incomeflow-gamma.vercel.app. Independent unauthenticated homepage and vault API requests returned HTTP 200; actual API state matched M1, including zero debt and 50/30/20 transfers. Final browser inspection and post-fix deployment are tracked in BUILD_STATUS.md. No custom domain or paid infrastructure was purchased.
+
+No signing secrets are required on Vercel. Public testnet RPC defaults are used unless explicitly overridden. `.vercelignore` excludes encrypted wallets, local tooling, video recordings, contract build artifacts and environment files. The core app uses on-chain state and needs no database. Production remains a testnet demonstration.

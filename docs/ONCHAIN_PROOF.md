@@ -72,3 +72,28 @@ Fee balances before proof: vault 0.003 Base test ETH; RC 0.5 lREACT; both debts 
 5. Retry the authenticated payment after the cooldown and confirm `DuplicateIgnored` without further payouts.
 
 Local Foundry system/proxy doubles are test fixtures and never live-network proof.
+
+
+## M3: genuine signed frontend acceptance (2026-11-26)
+
+A separate user-owned pair was created through the actual web interface using the disposable encrypted local signer. The original M1 contracts and proof above remain unchanged. The Node-only EIP-1193 test harness is explicit test infrastructure; it does not impersonate a Rabby confirmation screen or expose a key to the browser. There is no shared vault administrator. The signer owns this new pair; its ownership of the original demonstration pair gives no special permission over other independent pairs.
+
+The interrupted runner sent no transaction until its provider/helper and Foundry option-order defects were corrected. Its first successful RC deployment exposed a stale-render network-switch bug in the application. Each transaction now confirms the target network. Resumption reused confirmed addresses/hashes; no faucet exchange or replacement payment was performed.
+
+User vault: [0xd70db6249b22cb72a463cc26849e85fa699d37c1](https://sepolia.basescan.org/address/0xd70db6249b22cb72a463cc26849e85fa699d37c1). User Reactive contract: [0x30fc195918738aBf90BA5B626Dfa98F99d5Ca200](https://lasna.reactscan.net/address/0x30fc195918738aBf90BA5B626Dfa98F99d5Ca200). Same supported ifUSD token as M1.
+
+| Operation | Confirmed transaction |
+| --- | --- |
+| User Reactive deployment | [0x0eead665f653cfb2e8701d902a646d6d7cf504bee84a8f08dfe6fa0ccc8ba5ba](https://lasna.reactscan.net/tx/0x0eead665f653cfb2e8701d902a646d6d7cf504bee84a8f08dfe6fa0ccc8ba5ba) |
+| User vault deployment | [0x7e0ef54cb4ecb1cdffd5d03d19b1a57eb49bb90d33c30a1dcfafb32e24bf4b04](https://sepolia.basescan.org/tx/0x7e0ef54cb4ecb1cdffd5d03d19b1a57eb49bb90d33c30a1dcfafb32e24bf4b04) |
+| Exact subscription binding | [0x54ed236bb3a1fdeadd32c61fafcb1041de06f29227700ee4d13cdeb8cbcc1c93](https://lasna.reactscan.net/tx/0x54ed236bb3a1fdeadd32c61fafcb1041de06f29227700ee4d13cdeb8cbcc1c93) |
+| User allocation rules | [0x7ca44849c3d07d521f2c1caa8ea67476543c42fb59e28a7729fc824886afef49](https://sepolia.basescan.org/tx/0x7ca44849c3d07d521f2c1caa8ea67476543c42fb59e28a7729fc824886afef49) |
+| 100 ifUSD payment | [0x4fe6b6436fcd7671c7631bb7c1cece98e9168d66ec70472a19625edd184f148d](https://sepolia.basescan.org/tx/0x4fe6b6436fcd7671c7631bb7c1cece98e9168d66ec70472a19625edd184f148d) |
+| Owner pause | [0xc1dcd03ae450d5768a5f4694cb89fe6fb14f1055676c2bf09a0f7a43834c90bf](https://sepolia.basescan.org/tx/0xc1dcd03ae450d5768a5f4694cb89fe6fb14f1055676c2bf09a0f7a43834c90bf) |
+| Owner resume | [0xae3b1b4d9ffed2cf753ee5ffe02e3c081892ea1027ee849564a519193ad555b5](https://sepolia.basescan.org/tx/0xae3b1b4d9ffed2cf753ee5ffe02e3c081892ea1027ee849564a519193ad555b5) |
+
+Reactive processing: [0x239028f304ca2647e2dcf683dad26233e0edefbc0290ac6c420ede285b2484fd](https://lasna.reactscan.net/tx/0x239028f304ca2647e2dcf683dad26233e0edefbc0290ac6c420ede285b2484fd). Destination callback: [0x3862f63fb92f0ed84a684d5b1c35d83a1c48133edba8460c0a77c233fe1d4ac1](https://sepolia.basescan.org/tx/0x3862f63fb92f0ed84a684d5b1c35d83a1c48133edba8460c0a77c233fe1d4ac1). Payment ID `0x302d41d8de5c96b2254eeb8efcd0da0eca54500e50f95e341ac59d570bba756e`, origin log 12, executed policy version 1.
+
+Confirmed transfers: **50 / 30 / 20 ifUSD** to the same three destination wallets listed above. The new vault reports paymentCount 1, totalDistributed 100 ifUSD, zero token balance, paused false, active subscription and zero debt on both services. Pause and resume receipts were independently read when resuming the runner. Returning-wallet reconnection and a browser refresh retained owner access; historical receipt inspection used the saved origin-block window.
+
+The initial 0.5 lREACT and 0.003 test ETH reserves were funded by the existing disposable account, with no new faucet funds. The signed journey performed seven transactions across its resumptions; no original M1 deployment was replaced. Detailed chain-backed state and signed transaction inputs are in `deployments/browser-proof.json` and `deployments/browser-transactions.json`. Raw genuine moving captures remain under `artifacts/video/raw/`; they are not fabricated UI states. These browser acceptance timings are not an end-to-end latency benchmark.

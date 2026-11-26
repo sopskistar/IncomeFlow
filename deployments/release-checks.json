@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-11-26T03:16:59.730Z",
+  "results": [
+    {
+      "name": "lint",
+      "command": "npm run lint",
+      "exitCode": 0,
+      "required": true
+    },
+    {
+      "name": "typecheck",
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "required": true
+    },
+    {
+      "name": "unit",
+      "command": "npm test",
+      "exitCode": 0,
+      "required": true
+    },
+    {
+      "name": "contract-format",
+      "command": "node scripts/forge.mjs fmt --check",
+      "exitCode": 0,
+      "required": true
+    },
+    {
+      "name": "contracts",
+      "command": "node scripts/forge.mjs test -vv",
+      "exitCode": 0,
+      "required": true
+    },
+    {
+      "name": "dependency-audit",
+      "command": "npm audit --omit=dev --audit-level=high",
+      "exitCode": 0,
+      "required": true
+    },
+    {
+      "name": "solar-lint",
+      "command": "node scripts/forge.mjs lint --severity high --severity med",
+      "exitCode": 1,
+      "required": false
+    },
+    {
+      "name": "browser-local-production",
+      "command": "PLAYWRIGHT_BASE_URL=http://localhost:3098 npm run test:browser",
+      "exitCode": 0,
+      "required": true,
+      "testsPassed": 13,
+      "durationSeconds": 47.9
+    }
+  ]
+}

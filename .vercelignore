@@ -1,0 +1,15 @@
+.git
+.secrets
+.tools
+.env*
+contracts
+tests
+test-results
+playwright-report
+artifacts
+video
+.impeccable
+.hallmark
+.agents
+.codex
+.aws
