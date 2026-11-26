@@ -16,7 +16,7 @@ A separate Solar-based `forge lint --severity high --severity med` attempt could
 - TypeScript: passed.
 - ESLint: final verification recorded in BUILD_STATUS.md.
 - Vitest: 7 tests passed for basis-point validation, invalid recipients, exact integer rounding, decimal parsing and explorer links.
-- Production-server Playwright: 11 tests passed. Includes real public vault API/receipts, navigation, empty/error states, draft navigation/reload/discard, validation, downloads, 1440/768/390/320 layouts, keyboard/reduced motion and a non-signing wallet fixture for switching/rejection/disconnect.
+- Production-server Playwright: 14 tests passed. Includes real public vault API/receipts, navigation, empty/error states, draft navigation/reload/discard, validation, downloads, 1440/768/390/320 layouts, keyboard/reduced motion and a non-signing wallet fixture for switching/rejection/disconnect.
 - Runtime captures: no browser errors in the final responsive screenshot pass.
 - Dependency audit: no production vulnerabilities at the high-severity gate in the recorded local check.
 
@@ -43,3 +43,5 @@ Actual desktop, tablet and phone screenshots were inspected, then refined. Hallm
 ## CI
 
 `.github/workflows/ci.yml` runs independent contract and application jobs, including pinned dependency installation, build/tests, lint, TypeScript, production dependency audit and Chromium journeys. It receives no signing keys and performs no contract deployment. Actual remote-run status belongs in BUILD_STATUS.md once a pushed run is inspected.
+
+Final remote check: commit `747be04` passed GitHub Actions contracts/application jobs and both **14-test local-build and public-Vercel suites**. Public suite: 12.8s, no retries. [Actual run](https://github.com/sopskistar/IncomeFlow/actions/runs/45754101739). Additional deterministic hydration and underfunding/API validation coverage is included. Local production network interruptions were preserved and are not reclassified as passes.

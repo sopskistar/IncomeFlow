@@ -64,5 +64,13 @@
     "commit": "d6337e49e3180532d796e201c803cbb48121a68f",
     "conclusion": "success",
     "url": "https://github.com/sopskistar/IncomeFlow/actions/runs/45750287334"
+  },
+  "finalCi": {
+    "commit": "747be04b3528fa845ffdcdd459c816f3bf754250",
+    "conclusion": "success",
+    "url": "https://github.com/sopskistar/IncomeFlow/actions/runs/45754101739",
+    "browserLocalPassed": 14,
+    "browserPublicPassed": 14,
+    "publicDurationSeconds": 12.8
   }
 }

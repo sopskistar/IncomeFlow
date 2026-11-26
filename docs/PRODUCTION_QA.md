@@ -9,3 +9,7 @@ The first public browser run passed 10 and failed 3: one cold-load calculator hy
 The frozen local production build passed all 14 browser tests. A later public run again encountered host network changes; its complete output is retained as an environment failure, not reported as a passing run. Independent public-URL browser verification is added to GitHub Actions so all assertions run outside the affected host. Its actual outcome is recorded below when inspected.
 
 The actual signed local-production journey independently proved wallet connection, resumable network changes, vault creation, policy, payment/callback, pause/resume and returning owner. It uses an explicit encrypted Node test signer, not a vendor wallet extension; no claim of a separately tested Rabby popup is made.
+
+## Independent result: PASS
+
+[GitHub Actions run 45754101739](https://github.com/sopskistar/IncomeFlow/actions/runs/45754101739), commit `747be04`, passed contracts and application jobs. Both local-build and public-Vercel browser suites passed **14/14**. The public suite completed in 12.8 seconds without retries or skipped assertions. Raw CI logs are retained in `artifacts/qa/github-final.log`. This independently verified homepage, calculator hydration, workspace, actual receipt/API, rule drafts, wallet switching/rejection/disconnect, 1440/768/390/320 navigation and explicit failure states. Production fixture tests never broadcast transactions; signed live acceptance remains separately evidenced.

@@ -2,7 +2,7 @@ import { chromium } from "@playwright/test";
 import { browserPath } from "./browser-path.ts";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 const root = process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3098";
-const out = ".impeccable/review";
+const out = process.env.QA_OUTPUT || ".impeccable/review";
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch({
   headless: true,
@@ -12,10 +12,13 @@ const browser = await chromium.launch({
 const page = await browser.newPage();
 const issues = [];
 page.on("pageerror", (e) => issues.push(e.message));
+page.on("console", (msg) => { if (msg.type() === "error") issues.push(msg.text()); });
 for (const [name, width, route] of [
   ["landing-desktop", 1440, "/"],
   ["landing-mobile", 390, "/"],
   ["desktop", 1440, "/app?vault=demo"],
+  ["receipt-desktop", 1440, "/app?vault=demo&view=activity"],
+  ["health-desktop", 1440, "/app?vault=demo&view=health"],
   ["tablet", 768, "/app?vault=demo"],
   ["mobile", 390, "/app?vault=demo"],
   ["narrow", 320, "/app?vault=demo"],
@@ -33,6 +36,7 @@ for (const [name, width, route] of [
       .getByRole("button", { name: "Refresh", exact: true })
       .waitFor({ timeout: 30000 });
   }
+  if (route.includes("view=activity")) await page.locator(".payment-row>summary").first().click();
   await page.screenshot({ path: `${out}/${name}.png`, fullPage: true });
   console.log("Captured", name);
 }
