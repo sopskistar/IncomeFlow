@@ -1,0 +1,121 @@
+1
+00:00:00,100 --> 00:00:03,325
+Getting paid in crypto is only part of the job.
+
+2
+00:00:03,275 --> 00:00:09,641
+IncomeFlow automatically organizes each payment for spending, savings, and the
+reserves you choose.
+
+3
+00:00:12,100 --> 00:00:16,263
+Connect an EVM wallet and create an independent receiving vault.
+
+4
+00:00:16,213 --> 00:00:20,704
+Choose destination wallets and percentages, then confirm the rules.
+
+5
+00:00:20,704 --> 00:00:26,363
+Here, fifty percent goes to spending, thirty to savings, and twenty to a tax
+reserve.
+
+6
+00:00:26,363 --> 00:00:29,083
+Only the owner can change this plan.
+
+7
+00:00:36,100 --> 00:00:39,476
+Share the vault address like a normal receiving address.
+
+8
+00:00:39,426 --> 00:00:44,356
+The demo supports only IncomeFlow's valueless test token on Base Sepolia.
+
+9
+00:00:44,356 --> 00:00:47,736
+A regular token transfer starts the process.
+
+10
+00:00:47,736 --> 00:00:51,822
+Submitting a payment is not the same as completing its allocations.
+
+11
+00:00:51,822 --> 00:00:54,773
+The interface waits for real receipts.
+
+12
+00:00:58,100 --> 00:01:02,934
+An ordinary ERC twenty transfer does not execute the receiving vault.
+
+13
+00:01:02,884 --> 00:01:10,986
+Reactive Omni watches the token's genuine Transfer event, filters the exact
+vault destination, and requests a callback from Lasna.
+
+14
+00:01:10,986 --> 00:01:17,826
+The vault verifies both the official Base callback proxy and its specific
+Reactive contract before moving funds.
+
+15
+00:01:17,826 --> 00:01:20,697
+No backend payout key is involved.
+
+16
+00:01:22,100 --> 00:01:25,592
+Open the payment receipt to follow what actually happened.
+
+17
+00:01:25,542 --> 00:01:32,683
+The payment is allocated to the configured destinations, with exact integer
+amounts and its executed policy version.
+
+18
+00:01:32,683 --> 00:01:39,153
+Public transaction links connect the deposit, Reactive execution, and
+destination token transfers.
+
+19
+00:01:39,153 --> 00:01:41,977
+Unknown stages stay unconfirmed.
+
+20
+00:01:41,977 --> 00:01:46,016
+Funding, pause, and recovery controls remain visible.
+
+21
+00:01:50,100 --> 00:01:56,219
+The original verified run received one hundred demo tokens and paid fifty,
+thirty, and twenty.
+
+22
+00:01:56,169 --> 00:02:01,285
+Base block timestamps were two seconds apart for that run, not a latency
+guarantee.
+
+23
+00:02:01,285 --> 00:02:05,880
+A real duplicate callback emitted Duplicate Ignored and paid nothing more.
+
+24
+00:02:05,880 --> 00:02:12,049
+Exact source matches, raw receipts, and reproducible instructions are in the
+public repository.
+
+25
+00:02:14,099 --> 00:02:18,440
+IncomeFlow is a testnet prototype for personal income automation.
+
+26
+00:02:18,390 --> 00:02:24,298
+Tax reserves are user choices, and mainnet use would require independent
+security review.
+
+27
+00:02:24,298 --> 00:02:26,297
+Set your plan once.
+
+28
+00:02:26,297 --> 00:02:29,240
+Let supported payments find their purpose.

@@ -1,0 +1,19 @@
+{
+  "url": "https://incomeflow-gamma.vercel.app",
+  "deployment": "dpl_48RFxdBJ3Aeu5p1wXJXhEksmRxyc",
+  "ciRun": "https://github.com/sopskistar/IncomeFlow/actions/runs/45756034510",
+  "artifact": "production-visual-qa",
+  "inspected": [
+    "landing-desktop",
+    "landing-mobile",
+    "desktop",
+    "tablet",
+    "mobile",
+    "narrow",
+    "rules-narrow",
+    "dark-mobile",
+    "receipt-desktop",
+    "health-desktop"
+  ],
+  "browserErrors": []
+}

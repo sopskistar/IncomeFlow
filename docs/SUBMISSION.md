@@ -54,8 +54,9 @@ This prototype supports only its conventional valueless demo token on Base Sepol
 - [x] Actual origin/Reactive/callback/payout proof and real replay.
 - [x] Deployed addresses, network/explorer details and exact source matches.
 - [x] Signed frontend workflow and internal security audit.
-- [ ] Final post-fix production browser recheck.
-- [ ] Final narrated MP4 under three minutes, inspected and publicly linked.
+- [x] Final post-fix production browser recheck: 14/14 plus ten inspected production screenshots.
+- [x] Final narrated MP4: 150.0 seconds, full decode, aligned audio and inspected frames.
+- [ ] Public MP4 release link verified.
 - [ ] Final CI/commit and evidence ledger reconciled.
 - [ ] User checks exact DoraHacks closing time and any authenticated portal fields.
 - [ ] User reviews and manually submits; no automatic submission authorized.

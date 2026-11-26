@@ -1,0 +1,4 @@
+{"type": "SentenceBoundary", "offset": 1000000, "duration": 48342590, "text": "An ordinary ERC twenty transfer does not execute the receiving vault."}
+{"type": "SentenceBoundary", "offset": 48842590, "duration": 81018515, "text": "Reactive Omni watches the token's genuine Transfer event, filters the exact vault destination, and requests a callback from Lasna."}
+{"type": "SentenceBoundary", "offset": 129861105, "duration": 68402775, "text": "The vault verifies both the official Base callback proxy and its specific Reactive contract before moving funds."}
+{"type": "SentenceBoundary", "offset": 198263881, "duration": 28703702, "text": "No backend payout key is involved."}

@@ -171,3 +171,6 @@ artifacts/video/
 /video/node_modules
 /artifacts/qa/production-initial/
 /artifacts/qa/production-network-interrupted/
+
+# Transient QA, original recordings and rendered deliverables; durable reports are in deployments.
+/artifacts/

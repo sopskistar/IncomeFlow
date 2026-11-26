@@ -1,0 +1,2 @@
+# Optional narration tool; not needed to render the checked-in audio.
+edge-tts==7.3.1

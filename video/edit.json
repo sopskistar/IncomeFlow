@@ -1,0 +1,56 @@
+{
+  "clips": [
+    {
+      "id": "setup",
+      "file": "footage/setup.mp4",
+      "source": "artifacts/video/raw/page@d338c1e051b7a93b5d80c9c98010530d.webm",
+      "sourceStartSeconds": 2.5,
+      "sourceDurationSeconds": 8,
+      "targetSeconds": 24,
+      "speed": 0.3333333333333333,
+      "cuts": [
+        {
+          "start": 2.5,
+          "duration": 3,
+          "target": 4
+        },
+        {
+          "start": 14.7,
+          "duration": 5,
+          "target": 20
+        }
+      ],
+      "note": "Genuine moving screen recording. Editorial retiming; not a latency measurement. No transaction states were fabricated."
+    },
+    {
+      "id": "payment",
+      "file": "footage/payment.mp4",
+      "source": "artifacts/video/raw/page@d338c1e051b7a93b5d80c9c98010530d.webm",
+      "sourceStartSeconds": 21.5,
+      "sourceDurationSeconds": 6.2,
+      "targetSeconds": 22,
+      "speed": 0.2818181818181818,
+      "note": "Genuine moving screen recording. Editorial retiming; not a latency measurement. No transaction states were fabricated."
+    },
+    {
+      "id": "result",
+      "file": "footage/result.mp4",
+      "source": "artifacts/video/raw/page@1c23d5f9b8acadb8b1fa6c2c5e5e507f.webm",
+      "sourceStartSeconds": 7.09,
+      "sourceDurationSeconds": 31.747000000000003,
+      "targetSeconds": 28,
+      "speed": 1.1338214285714288,
+      "note": "Genuine moving screen recording. Editorial retiming; not a latency measurement. No transaction states were fabricated."
+    },
+    {
+      "id": "proof",
+      "file": "footage/proof.mp4",
+      "source": "artifacts/video/raw/page@1c23d5f9b8acadb8b1fa6c2c5e5e507f.webm",
+      "sourceStartSeconds": 39.041,
+      "sourceDurationSeconds": 26.676000000000002,
+      "targetSeconds": 24,
+      "speed": 1.1115000000000002,
+      "note": "Genuine moving screen recording. Editorial retiming; not a latency measurement. No transaction states were fabricated."
+    }
+  ]
+}

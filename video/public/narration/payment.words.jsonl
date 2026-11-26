@@ -1,0 +1,5 @@
+{"type": "SentenceBoundary", "offset": 1000000, "duration": 33759257, "text": "Share the vault address like a normal receiving address."}
+{"type": "SentenceBoundary", "offset": 34259257, "duration": 49305553, "text": "The demo supports only IncomeFlow's valueless test token on Base Sepolia."}
+{"type": "SentenceBoundary", "offset": 83564811, "duration": 33796294, "text": "A regular token transfer starts the process."}
+{"type": "SentenceBoundary", "offset": 117361106, "duration": 40856479, "text": "Submitting a payment is not the same as completing its allocations."}
+{"type": "SentenceBoundary", "offset": 158217586, "duration": 29513887, "text": "The interface waits for real receipts."}

@@ -16,10 +16,18 @@ The existing demonstration vault may be shown read-only with its genuine fetched
 
 ## Media provenance
 
-Logo and motion graphics: original IncomeFlow vectors/code. Manrope: supplied OFL font assets. Voice: generated narration of the original script through the free Edge TTS client. No purchased footage, template graphics or third-party music. Final clip paths, source timestamps and render checks will be added after capture and export.
+Logo and motion graphics: original IncomeFlow vectors/code. Manrope: supplied OFL font assets. Voice: generated narration of the original script through the free Edge TTS client. No purchased footage, template graphics or third-party music. Final cuts and source paths are in `video/edit.json`; rendered-file checks are in `deployments/video.json`.
 
 ## Signed frontend footage recovered
 
 `deployments/browser-proof.json` confirms the actual separate user pair. The successful creation/policy/payment segment is `artifacts/video/raw/page@d338c1e051b7a93b5d80c9c98010530d.webm` (1440×900, 33.4s). This recording ended on a strict-locator test error after genuine distribution had already succeeded; that assertion error is not shown as an application success. Owner pause/resume was captured in `page@a569d7022997f966488e06d33528aaf4.webm`; the final returning-owner receipt pass is `page@b7a0de9e5c2fc6f962b8d7b122700c99.webm`.
 
 The actual footage also revealed a brief stale pre-save editor display after confirmation. The final code retains submitted rows while chain data refreshes and disables editing during an in-flight save. Edited footage must not be presented as a latency measurement. Original files are preserved locally; explicit trim and retiming decisions belong in `video/edit.json`.
+
+The final result capture uses the separate signed-user vault and saved Base block cursor, matching the payment scene. Its older Lasna observation falls outside the API’s recent 2,000-block window; the UI honestly shows that stage as unobserved while the actual destination receipt confirms 50/30/20. Full saved Reactive references remain in browser-proof.json. The later Proof scene explicitly switches to the original M1 run, with all three archived references. No missing stage was painted into the recorded interface.
+
+A full-browser Remotion attempt stalled at frame 564 and produced no final MP4. The recovery pipeline keeps actual moving UI clips and narration, renders original Remotion graphics separately and uses native FFmpeg compositing. `render-remotion-failed.log`, `native-render.log` and the source edit map preserve this distinction. Final validation passed after assembly and representative-frame inspection; see VIDEO_TIMELINE.md and deployments/video.json.
+
+## Final editorial and verification result
+
+The final 150-second file passed complete decode, metadata checks, audio comparison, black-frame scan and representative-frame review. Setup/payment were refined using only their existing genuine recordings: actual destination entry and save are visible, middle waits are edited, and the already-fixed editor flash is excluded. The other five finished scenes were reused. Original and superseded files were preserved locally. No new testnet transactions or faucet requests were made during video completion. All on-chain claims remain supported by the original M1 and separate signed-user proof files.

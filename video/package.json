@@ -1,0 +1,21 @@
+{
+  "name": "incomeflow-demo-video",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "render": "node render-native.mjs",
+    "render:browser": "node preflight.mjs && remotion render src/index.tsx IncomeFlow ../artifacts/video/incomeflow-demo.mp4 --concurrency=1 --codec=h264 --crf=18 --offthreadvideo-cache-size-in-bytes=134217728 --media-cache-size-in-bytes=67108864 --offthreadvideo-video-threads=1"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.541",
+    "remotion": "4.0.541",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}

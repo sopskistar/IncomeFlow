@@ -1,0 +1,5 @@
+{"type": "SentenceBoundary", "offset": 1000000, "duration": 34916665, "text": "Open the payment receipt to follow what actually happened."}
+{"type": "SentenceBoundary", "offset": 35416665, "duration": 71412034, "text": "The payment is allocated to the configured destinations, with exact integer amounts and its executed policy version."}
+{"type": "SentenceBoundary", "offset": 106828699, "duration": 64699071, "text": "Public transaction links connect the deposit, Reactive execution, and destination token transfers."}
+{"type": "SentenceBoundary", "offset": 171527770, "duration": 28240739, "text": "Unknown stages stay unconfirmed."}
+{"type": "SentenceBoundary", "offset": 199768510, "duration": 40393516, "text": "Funding, pause, and recovery controls remain visible."}

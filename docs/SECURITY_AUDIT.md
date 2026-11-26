@@ -1,6 +1,6 @@
 # Internal security audit
 
-Date: 2026-11-25. Scope: the original Solidity sources, pinned Omni/OpenZeppelin boundaries, Next.js frontend/API, wallet bridge, deployment scripts and dependency configuration. This is an internal engineering assessment, **not an independent professional audit**. Testnet assets only.
+Review started 2026-11-25; release reconciliation 2026-11-26. Scope: the original Solidity sources, pinned Omni/OpenZeppelin boundaries, Next.js frontend/API, wallet bridge, deployment scripts and dependency configuration. This is an internal engineering assessment, **not an independent professional audit**. Testnet assets only.
 
 ## Threat model and custody
 
@@ -53,3 +53,11 @@ Foundry unit/fuzz/invariant outcomes, lint/typecheck/unit/browser results, depen
 Solar linter rejected an inherited `Ownable(owner_)` constructor invocation through `Ownable2Step` although pinned solc successfully compiles it and executable tests exercise deployment. This is a parser/tool compatibility limitation, not evidence of a Solidity initialization defect. No verified deployed source was modified to hide the warning. No Slither or Semgrep pass is claimed if those tools are unavailable.
 
 Before mainnet: independent audit, upstream licensing resolution, realistic service/funding failure tests, token-specific integration review, economic analysis and longer operational observation are required.
+
+Existing-address reads validate contract interfaces, supported token and official provider, but are not a source-code attestation for an arbitrary address. Use the verified deployment manifest or the application’s known-bytecode creation workflow; independently inspect source before depositing into a third-party address. The original three contracts have exact source matches; no source-verification claim is made for every arbitrary address a visitor enters.
+
+## Final release reconciliation
+
+Application/contract/test/workflow files remain unchanged from the passing `546e51a` checkpoint. Recorded evidence: 28 Foundry tests (including fuzz/invariant), 7 unit tests, 14 local-build and 14 independent public browser tests, ten inspected production captures and zero production browser errors. No new blockchain transaction was used for media completion. No unresolved critical/high project finding was identified; Solar remains an unresolved parser/tool compatibility limitation and was not marked passed.
+
+The initial video audit followed the reused shared node_modules symlink and reported one moderate minimatch glob-amplification advisory in the shared installation. That installation was not modified. The video project now has an independent portable registry lockfile, audited with zero vulnerabilities. Rendering used trusted project paths only; these offline tools are excluded from the deployed application. The web application's separate production dependency audit was also clean.

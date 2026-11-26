@@ -96,7 +96,7 @@ See [testing](docs/TESTING.md), [security review](docs/SECURITY.md), [troublesho
 
 ## Engineering portfolio
 
-**Cloud and deployment:** Next.js production builds, environment-separated RPC configuration and a Vercel-compatible deployment package. Actual hosting verification is recorded in the deployment guide; no Neon database is needed.
+**Cloud and deployment:** Deployed the Next.js frontend and read-only API to Vercel, separated public/server RPC configuration, and verified actual public HTTP responses, chain receipts and production viewport captures through GitHub Actions. No Neon database is needed.
 
 **DevOps:** Preserved Git history, checkpoint commits, pinned dependencies, GitHub Actions for contract and web checks, reproducible deployment scripts and deployment manifests. CI never receives signing keys or automatically deploys financial contracts.
 
@@ -109,3 +109,7 @@ See [testing](docs/TESTING.md), [security review](docs/SECURITY.md), [troublesho
 Supports only the deployed conventional demo ERC-20. Fee-on-transfer, rebasing and arbitrary tokens are excluded. Callback delivery can be delayed or fail; paused or recovered funds require the documented owner workflow. Public RPC history is bounded and paginated. The official callback query returned incomplete records in the verified run; raw receipts supply the evidence chain.
 
 This is internally reviewed and tested, **not independently audited or ready for mainnet funds**. Original project code is [MIT](LICENSE). Fonts include their OFL notice. Pinned upstream Omni files have `UNLICENSED` SPDX identifiers; they are downloaded locally rather than vendored, and upstream licensing clarification is needed before redistribution or commercial use. No adoption, audited safety or production uptime is claimed.
+
+## Demonstration film
+
+The verified film is **150.0 seconds, 1920×1080 at 30 fps, H.264 with AAC narration**. It contains genuine moving signed-user setup/payment footage, actual 50/30/20 receipts and the separately labeled original M1 proof. Source, audio, captions and editorial cuts are in [video/](video/); the complete rendered file is kept outside Git history at `artifacts/video/incomeflow-demo.mp4`. [Verification report](deployments/video.json) · [timeline and reproduction](docs/VIDEO_TIMELINE.md). Public release publication is tracked in [submission checklist](docs/SUBMISSION.md).

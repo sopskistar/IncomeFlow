@@ -33,3 +33,7 @@ Stop only conflicting IncomeFlow dev/build processes. Build once with Webpack, r
 ## Security reports
 
 Do not include wallet keys, password files or unrestricted environment dumps. Provide chain IDs, public addresses, transaction hashes, decoded error and the minimal reproduction. The prototype is not independently audited; use valueless test assets only.
+
+## Older receipt has no Reactive execution link
+
+The Base history cursor and recent Lasna observation window are separate. Lasna observations are queried over the last 2,000 blocks; an older user receipt can retain a confirmed destination payout while its Reactive stage is unavailable in this bounded read. That is an indexing limitation, not proof that no Reactive execution occurred. Keep the downloaded receipt/transaction references and inspect Reactscan. The original demonstration has explicit archived references that are revalidated from real receipts. The signed frontend run's complete references remain in `deployments/browser-proof.json`.

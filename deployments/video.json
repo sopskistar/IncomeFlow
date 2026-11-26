@@ -1,0 +1,148 @@
+{
+  "path": "artifacts/video/incomeflow-demo.mp4",
+  "sha256": "5a35aaadd5614c96f0a4da6f7c82ac645fe0abc5669cae92f313c9a7fbe1e530",
+  "durationSeconds": 150.0,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "video": "h264",
+  "audio": "aac",
+  "fullDecode": "passed",
+  "narrationAlignment": [
+    {
+      "scene": "opening",
+      "envelopeCorrelation": 0.99988,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "setup",
+      "envelopeCorrelation": 0.99989,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "payment",
+      "envelopeCorrelation": 0.9999,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "automation",
+      "envelopeCorrelation": 0.99991,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "result",
+      "envelopeCorrelation": 0.99983,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "proof",
+      "envelopeCorrelation": 0.99982,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "closing",
+      "envelopeCorrelation": 0.99995,
+      "offsetSeconds": 0.0
+    }
+  ],
+  "fileSizeBytes": 5281055,
+  "checkedAt": "2026-11-26T09:26:01.494293+00:00",
+  "visualChecks": {
+    "blackIntervals": [],
+    "activity": [
+      {
+        "scene": "opening",
+        "samples": 24,
+        "distinctHalfSecondFrames": 7
+      },
+      {
+        "scene": "setup",
+        "samples": 48,
+        "distinctHalfSecondFrames": 34
+      },
+      {
+        "scene": "payment",
+        "samples": 44,
+        "distinctHalfSecondFrames": 39
+      },
+      {
+        "scene": "automation",
+        "samples": 48,
+        "distinctHalfSecondFrames": 11
+      },
+      {
+        "scene": "result",
+        "samples": 56,
+        "distinctHalfSecondFrames": 42
+      },
+      {
+        "scene": "proof",
+        "samples": 48,
+        "distinctHalfSecondFrames": 29
+      },
+      {
+        "scene": "closing",
+        "samples": 32,
+        "distinctHalfSecondFrames": 7
+      }
+    ],
+    "frames": [
+      {
+        "file": "review/frame-01.png",
+        "seconds": 2
+      },
+      {
+        "file": "review/frame-02.png",
+        "seconds": 16
+      },
+      {
+        "file": "review/frame-03.png",
+        "seconds": 28
+      },
+      {
+        "file": "review/frame-04.png",
+        "seconds": 43
+      },
+      {
+        "file": "review/frame-05.png",
+        "seconds": 68
+      },
+      {
+        "file": "review/frame-06.png",
+        "seconds": 89
+      },
+      {
+        "file": "review/frame-07.png",
+        "seconds": 101
+      },
+      {
+        "file": "review/frame-08.png",
+        "seconds": 116
+      },
+      {
+        "file": "review/frame-09.png",
+        "seconds": 127
+      },
+      {
+        "file": "review/frame-10.png",
+        "seconds": 143
+      }
+    ],
+    "interpretation": "Actual footage changes in every scene. Intentional reading/network-wait holds are preserved; motion sampling alone is not proof of transaction authenticity. Visual inspection is recorded separately."
+  },
+  "visualInspection": {
+    "result": "passed",
+    "method": "Decoded representative full-resolution frames covering all seven scenes; revised rule entry and payment inspected again. Intentional reading/network-wait holds retained. No human listening or WCAG certification is claimed."
+  },
+  "projectVideoDependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "renderStrategy": "Original Remotion motion graphics + native FFmpeg genuine-video composite",
+  "sourceEditMap": "video/edit.json",
+  "publicRelease": "pending publication"
+}

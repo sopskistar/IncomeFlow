@@ -1,0 +1,70 @@
+{
+  "tool": "edge-tts 7.3.1",
+  "voice": "en-US-AriaNeural",
+  "paidAPI": false,
+  "scenes": [
+    {
+      "id": "opening",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 9.696,
+      "speed": 1.0,
+      "scheduledFrom": 0,
+      "sceneSeconds": 12,
+      "file": "video/public/narration/opening.mp3"
+    },
+    {
+      "id": "setup",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 17.136,
+      "speed": 1.0,
+      "scheduledFrom": 12,
+      "sceneSeconds": 24,
+      "file": "video/public/narration/setup.mp3"
+    },
+    {
+      "id": "payment",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 18.84,
+      "speed": 1.0,
+      "scheduledFrom": 36,
+      "sceneSeconds": 22,
+      "file": "video/public/narration/payment.mp3"
+    },
+    {
+      "id": "automation",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 22.752,
+      "speed": 1.0,
+      "scheduledFrom": 58,
+      "sceneSeconds": 24,
+      "file": "video/public/narration/automation.mp3"
+    },
+    {
+      "id": "result",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 24.072,
+      "speed": 1.0,
+      "scheduledFrom": 82,
+      "sceneSeconds": 28,
+      "file": "video/public/narration/result.mp3"
+    },
+    {
+      "id": "proof",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 22.104,
+      "speed": 1.0,
+      "scheduledFrom": 110,
+      "sceneSeconds": 24,
+      "file": "video/public/narration/proof.mp3"
+    },
+    {
+      "id": "closing",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 15.408,
+      "speed": 1.0070588235294118,
+      "scheduledFrom": 134,
+      "sceneSeconds": 16,
+      "file": "video/public/narration/closing.mp3"
+    }
+  ]
+}

@@ -31,3 +31,7 @@ SVG is the source of truth. Header icon 32px, favicon 32px, clear space at least
 ## QA ledger
 
 Production browser QA completed 10/10 tests before review fixes. Desktop, tablet, 390px and 320px captures were inspected. Independent Impeccable design and technical assessments identified draft preservation, inline validation, narrow navigation, small supporting text and touch targets; fixes are implemented and final recapture is pending. Hallmark static recheck reports 0 FAIL, 0 REFLEX, 0 WARN and two documented false-positive label dismissals. Its Puppeteer render tier is unavailable; actual rendering is inspected through Playwright instead. Final findings and results belong in TESTING.md.
+
+## Applied studio guidance
+
+Discovered and used: Premium UI Design, Hallmark, Impeccable, UI UX Pro Max, Brand Identity Studio, Design System, Frontend Motion Design and Frontend Visual QA. Video work used Hackathon Video Studio and installed Remotion guidance with the shared video workspace. The existing branching identity was preserved. Hallmark static checks passed with two documented dismissals; its unavailable Puppeteer renderer was not claimed as passed. Actual production captures were inspected through the independent Playwright/CI workflow.

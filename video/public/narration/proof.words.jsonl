@@ -1,0 +1,4 @@
+{"type": "SentenceBoundary", "offset": 1000000, "duration": 61189812, "text": "The original verified run received one hundred demo tokens and paid fifty, thirty, and twenty."}
+{"type": "SentenceBoundary", "offset": 61689812, "duration": 51157405, "text": "Base block timestamps were two seconds apart for that run, not a latency guarantee."}
+{"type": "SentenceBoundary", "offset": 112847217, "duration": 45949072, "text": "A real duplicate callback emitted Duplicate Ignored and paid nothing more."}
+{"type": "SentenceBoundary", "offset": 158796289, "duration": 61689812, "text": "Exact source matches, raw receipts, and reproducible instructions are in the public repository."}

@@ -12,11 +12,11 @@ This is a factual release gate, not an independent security certification. Origi
 | Replay prevention | Real second callback emits DuplicateIgnored, no extra transfers |
 | Source verification | Exact creation/runtime Sourcify matches for original three contracts |
 | Source reproducibility | Pinned compiler/library/dependencies, deployment manifest and receipt files |
-| Public app | Vercel deployment reported READY; homepage/API HTTP 200 independently checked |
+| Public app | PASS: actual public HTTP/API, 14 public tests and ten inspected production captures; PRODUCTION_QA.md |
 | Signed frontend acceptance | PASS: independent pair, real policy/payment/callback, pause/resume and returning owner; browser-proof.json |
 | Internal audit | PASS within internal scope: 28 Foundry tests, 7 units, lint/types/audit passed; Solar parser limitation disclosed |
-| Browser/responsive | PASS locally: 13/13 after network fix; final public-host browser run pending |
-| Video | Real narration and editable composition exist; final playable render required |
+| Browser/responsive | PASS: 14 local + 14 independent public tests; responsive captures and zero browser errors |
+| Video | PASS locally: 150.0s MP4, full decode, H.264/AAC, 1080p30, aligned narration, zero black intervals and inspected frames; deployments/video.json |
 | Submission | Manual DoraHacks submission only; exact portal cutoff still unverified |
 
 ## Acceptance coverage map
@@ -43,3 +43,7 @@ No unresolved critical or high finding may be hidden by a passing test summary. 
 ## Known operational limits
 
 Public RPC throttling/history windows, incomplete callback-list responses, independent-owner administration across two contracts, current-policy execution and funding requirements remain disclosed. Fee funding is not a delivery guarantee. Testnet availability is not production uptime. Upstream license clarification and independent review remain requirements before commercial/mainnet use.
+
+## Readiness disposition
+
+Technical evidence gates pass for the testnet prototype. Release artifact publication and the final source push/CI are recorded separately in BUILD_STATUS.md. Overall submission remains **CONDITIONAL PASS** until the user checks the authenticated DoraHacks cutoff/required portal fields and reviews the prepared package. No automated DoraHacks submission is performed. Internal review is not an independent professional audit.

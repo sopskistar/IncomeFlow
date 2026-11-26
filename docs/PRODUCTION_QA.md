@@ -13,3 +13,9 @@ The actual signed local-production journey independently proved wallet connectio
 ## Independent result: PASS
 
 [GitHub Actions run 45754101739](https://github.com/sopskistar/IncomeFlow/actions/runs/45754101739), commit `747be04`, passed contracts and application jobs. Both local-build and public-Vercel browser suites passed **14/14**. The public suite completed in 12.8 seconds without retries or skipped assertions. Raw CI logs are retained in `artifacts/qa/github-final.log`. This independently verified homepage, calculator hydration, workspace, actual receipt/API, rule drafts, wallet switching/rejection/disconnect, 1440/768/390/320 navigation and explicit failure states. Production fixture tests never broadcast transactions; signed live acceptance remains separately evidenced.
+
+## Production screenshot inspection: PASS
+
+[Run 45756034510](https://github.com/sopskistar/IncomeFlow/actions/runs/45756034510) also passed both 14-test suites and the real public screenshot capture. Ten production PNGs were downloaded and visually inspected: landing desktop/phone, workspace 1440/768/390/320, narrow rules, dark phone, expanded receipt and fee health. All five phone tabs remain visible; no horizontal clipping, overlapping controls or broken logo was observed in these captures. Actual receipt links and funded/zero-debt states were legible. `browser-errors.json` contains `[]` for page exceptions and browser console errors. These are point-in-time checks, not continuous monitoring or accessibility certification.
+
+Durable copies and source metadata: `.impeccable/production/`. They are captured from the public deployment, not a disconnected prototype.
