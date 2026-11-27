@@ -13,9 +13,9 @@ encode_clip() {
   if [ "$overlay" = "opening" ]; then
     vf="$vf,drawbox=x=64:y=463:w=1200:h=76:color=0xf5f7f6:t=fill"
   elif [ "$overlay" = "opening-then-research" ]; then
-    vf="$vf,drawbox=x=64:y=463:w=1200:h=76:color=0xf5f7f6:t=fill:enable='between(t,0,1.7)',drawbox=x=58:y=623:w=1670:h=63:color=0xf5f7f6:t=fill:enable='gte(t,1.7)'"
+    vf="$vf,drawbox=x=64:y=463:w=1200:h=76:color=0xf5f7f6:t=fill:enable='between(t,0,1.7)',drawbox=x=58:y=734:w=1670:h=50:color=0xf5f7f6:t=fill:enable='gte(t,1.7)'"
   elif [ "$overlay" = "plates" ]; then
-    vf="$vf,drawbox=x=58:y=623:w=1670:h=63:color=0xf5f7f6:t=fill:enable='lte(t,1.7)',drawbox=x=0:y=1018:w=iw:h=62:color=0xf5f7f6:t=fill:enable='gte(t,1.7)'"
+    vf="$vf,drawbox=x=58:y=734:w=1670:h=50:color=0xf5f7f6:t=fill:enable='lte(t,1.7)',drawbox=x=0:y=1018:w=iw:h=62:color=0xf5f7f6:t=fill:enable='gte(t,1.7)'"
   fi
   ffmpeg -hide_banner -loglevel error -threads 2 -filter_complex_threads 1 -y \
     -ss "$start" -t "$seconds" -i "$INPUT" \
