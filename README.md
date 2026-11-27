@@ -2,13 +2,15 @@
 
 **Give every payment a purpose.**
 
+Built with **[Reactive Network Omni](https://reactive.network/)** — **Reactive Smart Contracts on Lasna**, listening to payment events on **Base Sepolia** and triggering authenticated cross-chain callbacks for automatic income allocation.
+
 **From payment requested to income organized:** a no-code crypto-income workspace for freelancers, with owner-signed payment requests, partial-payment records, automatic on-chain allocations, and receipts that can be independently verified.
 
 **[Watch the 2:30 demo](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4) · [Open the live app](https://incomeflow-gamma.vercel.app) · [Explore the real Payment Passport](https://incomeflow-gamma.vercel.app/passport-demo?view=owner) · [Verify the Reactive loop](https://incomeflow-gamma.vercel.app/proof)**
 
 Built for the **[Reactive Omni Buildathon](https://dorahacks.io/hackathon/reactive-omni-buildathon/detail)**, **Set It and Forget It** track, using **Reactive Network Omni**, **Reactive Lasna**, and **Base Sepolia**.
 
-> **Testnet prototype:** IncomeFlow uses valueless MockIncomeUSD (**ifUSD**), not real USDC. The example freelancer/job is illustrative, not a real customer. IncomeFlow does not collect outstanding invoices, determine tax liability, or guarantee that customers will pay.
+> **Testnet prototype:** IncomeFlow currently uses MockIncomeUSD (**ifUSD**) on Base Sepolia. It does not collect unpaid invoices or calculate tax liability.
 
 ![IncomeFlow homepage captured during verified production QA](docs/screenshots/incomeflow-homepage-desktop.png)
 
