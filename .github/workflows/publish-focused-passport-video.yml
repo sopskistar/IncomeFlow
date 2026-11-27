@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/publish-focused-passport-video.yml
       - scripts/polish-passport-demo.sh
+      - scripts/retime-passport-subtitles.py
 
 permissions:
   contents: write
@@ -45,6 +46,9 @@ jobs:
           assert audio['codec_name']=='aac'
           print(f'Validated focused film: {t:.2f}s, H.264/AAC 1920x1080')
           PY
+      - name: Retiming captions to match removed passages
+        run: |
+          python3 scripts/retime-passport-subtitles.py video/public/passport-narration/incomeflow-passport.srt /tmp/income-film/incomeflow-passport-demo-focused.srt
       - name: Generate representative visual review frames
         shell: bash
         run: |
@@ -61,5 +65,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release upload incomeflow-payment-passport /tmp/income-film/incomeflow-passport-demo-focused.mp4 --repo "$GITHUB_REPOSITORY" --clobber
+          gh release upload incomeflow-payment-passport /tmp/income-film/incomeflow-passport-demo-focused.mp4 /tmp/income-film/incomeflow-passport-demo-focused.srt --repo "$GITHUB_REPOSITORY" --clobber
           gh release view incomeflow-payment-passport --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[] | select(.name=="incomeflow-passport-demo-focused.mp4") | [.name,.size,.url] | @tsv'
