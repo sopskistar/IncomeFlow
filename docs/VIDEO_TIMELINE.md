@@ -1,5 +1,12 @@
 # Payment Passport video timeline
 
+## Recommended concise public cut (November 27, 2026)
+
+The recommended judge-facing film is the **138.25-second [focused Payment Passport demo](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo-focused.mp4)** with [retimed subtitles](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo-focused.srt). It is a non-destructive editorial version of the original 150-second Payment Passport film, which remains available for reproducibility. The published version is 1920×1080, 30 fps, H.264/AAC; full decoding and six representative visual frames passed in [GitHub Actions](https://github.com/sopskistar/IncomeFlow/actions/runs/45957686082). Published SHA-256: `004c7c288de8804abb40731830565583bd8ba6bcbcffe73b422fdbf5d753949a`.
+
+Edits: remove repeated explanatory end-sentences in the opening, research and proof scenes; remove the persistent "genuine footage / edited pacing" footer, the opening illustrative label, and the redundant research caveat. The 59% statistic remains clearly scoped to **surveyed small businesses**, with the QuickBooks source shown in full. The genuine payment footage, the 40/60 transfers, Reactive executions and on-chain allocation evidence are preserved. The outro retains its testnet-prototype scope; this edit is not a latency benchmark. Source cut windows and non-destructive reproduction: [scripts/polish-passport-demo.sh](../scripts/polish-passport-demo.sh) and [scripts/retime-passport-subtitles.py](../scripts/retime-passport-subtitles.py).
+
+
 Revised output: `artifacts/video/passport/incomeflow-passport-demo.mp4` — **150.0s, 1920×1080, 30 fps, H.264/AAC, 5,682,102 bytes**. Separate from the unchanged original published film described below. The revision uses genuine signed-session footage and read-only verification of the same saved signatures/receipts. No test transaction was repeated for filming.
 
 | Time | Story | Actual source |
