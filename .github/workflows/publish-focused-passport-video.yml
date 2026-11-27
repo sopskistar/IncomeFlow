@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/publish-focused-passport-video.yml
+      - scripts/polish-passport-demo.sh
 
 permissions:
   contents: write
