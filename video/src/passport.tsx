@@ -151,11 +151,6 @@ function Scene({
               <p style={{ fontSize: 29, marginTop: 36 }}>
                 QuickBooks, 2026 Small Business Late Payments Report
               </p>
-              <p style={{ fontSize: 24, color: C.muted, maxWidth: 1500 }}>
-                Small businesses broadly, not crypto freelancers. This does not
-                establish IncomeFlow’s effectiveness or guarantee earlier
-                payment.
-              </p>
               <p style={{ fontSize: 21, color: C.muted, marginTop: 36 }}>
                 quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/
               </p>
