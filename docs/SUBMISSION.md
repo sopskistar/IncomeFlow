@@ -44,7 +44,7 @@ Testnet prototype for one conventional valueless token on Base Sepolia, with fun
 
 ## Media and submission checklist
 
-Recommended demo: [Payment Passport — 150 seconds](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4), 1920×1080p30 H.264/AAC, full decode/audio/timestamp/visual review and anonymous download checksum passed. [Captions and report](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-payment-passport). The [original film remains preserved](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo).
+Recommended demo: [Payment Passport — focused 138-second cut](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo-focused.mp4), 1920×1080p30 H.264/AAC. The focused cut removes repetitive on-screen and narrated caveats while keeping the actual 40/60 payment, callback and payout proof; full decoding, codec checks and representative-frame inspection passed. The original full-length film remains available separately. [Focused, synchronized captions](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo-focused.srt) and [release assets](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-payment-passport). The [original film remains preserved](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo).
 - [x] Public original MIT repository and preserved history.
 - [x] Real original and Passport event → Reactive → callback → payout proof.
 - [x] Signed request, explicit associations, partial records and recovery workflow.
