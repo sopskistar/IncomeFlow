@@ -161,7 +161,12 @@
     "unchanged": true
   },
   "publication": {
-    "status": "pending",
-    "tag": "incomeflow-payment-passport"
-  }
+    "status": "published and anonymously checksum-verified",
+    "tag": "incomeflow-payment-passport",
+    "url": "https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-payment-passport",
+    "mp4": "https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4",
+    "downloadSHA256": "a760d67f1390c97c036694d1eaf01f16ad2c40d8e6082ae002e29f36a7a19ede",
+    "verifiedAt": "2026-11-27T06:12:29.093379+00:00"
+  },
+  "mediaSourceCommit": "bb032dd55cfd2fb31a41f551915c9b5ca74cb809"
 }

@@ -29,7 +29,7 @@ On Lasna call SYSTEM `depositTo(reactive)` with lREACT; on Base call proxy `depo
 
 ## Web hosting
 
-Next.js targets Vercel with `npm ci && npm run build`; RPC env values and generated public deployment metadata contain no signing keys. The web frontend never uses the deployment keystore. A live URL will be added only after an actual deployment and browser inspection. No database is needed for core automation.
+Next.js targets Vercel with `npm ci && npm run build`; RPC env values and generated public deployment metadata contain no signing keys. The web frontend never uses the deployment keystore. The verified public URL and exact deployment checks are recorded below. No database is needed for core automation.
 
 ## Verified hosting record
 
@@ -37,8 +37,10 @@ Vercel project `sopskistars-projects/incomeflow` was created using the existing 
 
 No signing secrets are required on Vercel. Public testnet RPC defaults are used unless explicitly overridden. `.vercelignore` excludes encrypted wallets, local tooling, video recordings, contract build artifacts and environment files. The core app uses on-chain state and needs no database. Production remains a testnet demonstration.
 
-Final runtime source checkpoint: `747be04`. Verified deployment `dpl_48RFxdBJ3Aeu5p1wXJXhEksmRxyc`, immutable URL https://incomeflow-cpt6v6l13-sopskistars-projects.vercel.app. Both public browser assertions and production screenshots passed in GitHub Actions; see PRODUCTION_QA.md. No automatic Vercel-on-push integration is claimed: deployments were issued explicitly through the authenticated CLI, while GitHub Actions runs verification only.
+Preserved original runtime source checkpoint: `747be04`. Verified deployment `dpl_48RFxdBJ3Aeu5p1wXJXhEksmRxyc`, immutable URL https://incomeflow-cpt6v6l13-sopskistars-projects.vercel.app. Both public browser assertions and production screenshots passed in GitHub Actions; see PRODUCTION_QA.md. No automatic Vercel-on-push integration is claimed: deployments were issued explicitly through the authenticated CLI, while GitHub Actions runs verification only.
 
 ## Payment Passport promotion
 
 The feature adds no database, private server signer or new environment secret. Preserve `incomeflow-testnet-demo` and the prior immutable Vercel deployment as fallback. Verify the feature branch with normal CI and internal audit before promotion. After deploying the reviewed source, run `gh workflow run public-qa.yml --ref main -f url=https://incomeflow-gamma.vercel.app`, inspect its actual browser results and screenshot artifact, and record the deployment/commit. Public verification is an explicit post-deployment workflow so feature tests do not compare new selectors against intentionally unchanged production. No contract deployment is part of web promotion.
+
+The enhancement was promoted as `dpl_2NJf3SQUrKuZs1gUFBDLAEnF1fwF` after source 237e535 and main bb032dd passed CI. Public alias is unchanged. Actual public HTTP/API and 20-test independent browser verification passed; production screenshot and owner review results are in PRODUCTION_QA.md. Rollback can promote the preserved old immutable deployment through the authenticated Vercel CLI; do not redeploy financial contracts. Metadata: deployments/passport-release.json.

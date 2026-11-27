@@ -21,11 +21,55 @@
       "checkedAt": "2026-11-26T19:35:38.292Z"
     }
   },
-  "productionDomainPromoted": false,
+  "productionDomainPromoted": true,
   "previousRelease": {
     "commit": "1fdbad7cc96ec426b435fb2126e0d881daa72984",
     "deployment": "dpl_48RFxdBJ3Aeu5p1wXJXhEksmRxyc",
     "filmTag": "incomeflow-testnet-demo"
   },
-  "newTransactionsThisResumption": 0
+  "newTransactionsThisResumption": 0,
+  "integratedCommit": "bb032dd55cfd2fb31a41f551915c9b5ca74cb809",
+  "mainCI": {
+    "runId": 45946880326,
+    "conclusion": "success",
+    "url": "https://github.com/sopskistar/IncomeFlow/actions/runs/45946880326"
+  },
+  "public": {
+    "url": "https://incomeflow-gamma.vercel.app",
+    "homepageHTTP": 200,
+    "passportHTTP": 200,
+    "verificationHTTP": 200,
+    "verified": true,
+    "paid": "100000000",
+    "outstanding": "0",
+    "failures": [],
+    "checkedAt": "2026-11-27T05:53:28.716Z",
+    "browser": {
+      "runId": 45948544775,
+      "conclusion": "success",
+      "passed": 20,
+      "seconds": 27.3,
+      "url": "https://github.com/sopskistar/IncomeFlow/actions/runs/45948544775"
+    },
+    "ownerCapture": {
+      "root": "https://incomeflow-gamma.vercel.app",
+      "checkedAt": "2026-11-27T06:05:20.379Z",
+      "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "errors": [],
+      "network": [],
+      "mode": "Read-only encrypted-account connection; genuine saved signatures verified; unsigned form preview; no signing or transaction method."
+    },
+    "health": {
+      "vaultBalance": "2995987351800000",
+      "vaultDebt": "0",
+      "vaultReserves": "0",
+      "reactiveBalance": "392629400000000000",
+      "reactiveDebt": "0",
+      "reactiveReserves": "0",
+      "subscribed": true
+    },
+    "lifetimePaymentCount": "3",
+    "lifetimeTotalDistributed": "200000000",
+    "note": "Vault lifetime includes the separate earlier 100-token run. Passport counts only its exact two associated 40/60 transfers."
+  }
 }

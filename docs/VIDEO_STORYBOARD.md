@@ -14,6 +14,16 @@ Production direction: a calm fintech explainer intercut with genuine moving appl
 
 Footage must be recorded from the functioning application. Any locally automated EIP-1193 test wallet is named as such and signs through the encrypted Node/Foundry keystore; no private key is injected into a page and no third-party wallet UI is impersonated. Long network waits may be cut; transaction outcomes must remain authentic. Retain original recordings and the edit timing map.
 
-## Payment Passport revision (separate output)
+## Recommended Payment Passport revision — verified
 
-Preserve the published original film. Revised narrative: 0–20 illustrative delivered website / remaining admin; 20–35 qualified QuickBooks evidence with URL; 35–55 actual signed request creation; 55–85 real explicit partial-payment association and outstanding amounts; 85–115 genuine new test payments and Reactive allocation; 115–135 exact proof and recovered record; 135–150 established brand, live URL, GitHub. No invented client or historical invoice. Source: video/passport-narration.json. Do not recommend this revision until footage, render, decode and visual inspection are complete.
+| Time | Picture and movement | Narrative / integrity |
+| --- | --- | --- |
+| 0–20s | Original title reveal and staged financial-admin labels | Illustrative freelancer; no invented customer |
+| 20–35s | Quiet research composition with 59% emphasis and source URL | Broad small-business evidence; no product-effectiveness claim |
+| 35–55s | Actual request review/signing workflow and original signed-link navigation | Owner-controlled receiving vault; a signature moves no tokens |
+| 55–85s | Actual exact-log association, partial totals, second association and settled receipt | 40 received / 60 outstanding, then 100 / 0; explicit association, no inferred invoice ID |
+| 85–115s | Genuine 40/60 token payment footage | Reactive performs allocation; original saved transaction outcomes, waits retimed |
+| 115–135s | Moving receipt inspection and real payout links | Separate verification stages; actual 20/12/8 and 30/18/12; M1 is a separate run |
+| 135–150s | Original brand motion and real product/GitHub links | Testnet limits and verifiable record, no adoption claims |
+
+Source, exact cuts and measured validation: VIDEO_TIMELINE.md, VIDEO_EVIDENCE.md and deployments/video-passport.json. The opening font issue, mistimed cut and mixed MP4 time-base assembly were rejected and repaired before release. The original film remains unchanged. No screenshot slideshow or repeated payment substitutes for genuine moving footage.

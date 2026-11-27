@@ -58,10 +58,10 @@ The baseline remains reproducible and its published film is preserved. The enhan
 | Exact accounting | PASS: 100 ifUSD received, 0 outstanding, allocations 20/12/8 + 30/18/12. Same disposable owner/payer, not a real commercial client. |
 | Local and feature CI | PASS: 28 contract, 25 unit and 20 browser tests; lint/types/production build. No new transaction is sent by the regression suite. |
 | Internal security | No unresolved critical/high finding identified in scoped review. PP findings resolved and limitations accepted in SECURITY_AUDIT.md. Solar parser failure remains, not passed. |
-| Visual critique | Local desktop/tablet/phone captures inspected; A/B findings fixed. Final public narrow-confirmation and production captures pending. Hallmark static clearance is not a renderer pass. |
+| Visual critique | PASS: 19 independent public and 8 owner screenshots inspected; final narrow controls cleared by reviewer. Hallmark static clearance is not a renderer pass. |
 | Staged hosting | READY with skip-domain; authenticated API verifies signatures, current deployed code and all existing receipts. Protected immutable URL is not public verification. |
-| Enhanced public release | Pending promotion and explicit independent public browser suite. Prior public QA refers to the original release. |
-| Revised film | PASS locally: 150s 1080p30 H.264/AAC, full decode without logged errors, timestamp/activity/black scans, all narration aligned, 12 decoded frames inspected; separate publication pending. |
+| Enhanced public release | PASS: promoted production, HTTP 200 homepage/Passport/API, fresh exact proof, 20 independent public browser tests in 27.3s; CI 45948544775. |
+| Revised film | PASS locally: 150s 1080p30 H.264/AAC, full decode without logged errors, timestamp/activity/black scans, all narration aligned, 12 decoded frames inspected; published separately and anonymous download checksum matched. |
 | Submission | Draft and proof links prepared. User must review the authenticated cutoff/portal fields and manually submit; no automatic submission. |
 
-No additional blockchain transaction, faucet request or contract deployment occurred during this capture/video resumption. The previous local host's ERR_NETWORK_CHANGED failures remain disclosed in PRODUCTION_QA.md, separately from independent GitHub Actions passes. Technical readiness is only confirmed after the pending gates above have actual evidence. Internal review is not an independent professional audit.
+No additional blockchain transaction, faucet request or contract deployment occurred during this capture/video resumption. The previous local host's ERR_NETWORK_CHANGED failures remain disclosed in PRODUCTION_QA.md, separately from independent GitHub Actions passes. Technical gates now have evidence; overall submission is CONDITIONAL PASS until authenticated portal cutoff/fields and user review/manual submission. Internal review is not an independent professional audit.

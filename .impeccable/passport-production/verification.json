@@ -1,0 +1,11 @@
+{
+  "runId": 45948544775,
+  "url": "https://incomeflow-gamma.vercel.app",
+  "commit": "bb032dd55cfd2fb31a41f551915c9b5ca74cb809",
+  "passed": 20,
+  "durationSeconds": 27.3,
+  "publicCaptures": 19,
+  "errors": [],
+  "ownerCapture": "../passport-production-owner/owner-capture.json",
+  "note": "Independent CI public tests and captures; initial local Failed to fetch capture retained separately and not counted as a pass."
+}

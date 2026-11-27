@@ -2,7 +2,7 @@
 
 **From payment requested to income organized.** For independent professionals, finishing a project can leave another workload: requesting payment, tracking what arrives, organizing income and retaining the record. IncomeFlow connects those steps for supported crypto payments.
 
-[Open IncomeFlow](https://incomeflow-gamma.vercel.app) · [Inspect on-chain proof](https://incomeflow-gamma.vercel.app/proof)
+[Open IncomeFlow](https://incomeflow-gamma.vercel.app) · [Inspect on-chain proof](https://incomeflow-gamma.vercel.app/proof) · [Watch the 150-second demo](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4)
 
 Built for freelancers and independent professionals in the Reactive Omni Buildathon’s **Set It and Forget It** track. This is a **testnet prototype**, using valueless **MockIncomeUSD (ifUSD)**. Tax reserve percentages are user choices, not tax advice or calculated liabilities.
 
@@ -24,7 +24,7 @@ Established payment splitting and invoicing tools already solve valuable parts o
 4. Associate the exact transaction hash and log index with the request. Verify partial/outstanding amounts and the separate allocation evidence.
 5. Export the client receipt or full owner Passport; back up browser-local records for another device.
 
-[Payment Passport specification and limitations](docs/PAYMENT_PASSPORT.md). The feature branch's current verification/release state is in [BUILD_STATUS](docs/BUILD_STATUS.md); the previously verified release remains the fallback until its extension passes.
+[Payment Passport specification and limitations](docs/PAYMENT_PASSPORT.md). The enhanced release is live; exact CI, on-chain and production checks are in [BUILD_STATUS](docs/BUILD_STATUS.md). The original deployment and film remain preserved fallbacks.
 
 ## A signed request. Two real partial payments.
 
@@ -145,6 +145,6 @@ This is internally reviewed and tested, **not independently audited or ready for
 
 ## Demonstration film
 
-The recommended Payment Passport revision is **150.0 seconds, 1920×1080 at 30 fps, H.264 with AAC narration**. It opens with the qualified freelancer problem, then shows genuine request/association workflow, the actual 40/60 test payments, zero outstanding and both allocation receipts. Local output: `artifacts/video/passport/incomeflow-passport-demo.mp4`. [Measured verification](deployments/video-passport.json) · [timeline and reproduction](docs/VIDEO_TIMELINE.md). Public publication is recorded after upload and checksum verification. The original released film remains available below as a preserved fallback.
+The recommended Payment Passport revision is **150.0 seconds, 1920×1080 at 30 fps, H.264 with AAC narration**. It opens with the qualified freelancer problem, then shows genuine request/association workflow, the actual 40/60 test payments, zero outstanding and both allocation receipts. Local output: `artifacts/video/passport/incomeflow-passport-demo.mp4`. [Measured verification](deployments/video-passport.json) · [timeline and reproduction](docs/VIDEO_TIMELINE.md). [Download the verified Passport MP4](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4) · [release and captions](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-payment-passport). The anonymous download matched the inspected local SHA-256. The original released film remains available below as a preserved fallback.
 
 The verified film is **150.0 seconds, 1920×1080 at 30 fps, H.264 with AAC narration**. It contains genuine moving signed-user setup/payment footage, actual 50/30/20 receipts and the separately labeled original M1 proof. Source, audio, captions and editorial cuts are in [video/](video/); the complete rendered file is kept outside Git history at `artifacts/video/incomeflow-demo.mp4`. [Verification report](deployments/video.json) · [timeline and reproduction](docs/VIDEO_TIMELINE.md). [Download the verified MP4](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow-demo.mp4) · [release and captions](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo). The anonymous download was checked against the local SHA-256.

@@ -44,13 +44,12 @@ Testnet prototype for one conventional valueless token on Base Sepolia, with fun
 
 ## Media and submission checklist
 
-Original verified150-second film remains available at [the preserved release](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo). Revised film status and final link: BUILD_STATUS.md and VIDEO_EVIDENCE.md; recommend it only after full render/decode/visual verification.
-
+Recommended demo: [Payment Passport — 150 seconds](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4), 1920×1080p30 H.264/AAC, full decode/audio/timestamp/visual review and anonymous download checksum passed. [Captions and report](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-payment-passport). The [original film remains preserved](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo).
 - [x] Public original MIT repository and preserved history.
 - [x] Real original and Passport event → Reactive → callback → payout proof.
 - [x] Signed request, explicit associations, partial records and recovery workflow.
 - [x] Local tests, security review and responsive critique; exact final CI/public outcomes in BUILD_STATUS.md.
-- [ ] Enhanced production version independently verified after promotion.
-- [ ] Revised MP4 rendered, decoded, inspected and published.
+- [x] Enhanced production version independently verified after promotion: 20 public browser tests, actual API reads and inspected screenshots.
+- [x] Revised MP4 rendered, decoded, inspected, published and anonymously checksum-verified.
 - [ ] Exact official DoraHacks closing clock/timezone and portal-specific fields checked. The public event page remains inaccessible to available tools; competitor README times are not official authority.
 - [ ] User reviews and manually submits through DoraHacks. No automatic submission performed.

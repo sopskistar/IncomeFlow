@@ -69,73 +69,103 @@ await context.addInitScript(
 const page = await context.newPage();
 const errors: string[] = [];
 page.on("pageerror", (e) => errors.push(e.message));
-await page.goto(root + "/passport");
-await page
-  .locator("header")
-  .getByText("Connect wallet", { exact: true })
-  .click();
-await page.getByRole("button", { name: "Browser wallet", exact: true }).click();
-await page.getByRole("button", { name: proof.passport.request.title }).click();
-await expect(
-  page.getByText("Owner-signed request verified", { exact: true }),
-).toBeVisible({ timeout: 90000 });
-for (const width of [1440, 768, 390, 320]) {
-  await page.setViewportSize({ width, height: 1000 });
+const network: { path: string; failure?: string; status?: number }[] = [];
+page.on("requestfailed", (request) =>
+  network.push({
+    path: new URL(request.url()).pathname,
+    failure: request.failure()?.errorText,
+  }),
+);
+page.on("response", (response) => {
+  if (response.status() >= 400)
+    network.push({
+      path: new URL(response.url()).pathname,
+      status: response.status(),
+    });
+});
+try {
+  await page.goto(root + "/passport");
+  await page
+    .locator("header")
+    .getByText("Connect wallet", { exact: true })
+    .click();
+  await page.getByRole("button", { name: "Browser wallet", exact: true }).click();
+  await page.getByRole("button", { name: proof.passport.request.title }).click();
+  await expect(
+    page.getByText("Owner-signed request verified", { exact: true }),
+  ).toBeVisible({ timeout: 90000 });
+  for (const width of [1440, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.screenshot({
+      path: `${out}/returning-owner-${width}.png`,
+      fullPage: true,
+    });
+    if (
+      await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)
+    )
+      errors.push(`owner-${width} overflow`);
+  }
+  // Inspect the unsigned confirmation against the original signed link version.
+  await page.goto(
+    `${root}/passport#${encodePassport(parsePassport({ ...proof.passport, associations: [] }))}`,
+  );
+  await expect(
+    page.getByText("Owner-signed request verified", { exact: true }),
+  ).toBeVisible({ timeout: 90000 });
+  await page
+    .getByLabel("Origin transaction hash", { exact: true })
+    .fill(proof.passport.associations[0].transactionHash);
+  await page
+    .getByLabel("Transfer log index", { exact: true })
+    .fill(String(proof.passport.associations[0].logIndex));
+  await page
+    .getByRole("button", { name: "Review payment association", exact: true })
+    .click();
   await page.screenshot({
-    path: `${out}/returning-owner-${width}.png`,
+    path: `${out}/association-confirmation-narrow.png`,
     fullPage: true,
   });
-  if (
-    await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)
-  )
-    errors.push(`owner-${width} overflow`);
-}
-// Inspect the unsigned confirmation against the original signed link version.
-await page.goto(
-  `${root}/passport#${encodePassport(parsePassport({ ...proof.passport, associations: [] }))}`,
-);
-await expect(
-  page.getByText("Owner-signed request verified", { exact: true }),
-).toBeVisible({ timeout: 90000 });
-await page
-  .getByLabel("Origin transaction hash", { exact: true })
-  .fill(proof.passport.associations[0].transactionHash);
-await page
-  .getByLabel("Transfer log index", { exact: true })
-  .fill(String(proof.passport.associations[0].logIndex));
-await page
-  .getByRole("button", { name: "Review payment association", exact: true })
-  .click();
-await page.screenshot({
-  path: `${out}/association-confirmation-narrow.png`,
-  fullPage: true,
-});
-await page
-  .getByRole("button", { name: "Cancel association", exact: true })
-  .click();
-await page.setViewportSize({ width: 1440, height: 1000 });
-await page.getByRole("button", { name: "New request", exact: true }).click();
-await page
-  .getByLabel("Job or project title")
-  .fill(proof.passport.request.title);
-await page
-  .getByLabel("Description (optional)")
-  .fill(
-    "Unsigned UI review preview. No new payment request is signed or associated.",
+  await page
+    .getByRole("button", { name: "Cancel association", exact: true })
+    .click();
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.getByRole("button", { name: "New request", exact: true }).click();
+  await page
+    .getByLabel("Job or project title")
+    .fill(proof.passport.request.title);
+  await page
+    .getByLabel("Description (optional)")
+    .fill(
+      "Unsigned UI review preview. No new payment request is signed or associated.",
+    );
+  await page.getByLabel("Amount requested (ifUSD)").fill("100");
+  await page.getByLabel("Your IncomeFlow vault").fill(proof.vault);
+  await page.getByLabel("Expected payer wallet (optional)").fill(owner);
+  await page.screenshot({ path: `${out}/request-creation.png`, fullPage: true });
+  await page.getByRole("button", { name: "Review request", exact: true }).click();
+  await page.screenshot({ path: `${out}/signing-review.png`, fullPage: true });
+  await page.setViewportSize({ width: 320, height: 1000 });
+  await page.screenshot({
+    path: `${out}/signing-review-narrow.png`,
+    fullPage: true,
+  });
+} catch (error) {
+  await page
+    .screenshot({ path: `${out}/capture-failure.png`, fullPage: true })
+    .catch(() => {});
+  writeFileSync(
+    `${out}/capture-failure.json`,
+    JSON.stringify(
+      { checkedAt: new Date().toISOString(), error: String(error), network, pageErrors: errors },
+      null,
+      2,
+    ) + "\n",
   );
-await page.getByLabel("Amount requested (ifUSD)").fill("100");
-await page.getByLabel("Your IncomeFlow vault").fill(proof.vault);
-await page.getByLabel("Expected payer wallet (optional)").fill(owner);
-await page.screenshot({ path: `${out}/request-creation.png`, fullPage: true });
-await page.getByRole("button", { name: "Review request", exact: true }).click();
-await page.screenshot({ path: `${out}/signing-review.png`, fullPage: true });
-await page.setViewportSize({ width: 320, height: 1000 });
-await page.screenshot({
-  path: `${out}/signing-review-narrow.png`,
-  fullPage: true,
-});
-await context.close();
-await browser.close();
+  throw error;
+} finally {
+  await context.close();
+  await browser.close();
+}
 writeFileSync(
   out + "/owner-capture.json",
   JSON.stringify(
@@ -144,6 +174,7 @@ writeFileSync(
       checkedAt: new Date().toISOString(),
       owner,
       errors,
+      network,
       mode: "Read-only encrypted-account connection; genuine saved signatures verified; unsigned form preview; no signing or transaction method.",
     },
     null,

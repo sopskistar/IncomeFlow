@@ -1,0 +1,65 @@
+{
+  "verified": true,
+  "digest": "0x44b63bff17293a1bc7dccf1d1eae00ec9846386f1123741272fb5bd946f847f7",
+  "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+  "reactive": "0x30fc195918738aBf90BA5B626Dfa98F99d5Ca200",
+  "payments": [
+    {
+      "transactionHash": "0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964",
+      "logIndex": 10,
+      "id": "0x9fa81c78b51ad634bcae50a01d6b7431bc81f5a6a7b06fcbff74bad0c3397c5a",
+      "amount": "40000000",
+      "payer": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "paidAt": 1795710124,
+      "status": "Allocation confirmed",
+      "destinationHash": "0xdff7ee7715f54a4a119001cbee4965b6cde358317d1d14ec2ac497a4812590b9",
+      "reactiveHash": "0x7dc8bb4d7775d2a7d22989de6b35338bf696a873ce22b411dd6deb002e3e4b10",
+      "version": "1",
+      "allocations": [
+        {
+          "recipient": "0xA96B637E0Dc2F17937700B18010723AD1f4e3079",
+          "amount": "20000000"
+        },
+        {
+          "recipient": "0x93b79B2E31Fb33E11C11d4067C3A3820E5Cf2AEB",
+          "amount": "12000000"
+        },
+        {
+          "recipient": "0x0B4ad4CEDEC75bc9577Afc9D75C75b1101875713",
+          "amount": "8000000"
+        }
+      ]
+    },
+    {
+      "transactionHash": "0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da",
+      "logIndex": 29,
+      "id": "0x45703b64ab29accacc6398bff550fd794ba25aa8ad059a4cb02497a72f0ab71f",
+      "amount": "60000000",
+      "payer": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "paidAt": 1795710151,
+      "status": "Allocation confirmed",
+      "destinationHash": "0xb1f4ee25f1c47cb6d3f3f1330160b06f57392b7f0639fb5e220ab9bd5684dc91",
+      "reactiveHash": "0x0807477dab0eac199dfa65eba7416097c593b718dc8cab89d985f80de590077a",
+      "version": "1",
+      "allocations": [
+        {
+          "recipient": "0xA96B637E0Dc2F17937700B18010723AD1f4e3079",
+          "amount": "30000000"
+        },
+        {
+          "recipient": "0x93b79B2E31Fb33E11C11d4067C3A3820E5Cf2AEB",
+          "amount": "18000000"
+        },
+        {
+          "recipient": "0x0B4ad4CEDEC75bc9577Afc9D75C75b1101875713",
+          "amount": "12000000"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "paid": "100000000",
+  "outstanding": "0",
+  "overpaid": "0",
+  "checkedAt": "2026-11-27T05:53:28.716Z"
+}

@@ -56,7 +56,7 @@ Before mainnet: independent audit, upstream licensing resolution, realistic serv
 
 Existing-address reads validate contract interfaces, supported token and official provider, but are not a source-code attestation for an arbitrary address. Use the verified deployment manifest or the application’s known-bytecode creation workflow; independently inspect source before depositing into a third-party address. The original three contracts have exact source matches; no source-verification claim is made for every arbitrary address a visitor enters.
 
-## Final release reconciliation
+## Original release reconciliation
 
 Application/contract/test/workflow files remain unchanged from the passing `546e51a` checkpoint. Recorded evidence: 28 Foundry tests (including fuzz/invariant), 7 unit tests, 14 local-build and 14 independent public browser tests, ten inspected production captures and zero production browser errors. No new blockchain transaction was used for media completion. No unresolved critical/high project finding was identified; Solar remains an unresolved parser/tool compatibility limitation and was not marked passed.
 
@@ -92,3 +92,9 @@ The verifier now also attests the compiled IncomeFlowReactive runtime and checks
 Signed timestamps are owner assertions rather than trusted issuance-time proofs. No global request registry or legal invoice attestation is claimed. The actual demonstration signs first and then sends the two payments; recorded workflow evidence supports that specific ordering. This is an accepted informational limitation, distinct from authenticated on-chain block timestamps.
 
 Release source checkpoint `237e535` passed feature CI (28 contract, 25 unit, 20 browser tests plus build/types/lint). Subsequent media tools are offline and excluded from Vercel. Revised-film repairs sent no blockchain transactions. Temporary render/cache files, encrypted wallets and signing credentials remain excluded from Git; public signatures and illustrative metadata are intentionally included proof. Final public verification is recorded separately after promotion.
+
+## Enhanced production reconciliation — 2026-11-27
+
+The source/main CI and independent public 20-test suite passed. Public API freshly authenticated the two original signed associations and exact origin/Reactive/callback/payout evidence. No new financial action was performed for verification. Owner-only UI review used a read-only account connector with signing/sending disabled; eight inspected screenshots and empty request/page diagnostics are preserved. The scoped independent visual reviewer cleared the final narrow controls.
+
+No unresolved critical/high issue was identified within this internal review. Existing accepted RPC/funding, EOA-only signature, owner-asserted metadata, local-storage recovery, current-policy and upstream license limitations remain. Solar was not passed. This release remains a testnet prototype and is not independently professionally audited. Final delivery changes only documentation and capture diagnostics; production code remains the tested 237e535 snapshot.

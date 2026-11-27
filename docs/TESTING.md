@@ -1,6 +1,6 @@
 # Testing and verification
 
-Updated 2026-11-25. Local results are distinct from the independently recorded live chain proof.
+Original release checks below; enhancement release reconciled 2026-11-27. Local results are distinct from the independently recorded live chain proof.
 
 ## Contract checks
 
@@ -51,3 +51,5 @@ Final remote check: commit `747be04` passed GitHub Actions contracts/application
 The preserved 18-test report is `/tmp/incomeflow-passport-browser-full.log`. After independent review fixes, `/tmp/incomeflow-passport-browser-final.log` reports **20 passed in 1.7 minutes**. New cases cover signing-review title/amount, Edit retaining payer/date, declined signing, genuine signed archive import/export/reconnection, malformed/oversized links, and actual two-payment client/full-owner receipts. No ordinary browser test signs or broadcasts.
 
 The opt-in signed acceptance already passed and is guarded by `deployments/passport-proof.json`; do not rerun payments for QA. Exactly two transfers were made in the earlier run. 25 unit tests cover cryptography/domain tampering, schemas/expiry, duplicate association accounting, storage isolation and chain receipts including canonical vault/Reactive code and actual payouts. 28 unchanged-contract Foundry tests passed; Solar remains an incompatible parser result, not a passing scan. Final branch/public CI outcomes are recorded after execution in BUILD_STATUS.md and passport-checks.json.
+
+Final enhanced release: [main CI 45946880326](https://github.com/sopskistar/IncomeFlow/actions/runs/45946880326) passed all jobs; [public CI 45948544775](https://github.com/sopskistar/IncomeFlow/actions/runs/45948544775) passed **20 tests in 27.3 seconds**. Current totals are **28 Foundry / 25 unit / 20 browser**, not the earlier release's 7/14 counts. Production screenshot and read-only owner captures passed and were inspected. The signed live Passport acceptance remains the earlier two-transfer run; ordinary regressions and final captures make no new transactions. Media source TypeScript, Python syntax, final root lint and strengthened full-film validation passed. Closing diagnostics/docs-only CI is checked before delivery.

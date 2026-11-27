@@ -1,0 +1,25 @@
+{
+  "assessmentA": "Listed findings resolved; ship",
+  "assessmentB": "Final production 320px candidate and signing-review controls inspected; reserved concern resolved",
+  "staticHallmark": {
+    "FAIL": 0,
+    "REFLEX": 0,
+    "WARN": 0,
+    "dismissed": 4,
+    "scope": "Passport changed UI",
+    "renderer": "Unavailable; not claimed passed"
+  },
+  "actualScreenshots": {
+    "public": 19,
+    "owner": 8,
+    "inspected": 27,
+    "sizes": [
+      1440,
+      768,
+      390,
+      320
+    ],
+    "themes": "Light and supported dark captures"
+  },
+  "limitations": "Scoped engineering/visual review, not independent security audit or WCAG certification"
+}

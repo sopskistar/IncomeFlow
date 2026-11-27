@@ -112,3 +112,7 @@ Existing user vault: `0xd70db6249b22cb72a463cc26849e85fa699d37c1`. Exact request
 Each successful token-emitted Transfer was explicitly associated through an owner-signed EIP-712 PaymentAssociation. The verifier checked the current owner and canonical vault runtime, exact token/to/payer/log/amount, matching payment ID and policy, actual callback token Transfers and the corresponding Reactive PaymentObserved receipt. The first association counted 40 received and 60 outstanding; the second counted 100 received and zero outstanding. Total allocations are 50/30/20 ifUSD under policy version 1. Financial event verification passed; the final returning-owner browser regression is recorded separately in PASSPORT_QA.md.
 
 Reproduce read-only: open `/passport-demo?view=owner`, refresh evidence, follow each explorer link, or submit the signed envelope from the manifest to `POST /api/passport/verify`. No wallet or new payment is necessary to inspect this proof.
+
+## Read-only production reconfirmation — 2026-11-27
+
+The promoted public /api/passport/verify rechecked the existing signed request/associations and exact receipts: both allocations confirmed, 100000000 base units paid, 0 outstanding, no failures. Durable response: deployments/passport-public-proof.json. Current vault health is active/subscribed with zero service debts; the lifetime 200 ifUSD across three payments includes the separate earlier 100-token demonstration. No new transaction, faucet exchange or contract deployment was used for this check.

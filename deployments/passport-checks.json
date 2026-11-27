@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-26T18:59:58.428271+00:00",
-  "branch": "feat/payment-passport",
+  "checkedAt": "2026-11-27T06:12:29.093379+00:00",
+  "branch": "main (integrated from feat/payment-passport)",
   "baseline": "1fdbad7cc96ec426b435fb2126e0d881daa72984",
   "checks": {
     "contracts": {
@@ -38,7 +38,7 @@
   },
   "visual": {
     "assessmentA": "listed findings resolved; ship",
-    "assessmentB": "listed findings resolved; static0FAIL0REFLEX0WARN4dismissed; long confirmation label shortened, public final capture pending",
+    "assessmentB": "Final production narrow confirmation inspected and cleared; static 0 FAIL/REFLEX/WARN, four documented dismissals; renderer unavailable.",
     "capture": {
       "root": "http://localhost:3098",
       "checkedAt": "2026-11-26T18:20:24.635Z",
@@ -61,6 +61,20 @@
       "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
       "errors": [],
       "mode": "Read-only encrypted-account connection; genuine saved signatures verified; unsigned form preview; no signing or transaction method."
+    },
+    "productionOwnerCapture": {
+      "root": "https://incomeflow-gamma.vercel.app",
+      "checkedAt": "2026-11-27T06:05:20.379Z",
+      "owner": "0x732400B210BCd79ACD0BBb8a760CAcd511f7e09a",
+      "errors": [],
+      "network": [],
+      "mode": "Read-only encrypted-account connection; genuine saved signatures verified; unsigned form preview; no signing or transaction method."
+    },
+    "productionScreenshots": {
+      "captured": 19,
+      "source": "GitHub Actions 45948544775",
+      "directory": ".impeccable/passport-production",
+      "inspection": "Passport desktop/tablet/390/320/partial/owner/light/dark/home and vault overview/rules/receipt/health reviewed."
     }
   },
   "security": {
@@ -68,6 +82,13 @@
     "unresolvedCriticalHigh": 0,
     "solar": "Parser tooling limitation, not passed"
   },
-  "deployment": "Prior production preserved; extension not promoted yet",
-  "video": "Revision in production; original published film preserved"
+  "deployment": "Promoted dpl_2NJf3SQUrKuZs1gUFBDLAEnF1fwF; public HTTP/API/browser verification passed",
+  "video": "Revised MP4 published and anonymously checksum-verified; original film unchanged",
+  "mainCI": 45946880326,
+  "publicBrowser": {
+    "runId": 45948544775,
+    "passed": 20,
+    "durationSeconds": 27.3,
+    "conclusion": "success"
+  }
 }
