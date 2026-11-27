@@ -1,35 +1,35 @@
-# Narration script
+# Payment Passport narration
 
-Actual original copy used for the supplied synthetic en-US-AriaNeural narration. `video/narration.json` is the machine-readable source. Generated audio is already included; no paid API is required. This is explanatory narration, not a testimonial.
+Recommended revision when the final release gates pass. Original narration and published film remain preserved in `video/narration.json` and the original release. This is synthetic explanatory narration, not a testimonial. Exact synchronized source: `video/passport-narration.json`.
 
-## Give every payment a purpose. (0–12s)
+## The work is finished. (0–20s)
 
-Getting paid in crypto is only part of the job. IncomeFlow automatically organizes each payment for spending, savings, and the reserves you choose.
+Imagine a freelance designer who has just delivered a website. The work is finished. The financial admin isn't. A payment still needs requesting, incoming transfers need checking, and the money needs organizing. This is an illustrative scenario, not a customer testimonial.
 
-## Your wallets. Your allocation. (12–36s)
+## The admin is a real problem. (20–35s)
 
-Connect an EVM wallet and create an independent receiving vault. Choose destination wallets and percentages, then confirm the rules. Here, fifty percent goes to spending, thirty to savings, and twenty to a tax reserve. Only the owner can change this plan.
+QuickBooks' 2026 report says fifty-nine percent of surveyed small businesses had invoices overdue by at least thirty days. That is broader business research, not proof that IncomeFlow makes clients pay sooner.
 
-## A regular token payment. (36–58s)
+## From payment requested to income organized. (35–55s)
 
-Share the vault address like a normal receiving address. The demo supports only IncomeFlow's valueless test token on Base Sepolia. A regular token transfer starts the process. Submitting a payment is not the same as completing its allocations. The interface waits for real receipts.
+IncomeFlow connects the payment request with its financial outcome. Create a request for your own vault, choose the supported test token amount, and sign the details. The client can independently verify the receiving vault and its current owner. No tokens move when the request is signed.
 
-## Reactive does the essential work. (58–82s)
+## A payment belongs to a job. (55–85s)
 
-An ordinary ERC twenty transfer does not execute the receiving vault. Reactive Omni watches the token's genuine Transfer event, filters the exact vault destination, and requests a callback from Lasna. The vault verifies both the official Base callback proxy and its specific Reactive contract before moving funds. No backend payout key is involved.
+Payment Passport keeps the job and payment evidence together. A regular token transfer has no invoice identifier. So the owner explicitly signs an association to the exact transaction and transfer log. Here, a genuine forty-token test payment leaves sixty outstanding. A second sixty-token payment settles the requested amount. Both are engineering tests using valueless ifUSD, not commercial income. Records can be exported and recovered.
 
-## Follow the actual result. (82–110s)
+## Income organized automatically. (85–115s)
 
-Open the payment receipt to follow what actually happened. The payment is allocated to the configured destinations, with exact integer amounts and its executed policy version. Public transaction links connect the deposit, Reactive execution, and destination token transfers. Unknown stages stay unconfirmed. Funding, pause, and recovery controls remain visible.
+The financial action is performed by Reactive Omni. An ordinary supported token payment reaches the existing user-owned vault. The Reactive contract observes the exact Transfer event and requests an authenticated callback. The vault checks the official provider and its authorized Reactive sender, prevents duplicate payouts, and applies the owner's current allocation rules. The two new test payments together distribute fifty tokens, thirty tokens, and twenty tokens. No backend wallet triggers the split.
 
-## Evidence, all the way through. (110–134s)
+## A record you can verify. (115–135s)
 
-The original verified run received one hundred demo tokens and paid fifty, thirty, and twenty. Base block timestamps were two seconds apart for that run, not a latency guarantee. A real duplicate callback emitted Duplicate Ignored and paid nothing more. Exact source matches, raw receipts, and reproducible instructions are in the public repository.
+The Passport separately verifies the incoming transfers, the owner's request associations, and the actual destination payouts. Explorer links identify the original payment, Reactive execution and successful callback. The older M1 proof remains a separate demonstration. The illustrative job does not turn a historical test into a client payment.
 
-## Set your plan once. (134–150s)
+## Give every payment a purpose. (135–150s)
 
-IncomeFlow is a testnet prototype for personal income automation. Tax reserves are user choices, and mainnet use would require independent security review. Set your plan once. Let supported payments find their purpose.
+The freelancer does the work. IncomeFlow helps organize the money, from payment requested to income allocated, with a record you can verify. A testnet prototype, with owner control, honest limits, and open-source proof.
 
-## Payment Passport revision
+## Integrity rules
 
-The complete synchronized narration is versioned in `video/passport-narration.json`. The designer/job is visibly illustrative. Both test payments must be made after the signed request exists; the owner explicitly associates exact receipt logs. Research is attributed to QuickBooks with scope qualification. The original M1 is identified separately. No client identity, adoption, faster collection or product time-savings claim is permitted. Keep the original released MP4 intact.
+The job is illustrative. The two actual 40/60 transfers occurred after the request existed and are engineering tests, not customer income. Request associations are owner assertions about exact verified token logs, not independent client identity. M1 is a separate older demonstration. Edited recording speed is not a latency measurement. Research covers small businesses broadly. The film makes no faster-payment, adoption or tax-calculation claim.

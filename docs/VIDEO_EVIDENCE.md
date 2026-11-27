@@ -39,3 +39,11 @@ Published artifact: [testnet demo release](https://github.com/sopskistar/IncomeF
 The signed-request/40+60 payment journey is preserved in `artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm`, with marks in `deployments/passport-proof.json` recording history. Request creation preceded both payments. Exact origin, Reactive and callback receipts are in the same manifest and ONCHAIN_PROOF.md. Subsequent recordings are read-only inspections of that signed request and its first/all genuine association sets, never new payments. The first-set view represents the explicitly linked first payment; it does not infer other transfers from amount/time.
 
 The original published film and SHA-256 remain unchanged. The revision uses separate narration, footage, edit map, render directory and filename. Its final verification and public link are recorded only after rendering, full decoding and visual inspection.
+
+## Revision editorial controls
+
+The four edited clips are specified by `video/passport-edit.json`; raw originals, signed hashes and association versions are preserved. Wall-clock harness marks were not blindly treated as video timestamps. Picture review rejected one mistimed association cut and repaired only the affected clips. The opening font path was separately repaired. Rejected films/segments remain local, and only the verified final file is recommended for release. The exact final file checksum, decode/audio/frame checks and publication result belong in `deployments/video-passport.json`.
+
+## Revised film acceptance
+
+The final repaired file passed full decode with no logged errors, valid timestamp checks, activity in all seven scenes, no black intervals, and narration matching above 0.9999 at zero offset. Twelve representative decoded frames were inspected, including both genuine payment fields, partial/settled totals, second log 29 association and both actual allocation receipts. The 150.0-second film is 5,682,102 bytes; exact SHA-256 and review method are in deployments/video-passport.json. The earlier mixed-time-base copy was rejected rather than described as complete. No new on-chain action was used in any repair. Original film hash was reconfirmed unchanged.

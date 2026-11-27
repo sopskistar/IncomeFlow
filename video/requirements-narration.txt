@@ -1,0 +1,2 @@
+# Optional regeneration only; supplied narration requires no service call.
+edge-tts==7.3.1

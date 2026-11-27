@@ -6,7 +6,8 @@
   "scripts": {
     "studio": "remotion studio src/index.tsx",
     "render": "node render-native.mjs",
-    "render:browser": "node preflight.mjs && remotion render src/index.tsx IncomeFlow ../artifacts/video/incomeflow-demo.mp4 --concurrency=1 --codec=h264 --crf=18 --offthreadvideo-cache-size-in-bytes=134217728 --media-cache-size-in-bytes=67108864 --offthreadvideo-video-threads=1"
+    "render:browser": "node preflight.mjs && remotion render src/index.tsx IncomeFlow ../artifacts/video/incomeflow-demo.mp4 --concurrency=1 --codec=h264 --crf=18 --offthreadvideo-cache-size-in-bytes=134217728 --media-cache-size-in-bytes=67108864 --offthreadvideo-video-threads=1",
+    "render:passport": "node render-passport.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.541",

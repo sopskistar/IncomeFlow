@@ -1,0 +1,107 @@
+{
+  "clips": [
+    {
+      "id": "solution",
+      "file": "passport-footage/solution.mp4",
+      "duration": 20,
+      "cuts": [
+        {
+          "source": "artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm",
+          "start": 5.08,
+          "duration": 3.0,
+          "target": 6
+        },
+        {
+          "source": "artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm",
+          "start": 11.1,
+          "duration": 1.0,
+          "target": 2
+        },
+        {
+          "source": "artifacts/video/passport/raw/page@fb36b0841082a2afd75cb1df39a1d330.webm",
+          "start": 7.013,
+          "duration": 6.8,
+          "target": 12
+        }
+      ],
+      "note": "Genuine moving app recordings; trimmed and retimed editorially. Original request/association signatures and two payments preserved; read-only captures reverify signed link versions. No new payment, fabricated state or latency claim."
+    },
+    {
+      "id": "passport",
+      "file": "passport-footage/passport.mp4",
+      "duration": 30,
+      "cuts": [
+        {
+          "source": "artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm",
+          "start": 27.52,
+          "duration": 8,
+          "target": 9
+        },
+        {
+          "source": "artifacts/video/passport/raw/page@a17450b84acf9fcbc8fc244256cf8d2f.webm",
+          "start": 15.439,
+          "duration": 4.4,
+          "target": 7
+        },
+        {
+          "source": "artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm",
+          "start": 62.0,
+          "duration": 6,
+          "target": 7
+        },
+        {
+          "source": "artifacts/video/passport/raw/page@a17450b84acf9fcbc8fc244256cf8d2f.webm",
+          "start": 28.318,
+          "duration": 4.4,
+          "target": 7
+        }
+      ],
+      "note": "Genuine moving app recordings; trimmed and retimed editorially. Original request/association signatures and two payments preserved; read-only captures reverify signed link versions. No new payment, fabricated state or latency claim."
+    },
+    {
+      "id": "automation",
+      "file": "passport-footage/automation.mp4",
+      "duration": 30,
+      "cuts": [
+        {
+          "source": "artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm",
+          "start": 17,
+          "duration": 9,
+          "target": 15
+        },
+        {
+          "source": "artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm",
+          "start": 43,
+          "duration": 8,
+          "target": 15
+        }
+      ],
+      "note": "Genuine moving app recordings; trimmed and retimed editorially. Original request/association signatures and two payments preserved; read-only captures reverify signed link versions. No new payment, fabricated state or latency claim."
+    },
+    {
+      "id": "proof",
+      "file": "passport-footage/proof.mp4",
+      "duration": 20,
+      "cuts": [
+        {
+          "source": "artifacts/video/passport/raw/page@a17450b84acf9fcbc8fc244256cf8d2f.webm",
+          "start": 50.299,
+          "duration": 5,
+          "target": 10
+        },
+        {
+          "source": "artifacts/video/passport/raw/page@a17450b84acf9fcbc8fc244256cf8d2f.webm",
+          "start": 55.488,
+          "duration": 5,
+          "target": 10
+        }
+      ],
+      "note": "Genuine moving app recordings; trimmed and retimed editorially. Original request/association signatures and two payments preserved; read-only captures reverify signed link versions. No new payment, fabricated state or latency claim."
+    }
+  ],
+  "originalSignedRecording": "artifacts/video/passport/raw/page@e9c4aacb4373bb2a2ea3310e4c243dba.webm",
+  "readOnlyCapture": "artifacts/video/passport/raw/page@a17450b84acf9fcbc8fc244256cf8d2f.webm",
+  "initialSignedLinkCapture": "artifacts/video/passport/raw/page@fb36b0841082a2afd75cb1df39a1d330.webm",
+  "disclosure": "The original signed workflow preceded visual refinements. Signed link versions retain only their explicit association sets; they do not synchronize automatically.",
+  "timingNote": "Source cuts were reviewed in decoded video time, not copied blindly from wall-clock harness marks. An early cut included returning-owner form navigation; repaired with the existing association/payment footage only."
+}

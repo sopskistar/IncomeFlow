@@ -1,0 +1,31 @@
+{
+  "sourceCommit": "237e53530b882e1995e3ca9c6daa35c67cc9a00c",
+  "featureCI": {
+    "runId": 45882361535,
+    "conclusion": "success",
+    "url": "https://github.com/sopskistar/IncomeFlow/actions/runs/45882361535"
+  },
+  "stagedDeployment": {
+    "id": "dpl_2NJf3SQUrKuZs1gUFBDLAEnF1fwF",
+    "url": "https://incomeflow-bx5zzm7yy-sopskistars-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "skipDomain": true,
+    "publicAccess": "Vercel Authentication; not public",
+    "authenticatedProof": {
+      "http": 200,
+      "verified": true,
+      "paid": "100000000",
+      "outstanding": "0",
+      "failures": [],
+      "checkedAt": "2026-11-26T19:35:38.292Z"
+    }
+  },
+  "productionDomainPromoted": false,
+  "previousRelease": {
+    "commit": "1fdbad7cc96ec426b435fb2126e0d881daa72984",
+    "deployment": "dpl_48RFxdBJ3Aeu5p1wXJXhEksmRxyc",
+    "filmTag": "incomeflow-testnet-demo"
+  },
+  "newTransactionsThisResumption": 0
+}

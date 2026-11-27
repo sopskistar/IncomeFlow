@@ -1,4 +1,5 @@
 """Verify the playable export, decode it, and compare scene audio to its narration."""
+import argparse
 import array
 import hashlib
 import json
@@ -7,8 +8,15 @@ import pathlib
 import subprocess
 
 root = pathlib.Path(__file__).resolve().parents[1]
-movie = root / 'artifacts/video/incomeflow-demo.mp4'
-out = root / 'artifacts/video'
+parser=argparse.ArgumentParser()
+parser.add_argument('--movie',default='artifacts/video/incomeflow-demo.mp4')
+parser.add_argument('--output',default='artifacts/video')
+parser.add_argument('--scenes',default='video/narration.json')
+parser.add_argument('--narration',default='video/public/narration')
+args=parser.parse_args()
+movie=root/args.movie
+out=root/args.output
+out.mkdir(parents=True,exist_ok=True)
 
 def execute(args):
     return subprocess.run(args, check=True, capture_output=True).stdout
@@ -19,7 +27,8 @@ audio = next(s for s in probe['streams'] if s['codec_type'] == 'audio')
 assert (video['width'], video['height'], video['r_frame_rate'], video['codec_name']) == (1920, 1080, '30/1', 'h264')
 assert audio['codec_name'] == 'aac'
 assert 149.9 <= float(probe['format']['duration']) < 180
-execute(['ffmpeg', '-v', 'error', '-threads', '1', '-i', str(movie), '-f', 'null', '-'])
+decoded = subprocess.run(['ffmpeg', '-v', 'error', '-threads', '1', '-i', str(movie), '-f', 'null', '-'], check=True, capture_output=True)
+assert not decoded.stderr.strip(), decoded.stderr.decode()
 
 def envelope(path):
     raw = execute(['ffmpeg', '-v', 'error', '-threads', '1', '-i', str(path), '-vn', '-ac', '1', '-ar', '8000', '-f', 's16le', '-'])
@@ -34,8 +43,8 @@ def correlation(a, b):
 
 track = envelope(movie)
 sync = []
-for scene in json.loads((root/'video/narration.json').read_text()):
-    ref = envelope(root/f"video/public/narration/{scene['id']}.mp3")
+for scene in json.loads((root/args.scenes).read_text()):
+    ref = envelope(root/args.narration/f"{scene['id']}.mp3")
     choices = []
     for lag in range(-10, 11):
         start = scene['from']*100+lag

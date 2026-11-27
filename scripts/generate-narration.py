@@ -1,4 +1,5 @@
 """Optional free narration generator. Run with .tools/tts/bin/python; no credentials."""
+import argparse
 import asyncio
 import json
 import pathlib
@@ -6,12 +7,16 @@ import subprocess
 import edge_tts
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUTPUT = ROOT / "video/public/narration"
+parser=argparse.ArgumentParser()
+parser.add_argument("--scenes",default="video/narration.json")
+parser.add_argument("--output",default="video/public/narration")
+args=parser.parse_args()
+OUTPUT = ROOT / args.output
 VOICE = "en-US-AriaNeural"
 
 async def main():
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    scenes = json.loads((ROOT / "video/narration.json").read_text())
+    scenes = json.loads((ROOT / args.scenes).read_text())
     results = []
     for scene in scenes:
         path = OUTPUT / (scene["id"] + ".mp3")

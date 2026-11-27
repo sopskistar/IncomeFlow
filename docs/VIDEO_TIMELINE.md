@@ -1,3 +1,43 @@
+# Payment Passport video timeline
+
+Revised output: `artifacts/video/passport/incomeflow-passport-demo.mp4` — **150.0s, 1920×1080, 30 fps, H.264/AAC, 5,682,102 bytes**. Separate from the unchanged original published film described below. The revision uses genuine signed-session footage and read-only verification of the same saved signatures/receipts. No test transaction was repeated for filming.
+
+| Time | Story | Actual source |
+| --- | --- | --- |
+| 0–20s | The work is finished; financial admin remains | Original Remotion motion, visibly illustrative freelancer scenario |
+| 20–35s | Evidence for the broader problem | QuickBooks 59% finding with primary URL and small-business scope qualification |
+| 35–55s | From request to organized income | Genuine signing review and independent original signed-link inspection |
+| 55–85s | Request, partial payment, settlement | Real exact-log associations; first-payment signed-link version shows 60 outstanding; both associations show zero |
+| 85–115s | Essential Reactive financial action | Original actual 40/60 supported-token payment workflow; no repeated transfers |
+| 115–135s | Independently inspectable outcome | Moving owner receipt with exact origin/Reactive/callback links and actual 20/12/8 + 30/18/12 payouts |
+| 135–150s | Give every payment a purpose | Original brand motion, real application/GitHub URLs, testnet limits |
+
+The illustrative job is not commercial client income. One disposable test account acts as owner and payer. The original M1 is a separate older demonstration; the revised film says so explicitly. Request/association handling is application logic; Reactive performs allocation. Edited pacing is not a network-latency measurement.
+
+## Reproduction
+
+The project reuses the existing installed shared workspace locally, with all runtime versions declared in `video/package.json` and its portable lockfile. A fresh checkout can use:
+
+```sh
+cd video
+npm ci
+npm run render:passport
+cd ..
+python3 scripts/build-passport-captions.py
+python3 scripts/verify-video.py --movie artifacts/video/passport/incomeflow-passport-demo.mp4 --output artifacts/video/passport --scenes video/passport-narration.json --narration video/public/passport-narration
+python3 scripts/inspect-video.py --movie artifacts/video/passport/incomeflow-passport-demo.mp4 --output artifacts/video/passport --scenes video/passport-narration.json --times 2,24,42,61,68,74,80,89,105,121,130,143
+```
+
+Requires FFmpeg/FFprobe, Python 3 and Remotion's compatible browser. Four edited genuine clips and seven normalized narration tracks are supplied in `video/public/passport-*`; a fresh render does not require the large raw recordings. `scripts/edit-passport-video.py` is optional for editing the retained local originals, following `video/passport-edit.json`. It caches unchanged cuts. Optional narration regeneration uses `video/requirements-narration.txt`; supplied audio requires no API call.
+
+The native pipeline renders original motion/plates in Remotion, composites real recordings sequentially with one decoder thread per input and low-lookahead encoding, normalizes MP4 video time bases to 90 kHz without re-encoding, then copies completed video sequentially while assembling a continuous narration track. This avoids monolithic browser video decoding and seven concurrent video decoders. Valid scenes are reused. After changing a scene, preserve its previous generated segment before regenerating only that scene. Full decoding/inspection follows assembly; duration alone is not final acceptance.
+
+## Review history
+
+An initial opening used a missing font path. It was rejected and only that motion scene was repaired. Later visual inspection caught a cut that showed returning-owner form navigation rather than the second exact association. The two affected clips were recut from existing sources in decoded video time; the original footage and rejected outputs remain preserved locally. Resource pressure interrupted one composition; limited decoder threads and sequential video copying resolved the pipeline design. Final measured validation is recorded in `deployments/video-passport.json`. A direct-copy prototype with mixed time bases was rejected by motion/timestamp checks; 90 kHz normalization repaired it. The final full decode has no logged errors, every scene has distinct sampled frames, no black interval was detected, and all seven audio envelopes correlate above 0.9999 at 0.00s offset. Twelve decoded frames were visually inspected. The measured peak is −4.5 dB; end-of-scene reading gaps reach approximately 3.2s. Review uses those recorded methods, without claiming a separate human listening session. Captions contain 41 nonoverlapping cues.
+
+## Preserved original film
+
 # Final video timeline and reproduction
 
 Verified output: `artifacts/video/incomeflow-demo.mp4` — **150.0 seconds, 4,500 frames, 1920×1080, 30 fps, H.264 / AAC**, 5,281,055 bytes. SHA-256 and full check results are in `deployments/video.json`. The rendered file is published separately as a release artifact rather than added to Git history.

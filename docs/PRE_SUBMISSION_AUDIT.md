@@ -2,7 +2,7 @@
 
 This is a factual release gate, not an independent security certification. Original M1 remains verified and unchanged. Later frontend acceptance, hosting and video results are recorded separately below and in BUILD_STATUS.md.
 
-## Evidence requirements
+## Preserved original release evidence
 
 | Requirement | Current evidence |
 | --- | --- |
@@ -44,12 +44,24 @@ No unresolved critical or high finding may be hidden by a passing test summary. 
 
 Public RPC throttling/history windows, incomplete callback-list responses, independent-owner administration across two contracts, current-policy execution and funding requirements remain disclosed. Fee funding is not a delivery guarantee. Testnet availability is not production uptime. Upstream license clarification and independent review remain requirements before commercial/mainnet use.
 
-## Readiness disposition
+## Preserved original release disposition
 
 Technical evidence gates pass for the testnet prototype. Release publication and anonymous download checksum passed; source/media milestone b7b25e3 is pushed. Closing main CI and delivery are recorded in BUILD_STATUS.md and the final report. Overall submission remains **CONDITIONAL PASS** until the user checks the authenticated DoraHacks cutoff/required portal fields and reviews the prepared package. No automated DoraHacks submission is performed. Internal review is not an independent professional audit.
 
-## Payment Passport release gate
+## Payment Passport release gate — 2026-11-26
 
-The previously verified release and published original film remain a fallback. The extension is isolated on `feat/payment-passport`; it introduces no contract redeployment. New signatures, current-owner/runtime checks, exact explicit attribution, partial/overpayment math, archive recovery and real post-request payments require their own evidence.
+The baseline remains reproducible and its published film is preserved. The enhancement source checkpoint is `237e53530b882e1995e3ca9c6daa35c67cc9a00c`; [feature CI 45882361535](https://github.com/sopskistar/IncomeFlow/actions/runs/45882361535) passed both jobs. Existing Solidity/deployments are unchanged.
 
-Two new test transfers (40/60 ifUSD) and their real callbacks have passed chain verification; the final returning-owner browser run is still being reconciled. The app's recent activity window is not used as a substitute for saved exact historical receipts. PP-01 through PP-06 are documented in SECURITY_AUDIT.md. Prior Solar parse failure remains a tooling limitation. Updated local/public browser checks, responsive screenshot critique, final CI and revised-video verification must pass before promoting the extension or recommending its submission film. See PASSPORT_QA.md for actual results and failures.
+| Gate | Actual evidence |
+| --- | --- |
+| Signed user acceptance | PASS: request created before the two 40/60 transfers, exact signed associations, real callbacks and payouts, returning-owner refresh; passport-proof.json. |
+| Exact accounting | PASS: 100 ifUSD received, 0 outstanding, allocations 20/12/8 + 30/18/12. Same disposable owner/payer, not a real commercial client. |
+| Local and feature CI | PASS: 28 contract, 25 unit and 20 browser tests; lint/types/production build. No new transaction is sent by the regression suite. |
+| Internal security | No unresolved critical/high finding identified in scoped review. PP findings resolved and limitations accepted in SECURITY_AUDIT.md. Solar parser failure remains, not passed. |
+| Visual critique | Local desktop/tablet/phone captures inspected; A/B findings fixed. Final public narrow-confirmation and production captures pending. Hallmark static clearance is not a renderer pass. |
+| Staged hosting | READY with skip-domain; authenticated API verifies signatures, current deployed code and all existing receipts. Protected immutable URL is not public verification. |
+| Enhanced public release | Pending promotion and explicit independent public browser suite. Prior public QA refers to the original release. |
+| Revised film | PASS locally: 150s 1080p30 H.264/AAC, full decode without logged errors, timestamp/activity/black scans, all narration aligned, 12 decoded frames inspected; separate publication pending. |
+| Submission | Draft and proof links prepared. User must review the authenticated cutoff/portal fields and manually submit; no automatic submission. |
+
+No additional blockchain transaction, faucet request or contract deployment occurred during this capture/video resumption. The previous local host's ERR_NETWORK_CHANGED failures remain disclosed in PRODUCTION_QA.md, separately from independent GitHub Actions passes. Technical readiness is only confirmed after the pending gates above have actual evidence. Internal review is not an independent professional audit.

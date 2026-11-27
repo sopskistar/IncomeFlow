@@ -176,3 +176,6 @@ artifacts/video/
 /artifacts/
 # Python tooling bytecode
 __pycache__/
+
+# Local cut fingerprints; media source is versioned separately.
+/video/public/passport-footage/*.edit-sha256

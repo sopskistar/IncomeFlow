@@ -1,0 +1,6 @@
+{"type": "SentenceBoundary", "offset": 1000000, "duration": 35726850, "text": "The financial action is performed by Reactive Omni."}
+{"type": "SentenceBoundary", "offset": 36226850, "duration": 46064812, "text": "An ordinary supported token payment reaches the existing user-owned vault."}
+{"type": "SentenceBoundary", "offset": 82291663, "duration": 59722219, "text": "The Reactive contract observes the exact Transfer event and requests an authenticated callback."}
+{"type": "SentenceBoundary", "offset": 142013883, "duration": 87037033, "text": "The vault checks the official provider and its authorized Reactive sender, prevents duplicate payouts, and applies the owner's current allocation rules."}
+{"type": "SentenceBoundary", "offset": 229050916, "duration": 60185182, "text": "The two new test payments together distribute fifty tokens, thirty tokens, and twenty tokens."}
+{"type": "SentenceBoundary", "offset": 289236099, "duration": 28009258, "text": "No backend wallet triggers the split."}

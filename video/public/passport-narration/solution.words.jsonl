@@ -1,0 +1,4 @@
+{"type": "SentenceBoundary", "offset": 1000000, "duration": 41629627, "text": "IncomeFlow connects the payment request with its financial outcome."}
+{"type": "SentenceBoundary", "offset": 42129627, "duration": 58217590, "text": "Create a request for your own vault, choose the supported test token amount, and sign the details."}
+{"type": "SentenceBoundary", "offset": 100347218, "duration": 46759257, "text": "The client can independently verify the receiving vault and its current owner."}
+{"type": "SentenceBoundary", "offset": 147106475, "duration": 30439813, "text": "No tokens move when the request is signed."}

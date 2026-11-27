@@ -31,3 +31,5 @@ Client receipts omit allocation details in the rendered view/export observation.
 See BUILD_STATUS.md and the latest recorded test results. Implementation is under verification on a feature branch; the prior production release remains the fallback until checks pass.
 
 The linked Reactive runtime and its token/vault binding are also checked against the pinned build. This protects the automation-evidence label from lookalike contracts. Requests with zero associated outstanding amount do not solicit another payment; additional or excessive payments require explicit acknowledgment and are still counted only after owner association.
+
+Signed issue/due dates are owner assertions, not a trusted timestamp service or on-chain request registry. The verifier rejects transfers older than the signed issue time; that alone cannot prove when a signature was physically created. The demonstrated ordering is supported by the genuine recorded acceptance workflow. Job completion, legal debt and named client identity are not attested by the signature.

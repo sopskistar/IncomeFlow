@@ -1,0 +1,191 @@
+1
+00:00:00,100 --> 00:00:03,890
+Imagine a freelance designer who has just
+delivered a website.
+
+2
+00:00:03,900 --> 00:00:05,810
+The work is finished.
+
+3
+00:00:05,810 --> 00:00:08,113
+The financial admin isn't.
+
+4
+00:00:08,113 --> 00:00:13,069
+A payment still needs requesting, incoming
+transfers need checking, and the money
+
+5
+00:00:13,069 --> 00:00:14,109
+needs organizing.
+
+6
+00:00:14,109 --> 00:00:18,275
+This is an illustrative scenario, not a
+customer testimonial.
+
+7
+00:00:20,100 --> 00:00:25,309
+QuickBooks' 2026 report says fifty-nine
+percent of surveyed small businesses had
+
+8
+00:00:25,309 --> 00:00:27,918
+invoices overdue by at least thirty days.
+
+9
+00:00:27,928 --> 00:00:33,299
+That is broader business research, not proof
+that IncomeFlow makes clients pay sooner.
+
+10
+00:00:35,100 --> 00:00:39,203
+IncomeFlow connects the payment request with
+its financial outcome.
+
+11
+00:00:39,213 --> 00:00:44,315
+Create a request for your own vault, choose
+the supported test token amount, and sign
+
+12
+00:00:44,315 --> 00:00:45,035
+the details.
+
+13
+00:00:45,035 --> 00:00:49,711
+The client can independently verify the
+receiving vault and its current owner.
+
+14
+00:00:49,711 --> 00:00:52,755
+No tokens move when the request is signed.
+
+15
+00:00:55,098 --> 00:00:58,755
+Payment Passport keeps the job and payment
+evidence together.
+
+16
+00:00:58,765 --> 00:01:02,621
+A regular token transfer has no invoice
+identifier.
+
+17
+00:01:02,621 --> 00:01:07,984
+So the owner explicitly signs an association
+to the exact transaction and transfer
+
+18
+00:01:07,984 --> 00:01:08,245
+log.
+
+19
+00:01:08,245 --> 00:01:12,623
+Here, a genuine forty-token test payment
+leaves sixty outstanding.
+
+20
+00:01:12,623 --> 00:01:16,354
+A second sixty-token payment settles the
+requested amount.
+
+21
+00:01:16,354 --> 00:01:21,400
+Both are engineering tests using valueless
+ifUSD, not commercial income.
+
+22
+00:01:21,400 --> 00:01:24,247
+Records can be exported and recovered.
+
+23
+00:01:25,092 --> 00:01:28,330
+The financial action is performed by
+Reactive Omni.
+
+24
+00:01:28,340 --> 00:01:32,588
+An ordinary supported token payment reaches
+the existing user-owned vault.
+
+25
+00:01:32,588 --> 00:01:37,568
+The Reactive contract observes the exact
+Transfer event and requests an authenticated
+
+26
+00:01:37,568 --> 00:01:38,095
+callback.
+
+27
+00:01:38,095 --> 00:01:42,506
+The vault checks the official provider and
+its authorized Reactive sender, prevents
+
+28
+00:01:42,506 --> 00:01:46,120
+duplicate payouts, and applies the owner's
+current allocation rules.
+
+29
+00:01:46,120 --> 00:01:51,248
+The two new test payments together
+distribute fifty tokens, thirty tokens, and
+twenty
+
+30
+00:01:51,248 --> 00:01:51,670
+tokens.
+
+31
+00:01:51,670 --> 00:01:54,253
+No backend wallet triggers the split.
+
+32
+00:01:55,086 --> 00:01:59,204
+The Passport separately verifies the
+incoming transfers, the owner's request
+
+33
+00:01:59,204 --> 00:02:01,807
+associations, and the actual destination
+payouts.
+
+34
+00:02:01,817 --> 00:02:06,458
+Explorer links identify the original
+payment, Reactive execution and successful
+
+35
+00:02:06,458 --> 00:02:06,987
+callback.
+
+36
+00:02:06,987 --> 00:02:10,132
+The older M1 proof remains a separate
+demonstration.
+
+37
+00:02:10,132 --> 00:02:14,250
+The illustrative job does not turn a
+historical test into a client payment.
+
+38
+00:02:15,098 --> 00:02:17,266
+The freelancer does the work.
+
+39
+00:02:17,276 --> 00:02:22,618
+IncomeFlow helps organize the money, from
+payment requested to income allocated, with
+
+40
+00:02:22,618 --> 00:02:24,127
+a record you can verify.
+
+41
+00:02:24,127 --> 00:02:29,236
+A testnet prototype, with owner control,
+honest limits, and open-source proof.

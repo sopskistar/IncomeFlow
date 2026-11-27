@@ -1,95 +1,56 @@
 # IncomeFlow — Give Every Payment a Purpose
 
-## Story and product description
+Track: **Set It and Forget It**, Reactive Omni Buildathon. Public repository: https://github.com/sopskistar/IncomeFlow. Application: https://incomeflow-gamma.vercel.app. Do not submit automatically.
 
-A freelancer finishes the work. Managing the payment can still create another round of administration: requesting payment, recognizing transfers, tracking outstanding amounts and organizing income. Our designer scenario is illustrative, never a claimed customer.
+## Description
 
-Primary small-business and receivables research supports the wider problem; see [PROBLEM_RESEARCH](PROBLEM_RESEARCH.md) for precise scope and methodology. It does not demonstrate IncomeFlow's effectiveness or establish crypto-freelancer prevalence.
+Imagine a freelance designer delivering a website. The work is finished. The financial admin isn't: request payment, identify transfers, track outstanding amounts, organize income and retain the record. This is an illustrative scenario, not a customer testimonial.
 
-IncomeFlow addresses a narrow part of that workflow. Payment Passport connects a signed supported-token request to explicitly owner-associated verified transfers and the financial outcome. Incoming ifUSD reaches the user's existing smart vault through an ordinary ERC-20 transfer. Reactive Omni observes its exact event subscription and requests an authenticated callback, which distributes funds according to owner-controlled rules. The user does not keep a bot running or initiate each allocation.
+Broader small-business and receivables research supports that administrative problem. [QuickBooks' 2026 report](https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/) reports 59% with invoices overdue at least 30 days and 39% experiencing payroll/bill difficulty after a late payment. These findings are not statistics about crypto freelancers or proof of IncomeFlow's effectiveness. [Research methodology and Chaser caveats](PROBLEM_RESEARCH.md).
 
-The original M1 and signed-wallet demonstration provide real public origin → Reactive → callback → 50/30/20 payout proof. They are engineering tests, not commercial income. Passport-specific live acceptance and revised media must be verified separately before claiming the updated workflow is ready. Current status: BUILD_STATUS.md.
+IncomeFlow addresses a narrow supported-crypto workflow. **Payment Passport** creates an owner-signed request, connects explicitly associated verified transfers to its outstanding balance, and retains allocation evidence. An ERC-20 transfer contains no invoice ID; the owner signs the exact transaction/log association. Client identity remains unverified.
 
-The prototype cannot enforce collection, guarantee cash flow, resolve disputes or calculate tax liability. Request metadata and payment associations are application features; Reactive performs the actual event-triggered allocation. Browser-local records need backups, and public links do not automatically synchronize. An internal review is not an independent security audit.
+When supported ifUSD reaches the user's existing smart vault, Reactive Omni observes the token's narrowly filtered Transfer event and requests an authenticated callback. The vault checks the official provider and its specific Reactive sender, prevents duplicate payouts and distributes according to owner-controlled rules. No online freelancer or backend payout bot initiates each allocation. Request metadata and associations are application features; Reactive performs the financial action.
 
-## Judging evidence
+A newly signed 100 ifUSD request preceded genuine 40 and 60 token payments. Their allocations were 20/12/8 and 30/18/12, totaling 50/30/20. Both associations and callback receipts were verified; outstanding is zero. These are valueless testnet engineering payments using one disposable owner/payer account, not real client income. The original M1 and earlier 100-token signed-user demonstration remain separate evidence.
 
-- Execution: deployed contracts and exact transaction evidence in ONCHAIN_PROOF.md.
-- Integration: a regular token Transfer does not execute receiving-vault logic; the Reactive callback performs that essential action.
-- Usefulness: a coherent request-to-organized-income record for independent professionals.
-- Craft: reproducible source, explicit trust boundaries, owner controls, tests, responsive application and genuinely recorded footage.
+## Judge verification
 
----
+1. Open [the full Payment Passport](https://incomeflow-gamma.vercel.app/passport-demo?view=owner) or [client receipt](https://incomeflow-gamma.vercel.app/passport-demo).
+2. Confirm the request, exact associated amounts and zero outstanding. Follow each origin, Reactive and callback link; inspect actual payouts and policy version 1.
+3. Read [ONCHAIN_PROOF.md](ONCHAIN_PROOF.md) and [the signed manifest](../deployments/passport-proof.json) for exact hashes/logs/signatures.
+4. Open the original [/proof](https://incomeflow-gamma.vercel.app/proof) for the separate M1 loop, successful replay no-op and exact Sourcify source matches.
+5. Reproduce from README, deployment guide and tests. Inspection needs no new payment; creating an independent vault or paying requires only testnet funds.
 
-## Preserved submission details
+## Evidence links
 
-# DoraHacks submission draft
+| Payment | Origin | Reactive | Destination |
+| --- | --- | --- | --- |
+|40 ifUSD|[log10](https://sepolia.basescan.org/tx/0xdc6f6488ac482b330b5e26eaec5e4aebd8f2acd9b7137164fa99dc07104fe964)|[execution](https://lasna.reactscan.net/tx/0x7dc8bb4d7775d2a7d22989de6b35338bf696a873ce22b411dd6deb002e3e4b10)|[20/12/8](https://sepolia.basescan.org/tx/0xdff7ee7715f54a4a119001cbee4965b6cde358317d1d14ec2ac497a4812590b9)|
+|60 ifUSD|[log29](https://sepolia.basescan.org/tx/0xc038b2871e76c59fa9e1c12721f3734b24b1d9231340e86804f71be5aea9e8da)|[execution](https://lasna.reactscan.net/tx/0x0807477dab0eac199dfa65eba7416097c593b718dc8cab89d985f80de590077a)|[30/18/12](https://sepolia.basescan.org/tx/0xb1f4ee25f1c47cb6d3f3f1330160b06f57392b7f0639fb5e220ab9bd5684dc91)|
 
-**Title:** IncomeFlow — give every payment a purpose
+Existing user vault: `0xd70db6249b22cb72a463cc26849e85fa699d37c1` on Base Sepolia 84532. Reactive: `0x30fc195918738aBf90BA5B626Dfa98F99d5Ca200` on Lasna 5318007. Token: `0x2d1045a2025d197Ee83723452B505bec38427CE9`, 6 decimals. Original deployment addresses and verification references remain in deployments/testnet.json and ONCHAIN_PROOF.md.
 
-**Track:** Set It and Forget It
+## Judging criteria
 
-**Public application:** https://incomeflow-gamma.vercel.app
+- **Execution:** genuine ordinary token payments, actual Reactive executions, authenticated destination receipts and conserved payouts; no simulation substituted for proof.
+- **Integration:** a normal ERC-20 transfer does not execute receiving-vault logic. The Reactive event-to-callback action is essential to unattended allocation.
+- **Usefulness:** a coherent freelancer request-to-organized-income record, beyond manually invoking a splitter.
+- **Craft:** reproducible source, explicit trust boundaries, owner controls, internal review, tests/CI, responsive interface and genuine recorded footage.
 
-**Repository:** https://github.com/sopskistar/IncomeFlow (MIT original code; dependency licensing caveat below)
+## Limitations
 
-## Short description
+Testnet prototype for one conventional valueless token on Base Sepolia, with funded Lasna/callback services. No collection enforcement, cash-flow guarantee, tax calculation, comprehensive accounting, disputes or verified client identity. Rules apply at callback execution. Browser records require backups; shared links do not automatically receive later associations. No global exclusive invoice-attribution registry exists. EOA signatures only. RPC history/availability and upstream Omni licensing remain documented limits. Internal engineering review is not an independent professional audit.
 
-IncomeFlow automatically organizes supported crypto income into spending, savings and user-selected reserves. Independent professionals configure wallet destinations and percentages once. A normal ERC-20 payment to their own receiving vault triggers Reactive Omni and an authenticated callback, with public receipts for the actual allocations.
+## Media and submission checklist
 
-## Problem and usefulness
+Original verified150-second film remains available at [the preserved release](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo). Revised film status and final link: BUILD_STATUS.md and VIDEO_EVIDENCE.md; recommend it only after full render/decode/visual verification.
 
-A freelancer receiving cryptocurrency still needs to move each payment into the wallets used for daily spending, saving and reserves. A manual splitter reduces transfer calls but still requires someone to initiate each distribution. IncomeFlow focuses on the recurring income workflow: a no-code allocation plan, a shareable receiving address and event-driven execution while the recipient is offline. Tax reserve percentages remain the user's choice, not an estimate of tax liability.
-
-## What Reactive does
-
-The supported token emits a genuine `Transfer` event; a regular ERC-20 transfer does not execute the receiving vault. An independent `IncomeFlowReactive` contract on Lasna subscribes to the emitting token and exact indexed vault destination. It validates the normalized `LogRecord` and calls `requestCallbackV_1_0`. The Base vault checks the official callback provider and specific Reactive sender, then allocates using current on-chain rules. No backend payout signer or cron job controls funds.
-
-## Technical achievements
-
-- A real 100 ifUSD origin payment -> Lasna execution -> authenticated Base callback -> 50/30/20 token distribution.
-- A separate signed frontend user journey created its own pair, saved policy, paid and inspected actual receipts; pause/resume and returning-owner checks passed.
-- A real duplicate callback emitted `DuplicateIgnored` without extra payouts.
-- Exact creation/runtime Sourcify matches for the original deployed contracts.
-- Integer-conserving allocations, domain-separated replay IDs, two-step ownership, bounded rules, pause/recovery cutoff and owner-only stored-event retry.
-- Chain-backed Next.js interface, wallet switching, resumable setup, policy drafts, paginated history and service fee/debt diagnostics.
-- Foundry unit/fuzz/invariant checks, browser regression and GitHub Actions. Internal security review is disclosed separately from a professional audit.
-
-## Judge verification path
-
-1. Open the app and choose **Explore the verified vault**.
-2. Read the 50/30/20 allocation and its confirmed 100 ifUSD receipt.
-3. Expand the receipt and follow actual origin, Reactive and destination explorer links.
-4. Open `/proof` for the qualified two-second original-run observation, actual replay and source-verification references.
-5. Read [ONCHAIN_PROOF.md](ONCHAIN_PROOF.md) for raw receipts, balance deltas, original and signed-frontend addresses and all transaction links.
-6. Reproduce with the deployment/test guides. Additional transfers require testnet gas and the explicitly labeled ifUSD demo token; never send real assets.
-
-## Addresses and evidence
-
-The authoritative original deployment is [deployments/testnet.json](../deployments/testnet.json). The original proof and seven signed frontend transactions are linked in [ONCHAIN_PROOF.md](ONCHAIN_PROOF.md); [browser-proof.json](../deployments/browser-proof.json) records the independent user pair and actual receipt state. Do not substitute a requested callback for a successful destination receipt.
-
-## Honest limitations
-
-This prototype supports only its conventional valueless demo token on Base Sepolia, with Lasna automation. Public RPCs have rate/history limitations; unknown delivery stages remain unconfirmed. Policies apply when callbacks execute. Owners must maintain funding on both sides; pauses, failures and service delays may require recovery/retry. Original measured latency is a single observation, not a guarantee. Mainnet/commercial use requires independent review and clarification of the upstream Omni library's UNLICENSED SPDX status; downloaded dependencies are not presented as original event work. No adoption, audited safety or uptime claim is made.
-
-## Submission checklist
-
-- [x] Original project built during the November 5–December 5 event window.
-- [x] Public repository with original MIT code and preserved history.
-- [x] Actual origin/Reactive/callback/payout proof and real replay.
-- [x] Deployed addresses, network/explorer details and exact source matches.
-- [x] Signed frontend workflow and internal security audit.
-- [x] Final post-fix production browser recheck: 14/14 plus ten inspected production screenshots.
-- [x] Final narrated MP4: 150.0 seconds, full decode, aligned audio and inspected frames.
-- [x] [Public MP4 release](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo) verified by anonymous download/checksum.
-- [x] Source/media milestone pushed; evidence ledger reconciled. Closing main CI is checked at delivery.
-- [ ] User checks exact DoraHacks closing time and any authenticated portal fields.
-- [ ] User reviews and manually submits; no automatic submission authorized.
-
-Official announcement confirms December 5, equal execution/integration/usefulness/craft scoring and video under three minutes. The [DoraHacks event page](https://dorahacks.io/hackathon/reactive-omni-buildathon/detail) repeatedly returned HTTP 405 to automated access. Exact cutoff/timezone is **not verified**; do not infer it from a third-party listing. [Official organizer announcement](https://blog.reactive.network/reactive-omni-buildathon-thirty-days-to-find-out-what-one-second-buys/).
-
-## Demo delivery
-
-[Watch/download the 150-second MP4](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-testnet-demo/incomeflow-demo.mp4) · [release, captions and verification](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo). Local final file: `artifacts/video/incomeflow-demo.mp4`. Exact size 5,281,055 bytes; 1920×1080, 30fps, H.264/AAC. Full decode, source-audio alignment, black-frame scan and representative-frame review passed. Actual proof and limitations are documented in VIDEO_EVIDENCE.md.
-
-Readiness: **CONDITIONAL PASS**, pending the user's authenticated portal cutoff/field check and final manual review/submission. The technical evidence gate passes; nothing was submitted automatically.
+- [x] Public original MIT repository and preserved history.
+- [x] Real original and Passport event → Reactive → callback → payout proof.
+- [x] Signed request, explicit associations, partial records and recovery workflow.
+- [x] Local tests, security review and responsive critique; exact final CI/public outcomes in BUILD_STATUS.md.
+- [ ] Enhanced production version independently verified after promotion.
+- [ ] Revised MP4 rendered, decoded, inspected and published.
+- [ ] Exact official DoraHacks closing clock/timezone and portal-specific fields checked. The public event page remains inaccessible to available tools; competitor README times are not official authority.
+- [ ] User reviews and manually submits through DoraHacks. No automatic submission performed.

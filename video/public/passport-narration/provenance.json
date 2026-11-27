@@ -1,0 +1,70 @@
+{
+  "tool": "edge-tts 7.3.1",
+  "voice": "en-US-AriaNeural",
+  "paidAPI": false,
+  "scenes": [
+    {
+      "id": "problem",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 18.336,
+      "speed": 1.0,
+      "scheduledFrom": 0,
+      "sceneSeconds": 20,
+      "file": "video/public/passport-narration/problem.mp3"
+    },
+    {
+      "id": "research",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 13.344,
+      "speed": 1.0,
+      "scheduledFrom": 20,
+      "sceneSeconds": 15,
+      "file": "video/public/passport-narration/research.mp3"
+    },
+    {
+      "id": "solution",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 17.808,
+      "speed": 1.0,
+      "scheduledFrom": 35,
+      "sceneSeconds": 20,
+      "file": "video/public/passport-narration/solution.mp3"
+    },
+    {
+      "id": "passport",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 29.904,
+      "speed": 1.0206143344709897,
+      "scheduledFrom": 55,
+      "sceneSeconds": 30,
+      "file": "video/public/passport-narration/passport.mp3"
+    },
+    {
+      "id": "automation",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 31.776,
+      "speed": 1.0845051194539248,
+      "scheduledFrom": 85,
+      "sceneSeconds": 30,
+      "file": "video/public/passport-narration/automation.mp3"
+    },
+    {
+      "id": "proof",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 22.512,
+      "speed": 1.1664248704663212,
+      "scheduledFrom": 115,
+      "sceneSeconds": 20,
+      "file": "video/public/passport-narration/proof.mp3"
+    },
+    {
+      "id": "closing",
+      "voice": "en-US-AriaNeural",
+      "sourceSeconds": 14.544,
+      "speed": 1.0170629370629372,
+      "scheduledFrom": 135,
+      "sceneSeconds": 15,
+      "file": "video/public/passport-narration/closing.mp3"
+    }
+  ]
+}

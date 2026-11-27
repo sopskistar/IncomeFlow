@@ -1,0 +1,167 @@
+{
+  "path": "artifacts/video/passport/incomeflow-passport-demo.mp4",
+  "sha256": "a760d67f1390c97c036694d1eaf01f16ad2c40d8e6082ae002e29f36a7a19ede",
+  "durationSeconds": 150.0,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "video": "h264",
+  "audio": "aac",
+  "fullDecode": "passed",
+  "narrationAlignment": [
+    {
+      "scene": "problem",
+      "envelopeCorrelation": 0.99995,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "research",
+      "envelopeCorrelation": 0.99995,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "solution",
+      "envelopeCorrelation": 0.99994,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "passport",
+      "envelopeCorrelation": 0.99994,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "automation",
+      "envelopeCorrelation": 0.99993,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "proof",
+      "envelopeCorrelation": 0.99993,
+      "offsetSeconds": 0.0
+    },
+    {
+      "scene": "closing",
+      "envelopeCorrelation": 0.99995,
+      "offsetSeconds": 0.0
+    }
+  ],
+  "checkedAt": "2026-11-27T05:32:36.815921+00:00",
+  "fileSizeBytes": 5682102,
+  "visual": {
+    "blackIntervals": [],
+    "activity": [
+      {
+        "scene": "problem",
+        "samples": 40,
+        "distinctHalfSecondFrames": 11
+      },
+      {
+        "scene": "research",
+        "samples": 30,
+        "distinctHalfSecondFrames": 4
+      },
+      {
+        "scene": "solution",
+        "samples": 40,
+        "distinctHalfSecondFrames": 28
+      },
+      {
+        "scene": "passport",
+        "samples": 60,
+        "distinctHalfSecondFrames": 37
+      },
+      {
+        "scene": "automation",
+        "samples": 60,
+        "distinctHalfSecondFrames": 30
+      },
+      {
+        "scene": "proof",
+        "samples": 40,
+        "distinctHalfSecondFrames": 19
+      },
+      {
+        "scene": "closing",
+        "samples": 30,
+        "distinctHalfSecondFrames": 4
+      }
+    ],
+    "frames": [
+      {
+        "file": "review/frame-01.png",
+        "seconds": 2
+      },
+      {
+        "file": "review/frame-02.png",
+        "seconds": 24
+      },
+      {
+        "file": "review/frame-03.png",
+        "seconds": 42
+      },
+      {
+        "file": "review/frame-04.png",
+        "seconds": 61
+      },
+      {
+        "file": "review/frame-05.png",
+        "seconds": 68
+      },
+      {
+        "file": "review/frame-06.png",
+        "seconds": 74
+      },
+      {
+        "file": "review/frame-07.png",
+        "seconds": 80
+      },
+      {
+        "file": "review/frame-08.png",
+        "seconds": 89
+      },
+      {
+        "file": "review/frame-09.png",
+        "seconds": 105
+      },
+      {
+        "file": "review/frame-10.png",
+        "seconds": 121
+      },
+      {
+        "file": "review/frame-11.png",
+        "seconds": 130
+      },
+      {
+        "file": "review/frame-12.png",
+        "seconds": 143
+      }
+    ],
+    "interpretation": "Actual footage changes in every scene. Intentional reading/network-wait holds are preserved; motion sampling alone is not proof of transaction authenticity. Visual inspection is recorded separately."
+  },
+  "visualInspection": {
+    "status": "passed",
+    "framesReviewed": 12,
+    "method": "Representative decoded frames inspected; full-file decode, activity and black-frame checks. Not a separate human listening session.",
+    "notes": "Request review, 40/60 payment fields, exact associations, 60/0 outstanding, actual 20/12/8 and 30/18/12 proof, citations and closing legible. Intentional reading/network holds retained."
+  },
+  "audioVerification": {
+    "meanVolumeDb": -20.8,
+    "peakVolumeDb": -4.5,
+    "longestQuietSeconds": 3.1989,
+    "interpretation": "Quiet end-of-scene reading gaps up to approximately 3.2 seconds; no missing narration track, measured clipping or displaced scene audio."
+  },
+  "captions": {
+    "file": "video/public/passport-narration/incomeflow-passport.srt",
+    "cues": 41,
+    "timing": "Generated from original synthetic sentence boundaries, adjusted for exact narration speed; nonoverlap validated."
+  },
+  "originalFilm": {
+    "path": "artifacts/video/incomeflow-demo.mp4",
+    "sha256": "5a35aaadd5614c96f0a4da6f7c82ac645fe0abc5669cae92f313c9a7fbe1e530",
+    "unchanged": true
+  },
+  "publication": {
+    "status": "pending",
+    "tag": "incomeflow-payment-passport"
+  }
+}
