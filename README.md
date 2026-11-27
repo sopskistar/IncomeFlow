@@ -6,7 +6,7 @@ Built with **[Reactive Network Omni](https://reactive.network/)** — **Reactive
 
 **From payment requested to income organized:** a no-code crypto-income workspace for freelancers, with owner-signed payment requests, partial-payment records, automatic on-chain allocations, and receipts that can be independently verified.
 
-**[Watch the 2:30 demo](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4) · [Open the live app](https://incomeflow-gamma.vercel.app) · [Explore the real Payment Passport](https://incomeflow-gamma.vercel.app/passport-demo?view=owner) · [Verify the Reactive loop](https://incomeflow-gamma.vercel.app/proof)**
+**[Watch the 2:18 focused demo](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo-focused.mp4) · [Open the live app](https://incomeflow-gamma.vercel.app) · [Explore the real Payment Passport](https://incomeflow-gamma.vercel.app/passport-demo?view=owner) · [Verify the Reactive loop](https://incomeflow-gamma.vercel.app/proof)**
 
 Built for the **[Reactive Omni Buildathon](https://dorahacks.io/hackathon/reactive-omni-buildathon/detail)**, **Set It and Forget It** track, using **Reactive Network Omni**, **Reactive Lasna**, and **Base Sepolia**.
 
@@ -68,11 +68,11 @@ The app never substitutes simulated fixture transactions for live on-chain proof
 
 ## Demo video and visuals
 
-[![Watch the narrated IncomeFlow demo — actual production Payment Passport screenshot](docs/screenshots/payment-passport-desktop.png)](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4)
+[![Watch the narrated IncomeFlow demo — actual production Payment Passport screenshot](docs/screenshots/payment-passport-desktop.png)](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo-focused.mp4)
 
 **[Watch or download the final Payment Passport video](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4) · [Video release, captions and verification](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-payment-passport)**
 
-The **150-second, 1920×1080, 30 fps H.264/AAC** film includes the research-qualified freelancer scenario, genuine moving product footage, both real partial test payments, the Reactivity evidence and final confirmed allocations. [Video verification report](deployments/video-passport.json). The previous [original M1 video](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo) is preserved separately.
+The **138.25-second focused film (1920×1080, 30 fps, H.264/AAC)** includes the research-qualified freelancer scenario, genuine moving product footage, both real partial test payments, the Reactivity evidence and final confirmed allocations. [Video verification report](deployments/video-passport.json). The [original untrimmed Payment Passport film](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo.mp4) and [earlier M1 video](https://github.com/sopskistar/IncomeFlow/releases/tag/incomeflow-testnet-demo) remain preserved. [Focused subtitles](https://github.com/sopskistar/IncomeFlow/releases/download/incomeflow-payment-passport/incomeflow-passport-demo-focused.srt) are synchronized with the streamlined cut.
 
 **Actual production screenshots:** [Homepage desktop](docs/screenshots/incomeflow-homepage-desktop.png) · [Payment Passport desktop](docs/screenshots/payment-passport-desktop.png) · [Homepage mobile](docs/screenshots/incomeflow-homepage-mobile.png).  [View/download the GitHub Actions desktop, tablet, mobile, Passport and vault capture archive](https://github.com/sopskistar/IncomeFlow/actions/runs/45948544775/artifacts/15176435063). The embedded images above are real production captures, not generated mockups. The archive is a time-limited CI artifact.
 
