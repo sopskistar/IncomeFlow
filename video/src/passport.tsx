@@ -85,17 +85,6 @@ function Scene({
               borderRadius: 14,
             }}
           />
-          <div
-            style={{
-              position: "absolute",
-              bottom: 24,
-              fontSize: 20,
-              color: C.muted,
-            }}
-          >
-            Genuine application footage. Edited pacing is not a network-latency
-            measurement. Valueless testnet funds.
-          </div>
         </>
       ) : (
         <div style={{ transform: `translateY(${rise}px)`, paddingTop: 95 }}>
@@ -114,9 +103,6 @@ function Scene({
                 <br />
                 The financial admin isn’t.
               </h1>
-              <p style={{ fontSize: 32, color: C.muted, marginTop: 36 }}>
-                An illustrative freelancer scenario
-              </p>
               <div style={{ display: "flex", gap: 52, marginTop: 70 }}>
                 {[
                   "Request payment",
